@@ -19,7 +19,7 @@ class PreferencesData:
         self.__pref_error = TypeError('Got {} as pref but only accepts Union[str, dict, typing.IO].'
                                       .format(type(self.__pref)))
         if isinstance(self.__pref, str):
-            if self.__format == 'crab':
+            if self.__format in ['crab', 'json']:
                 try:
                     with open(self.__pref, mode='r') as _f:
                         self.__pref_dict = json.load(_f)
@@ -38,9 +38,6 @@ class PreferencesData:
                                 self.__pref_dict[dict_key] = list()
                             else:
                                 self.__pref_dict[dict_key].append(_line_data)
-            elif self.__format == 'json':
-                with open(self.__pref, mode='r') as _f:
-                    self.__pref_dict = json.load(_f)
             else:
                 raise self.__format_error
         elif isinstance(self.__pref, _IO):
