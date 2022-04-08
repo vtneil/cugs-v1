@@ -5,7 +5,10 @@ This repo includes example CLI and GUI main files and included specifically made
 
 ## Data Format
 
-Edit file `data_format.txt` in specified `crab` format or in universal `json` format file. Either format are readible and automatically detected.
+Edit/Add your preferences to file `data_format.txt` in any universal `json`, `toml`, `xml`, or `yaml` format file as you prefer. All formats are readible and automatically detected. For the ground control station serial interface receiver to function, you have to make a preferences with root parent: `data_format` containing one child of a list of strings representing data to get parsed.
+
+#### Upcoming features
+If `data_format` is not present, the file will be created automatically with size of the first serial string encountered.
 
 ## Libraries
 
