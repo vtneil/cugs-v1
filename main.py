@@ -6,7 +6,6 @@ from data_handler import lib_parse_data as lparse
 from data_handler import lib_file_class as lfile
 from data_handler import lib_pyqtchart as lchart
 from data_handler import lib_serial_tools as lserial
-from data_handler.lib_gis import *
 from data_handler.lib_threading import *
 from gui.gui_class import *
 

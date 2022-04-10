@@ -142,6 +142,15 @@ class LogSerial:
             pass
         print('_' * 20 + 'END_SERIAL' + '_' * 20)
 
+    def readLine(self) -> str:
+        '''
+        Upcoming
+
+        :return:
+        '''
+        #make a readline function without forever loop
+        return ''
+
     def isUpdated(self) -> bool:
         '''
         Returns if payload is updated.

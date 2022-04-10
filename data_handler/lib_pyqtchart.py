@@ -2,7 +2,7 @@ from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSp
 from PySide6.QtGui import QColor, QPen, QPainter
 
 
-class ChartAttributes:
+class PyQtCharts:
     def __init__(self, ChartLayout: QChartView, ChartName='None (none)', UseScatter=False, UseSpline=True,
                  Color=QColor(255, 255, 255), LegendVisible=False) -> None:
         '''

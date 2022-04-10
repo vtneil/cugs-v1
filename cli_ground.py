@@ -1,13 +1,7 @@
 import sys
 import os
+import data_handler as ilib
 from typing import Union as _Union
-from data_handler import lib_time as ltime
-from data_handler import lib_preferences_reader as lpref
-from data_handler import lib_parse_data as lparse
-from data_handler import lib_file_class as lfile
-from data_handler import lib_serial_tools as lserial
-from data_handler.lib_gis import *
-from data_handler.lib_threading import *
 
 
 class ProgFullStackCLI:
@@ -19,9 +13,9 @@ class ProgFullStackCLI:
         self.header = header if header else 'SPARK2'
         self.save_name = save_name if save_name else 'test_file'
         self.extension = ext if ext else 'csv'
-        self.parser = lparse.Parser(self.data_format, header=self.header)
-        self.directory = lfile.LoadDirectory(__file__, self.save_name, self.extension)
-        self.com = lserial.ComPort()
+        self.parser = ilib.Parser(self.data_format, header=self.header)
+        self.directory = ilib.LoadDirectory(__file__, self.save_name, self.extension)
+        self.com = ilib.ComPort()
         self.com_baudrate = 0
         self.com_portname = ''
         self.serial_logger = None
@@ -30,7 +24,7 @@ class ProgFullStackCLI:
     def start(self) -> None:
         self.getPortBaudFromUser()
         self.com.connect(self.com_portname, self.com_baudrate)
-        self.serial_logger = lserial.LogSerial(self.com.device, header=self.header)
+        self.serial_logger = ilib.LogSerial(self.com.device, header=self.header)
         self.serial_logger.readAll(*self.func_list)
         return
 
@@ -39,7 +33,7 @@ class ProgFullStackCLI:
         for k, v in __data_dict.items():
             print('{}: {}'.format(k, v), end=', ')
         print('\n')
-        __coord = Coordinate(
+        __coord = ilib.Coordinate(
             latitude=__data_dict['gps_lat'],
             longitude=__data_dict['gps_lon'],
             altitude=__data_dict['bar_alt']
@@ -115,7 +109,7 @@ class ProgFullStackCLI:
 if __name__ == '__main__':
     print('[ CLI_PROG ] ' + 'Start of Program')
     print()
-    prog_preferences = lpref.PreferencesData('data_handler/data_format.txt').getPreferences()
+    prog_preferences = ilib.PreferencesData('data_handler/data_format.txt').getPreferences()
     data_format = prog_preferences['data_format']
     prog = ProgFullStackCLI(data_format)
     prog.start()

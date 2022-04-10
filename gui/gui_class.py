@@ -9,13 +9,13 @@ class GuiLoader(_QMainWindow):
 
         For .ui file name:
 
-        - Call GuiLoader('...').ui and use .show, .method, .elem
+        - Call GuiLoader('...').ui and use .show(), .method(), .elem
 
         ====================================
 
         For .py file name:
 
-        - Call GuiLoader('...') and use .show, .ui.method, .ui.elem
+        - Call GuiLoader('...') and use .show(), .ui.method(), .ui.elem
 
         :param _ui_filename: UI file path or name
         '''
