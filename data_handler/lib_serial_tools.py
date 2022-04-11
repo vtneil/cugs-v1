@@ -135,23 +135,14 @@ class LogSerial:
                         self.raw = self.raw.replace(self.payload, '', 1)
                         self._is_updated = True
 
-                        for f in func:
-                            f(self.payload)
+                        for __f, __args, __kwargs in func:
+                            __f(self.payload, *__args, **__kwargs)
 
                 except _serial.serialutil.SerialException:
                     result = ''
         except KeyboardInterrupt:
             pass
         print('_' * 20 + 'END_SERIAL' + '_' * 20)
-
-    def readLine(self) -> str:
-        """
-        Upcoming
-
-        :return:
-        """
-        # make a readline function without forever loop
-        return ''
 
     def isUpdated(self) -> bool:
         """
@@ -177,10 +168,10 @@ class LogSerial:
         :return:
         """
         try:
-            s = self._pStrip(self.device.read().decode('utf-8')).strip()
+            __s = self._pStrip(self.device.read().decode('utf-8')).strip()
         except UnicodeDecodeError:
-            s = ''
-        return s
+            __s = ''
+        return __s
 
     @staticmethod
     def _pStrip(s) -> str:

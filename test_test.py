@@ -11,7 +11,7 @@ from gui.gui_class import *
 
 if __name__ == '__main__':
     print('Start of PROG')
-    list_data_format = lpref.PreferencesData('data_handler/data_format.txt')
+    list_data_format = lpref.PreferencesData('data_handler/cugs_preferences.json')
     # list_data_format.writePreferences('crab')
     # app = QApplication(sys.argv)
     # ui_home = gc.LoadUi('gui/hw_ref.ui')

@@ -12,11 +12,11 @@ from io import StringIO as _String
 
 class PreferencesData:
     def __init__(self, pref: _Union[str, dict], /, *, mode: str = 'file') -> None:
-        '''
+        """
         A class to read custom preference data
 
-        :param _pref_filename: Preference file path or name
-        '''
+        :param pref: Preference file path or name
+        """
         self.__pref = pref
         self.__mode = mode
         self.__format = ''
@@ -29,11 +29,11 @@ class PreferencesData:
         self.__format_parser = {'json': self.parseJSON,
                                 'toml': self.parseTOML,
                                 'xml': self.parseXML,
-                                'yaml': self.parseYAML,}
+                                'yaml': self.parseYAML}
         self.__format_writer = {'json': self.writeJSON,
                                 'toml': self.writeTOML,
                                 'xml': self.writeXML,
-                                'yaml': self.writeYAML,}
+                                'yaml': self.writeYAML}
 
         if isinstance(self.__pref, str):
             if '.' in self.__pref:
@@ -77,21 +77,21 @@ class PreferencesData:
             self.__format = 'json'
 
     def getPreferences(self) -> dict:
-        '''
+        """
         Get data in tuple format.
 
         :return: Data in tuple format
-        '''
+        """
         return self.__pref_dict
 
     def writePreferences(self, pref_dict=None, pref_file_name=None, file_format=None) -> bool:
-        '''
+        """
         Write preferences to file.
         Internal Python functions only update the preferences dictionary, but
         this method will update the file as set.
 
         :return: True if successful, False if failed
-        '''
+        """
         if file_format is None:
             __file_format = self.__format
         else:
@@ -161,8 +161,8 @@ class PreferencesData:
         if mode == 'str':
             return _json.loads(inp_str)
         elif mode == 'file':
-            with open(inp_str, mode='r', encoding='utf-8') as f:
-                return _json.load(f)
+            with open(inp_str, mode='r', encoding='utf-8') as __f:
+                return _json.load(__f)
         else:
             raise KeyError('mode only supports str and file!')
 
@@ -171,8 +171,8 @@ class PreferencesData:
         if mode == 'str':
             return _toml.loads(inp_str)
         elif mode == 'file':
-            with open(inp_str, mode='r', encoding='utf-8') as f:
-                return _toml.load(f)
+            with open(inp_str, mode='r', encoding='utf-8') as __f:
+                return _toml.load(__f)
         else:
             raise KeyError('mode only supports str and file!')
 
@@ -184,62 +184,62 @@ class PreferencesData:
             else:
                 return _xmldict.parse(inp_str, encoding='utf-8')
         elif mode == 'file':
-            with open(inp_str, mode='r', encoding='utf-8') as f:
+            with open(inp_str, mode='r', encoding='utf-8') as __f:
                 if disorder:
-                    return PreferencesData.disorderDict(_xmldict.parse(''.join(f.readlines()), encoding='utf-8'))
+                    return PreferencesData.disorderDict(_xmldict.parse(''.join(__f.readlines()), encoding='utf-8'))
                 else:
-                    return _xmldict.parse(''.join(f.readlines()), encoding='utf-8')
+                    return _xmldict.parse(''.join(__f.readlines()), encoding='utf-8')
 
     @staticmethod
     def parseYAML(inp_str: str, /, mode: str = 'str', *, strict_validate: bool = False) -> dict:
         if strict_validate:
             if mode == 'str':
-                f = _String(inp_str)
-                return _strictyaml.load(f)
+                __f = _String(inp_str)
+                return _strictyaml.load(__f)
             elif mode == 'file':
-                with open(inp_str, mode='r', encoding='utf-8') as f:
-                    return _strictyaml.load(f)
+                with open(inp_str, mode='r', encoding='utf-8') as __f:
+                    return _strictyaml.load(__f)
         else:
             if mode == 'str':
-                f = _String(inp_str)
-                return _yaml.safe_load(f)
+                __f = _String(inp_str)
+                return _yaml.safe_load(__f)
             elif mode == 'file':
-                with open(inp_str, mode='r', encoding='utf-8') as f:
-                    return _yaml.safe_load(f)
+                with open(inp_str, mode='r', encoding='utf-8') as __f:
+                    return _yaml.safe_load(__f)
             else:
                 raise KeyError('mode only supports str and file!')
 
     @staticmethod
     def writeJSON(pref_to_write: dict, inp_file_dir: str, *, _indent: int = 4) -> bool:
         if pref_to_write:
-            with open(inp_file_dir, mode='w', encoding='utf-8') as f:
-                _json.dump(pref_to_write, f, indent=_indent)
+            with open(inp_file_dir, mode='w', encoding='utf-8') as __f:
+                _json.dump(pref_to_write, __f, indent=_indent)
             return True
         return False
 
     @staticmethod
     def writeTOML(pref_to_write: dict, inp_file_dir: str, *, _indent: int = 4) -> bool:
         if pref_to_write:
-            with open(inp_file_dir, mode='w', encoding='utf-8') as f:
-                _toml.dump(pref_to_write, f)
+            with open(inp_file_dir, mode='w', encoding='utf-8') as __f:
+                _toml.dump(pref_to_write, __f)
             return True
         return False
 
     @staticmethod
     def writeXML(pref_to_write: dict, inp_file_dir: str, *, _indent: int = 4) -> bool:
         if pref_to_write:
-            with open(inp_file_dir, mode='w', encoding='utf-8') as f:
-                s = _dictxml.dict2xml(pref_to_write)
-                f.writelines(s)
+            with open(inp_file_dir, mode='w', encoding='utf-8') as __f:
+                __s = _dictxml.dict2xml(pref_to_write)
+                __f.writelines(s)
             return True
         return False
 
     @staticmethod
     def writeYAML(pref_to_write: dict, inp_file_dir: str, *, _indent: int = 4) -> bool:
         if pref_to_write:
-            with open(inp_file_dir, mode='w', encoding='utf-8') as f:
-                s = _yaml.dump(pref_to_write)
-                f.writelines(s)
+            with open(inp_file_dir, mode='w', encoding='utf-8') as __f:
+                __s = _yaml.dump(pref_to_write)
+                __f.writelines(__s)
             return True
         return False
 
@@ -249,7 +249,7 @@ class PreferencesData:
 
 
 if __name__ == '__main__':
-    f = open('data_format.txt')
+    f = open('cugs_preferences.json')
     f.close()
     # s = PreferencesData.parseXML('<EmpData><EmpID>12345</EmpID><EmpName>Vivatsathorn</EmpName></EmpData>', mode='str')
     s = PreferencesData.parseYAML('hello:\n    - image\n    - command', strict_validate=False)

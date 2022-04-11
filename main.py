@@ -67,7 +67,7 @@ if __name__ == '__main__':
     print('[ GUI_PROG ] ' + 'Start of Program')
     print()
 
-    prog_preferences = lpref.PreferencesData('data_handler/data_format.txt').getPreferences()
+    prog_preferences = lpref.PreferencesData('data_handler/cugs_preferences.json').getPreferences()
     # prog_d = lpref.PreferencesData(1)
     # print(str(prog_d))
 

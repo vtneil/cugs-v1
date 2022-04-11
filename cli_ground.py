@@ -19,7 +19,11 @@ class ProgFullStackCLI:
         self.com_baudrate = 0
         self.com_portname = ''
         self.serial_logger = None
-        self.func_list = [print, self.backEnd]
+        self.func_list = [
+            # ilib.wrapper(print, [], {}),
+            ilib.wrapper(ilib.printStyled, [], {'fg': 'red', 'bg': 'blue'}),
+            ilib.wrapper(self.backEnd, [], {})
+        ]
 
     def start(self) -> None:
         self.getPortBaudFromUser()
@@ -28,10 +32,10 @@ class ProgFullStackCLI:
         self.serial_logger.readAll(*self.func_list)
         return
 
-    def backEnd(self, _get_data_from_serial) -> None:
+    def backEnd(self, _get_data_from_serial, *args, **kwargs) -> None:
         __data_dict = self.parser.parseData(_get_data_from_serial)
-        for k, v in __data_dict.items():
-            print('{}: {}'.format(k, v), end=', ')
+        print(', '.join(['{}: {}'.format(k, v) for k, v in __data_dict.items()]))
+        #func keep data to total dict with numpy or list within dict
         print('\n')
         __coord = ilib.Coordinate(
             latitude=__data_dict['gps_lat'],
@@ -94,24 +98,20 @@ class ProgFullStackCLI:
         if __successful:
             self.com_portname = __port_name
             self.com_baudrate = __baudrate
-            self.clearConsole()
+            ilib.scrollConsole()
             print('Set {} as ComPort with baudrate={}'.format(self.com_portname, self.com_baudrate))
             print('=' * 50)
             print()
-        return
-
-    @staticmethod
-    def clearConsole() -> None:
-        print('\n' * 150)
         return
 
 
 if __name__ == '__main__':
     print('[ CLI_PROG ] ' + 'Start of Program')
     print()
-    prog_preferences = ilib.PreferencesData('data_handler/data_format.txt').getPreferences()
+    prog_preferences = ilib.PreferencesData('data_handler/cugs_preferences.json').getPreferences()
     data_format = prog_preferences['data_format']
-    prog = ProgFullStackCLI(data_format)
+    leading_header = prog_preferences['header']
+    prog = ProgFullStackCLI(data_format, header=leading_header)
     prog.start()
 
     prog.com.disconnect()
