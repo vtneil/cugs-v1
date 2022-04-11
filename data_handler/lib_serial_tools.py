@@ -5,48 +5,50 @@ from typing import Union as _Union
 
 class ComPort:
     def __init__(self) -> None:
-        '''
+        """
         Serial Port Manipulation Class
-        '''
+        """
         self.port_dict = self.listPorts()
         self.port_list = list()
         self.dir = str()
         self.name = str()
         self.port = str()
+        self.port_port = None
+        self.device = None
 
     def listPorts(self) -> dict:
-        '''
+        """
         List all ports available
 
         :return: Tuple of port directory and port name
-        '''
+        """
         port_name = dict()
         self.port_port = _serial_port.comports()
         for port_iter in self.port_port:
             self.name = str(port_iter.device) + \
-                ' (' + str(port_iter.manufacturer) + \
-                ' ' + str(port_iter.product) + ')'
+                        ' (' + str(port_iter.manufacturer) + \
+                        ' ' + str(port_iter.product) + ')'
             port_name[self.name] = port_iter.device
         return port_name
 
     def refreshPortList(self) -> dict:
-        '''
+        """
         Refreshes port list and returns it.
 
         :return:
-        '''
+        """
         self.port_dict = self.listPorts()
         self.port_list = sorted(self.port_dict.items())
         return self.port_dict
 
     def connect(self, selected_name, baud: _Union[int, str]) -> bool:
-        '''
+        """
         Connect serial port
 
         :param selected_name:
         :param baud:
         :return:
-        '''
+        """
         if selected_name:
             self.port = self.port_dict[selected_name]
             try:
@@ -67,22 +69,22 @@ class ComPort:
         return
 
     def isConnected(self) -> bool:
-        '''
+        """
         Check if the serial device is connected.
 
         :return:
-        '''
+        """
         if self.device.isOpen():
             return True
         else:
             return False
 
     def disconnect(self) -> bool:
-        '''
+        """
         Disconnect serial port
 
         :return:
-        '''
+        """
         try:
             if self.device.isOpen():
                 self.device.close()
@@ -98,12 +100,12 @@ class ComPort:
 
 class LogSerial:
     def __init__(self, device: _serial.serialwin32.Serial, /, *, header='PSG') -> None:
-        '''
+        """
         Serial Logger object class
 
         :param device:
         :param header:
-        '''
+        """
         self.device = device
         self.header = header
         self.raw = ''
@@ -114,11 +116,11 @@ class LogSerial:
         self._find2 = 0
 
     def readAll(self, *func) -> None:
-        '''
+        """
         Read all in forever loop
 
         :return:
-        '''
+        """
         result = None
         print('_' * 20 + 'LOG_SERIAL' + '_' * 20)
         try:
@@ -143,37 +145,37 @@ class LogSerial:
         print('_' * 20 + 'END_SERIAL' + '_' * 20)
 
     def readLine(self) -> str:
-        '''
+        """
         Upcoming
 
         :return:
-        '''
-        #make a readline function without forever loop
+        """
+        # make a readline function without forever loop
         return ''
 
     def isUpdated(self) -> bool:
-        '''
+        """
         Returns if payload is updated.
 
         :return:
-        '''
+        """
         return self._is_updated
 
     def getPayload(self) -> str:
-        '''
+        """
         Pull latest data from payload.
 
         :return:
-        '''
+        """
         self._is_updated = False
         return self.payload
 
     def __read(self) -> str:
-        '''
+        """
         (Private) Read data from serial.
 
         :return:
-        '''
+        """
         try:
             s = self._pStrip(self.device.read().decode('utf-8')).strip()
         except UnicodeDecodeError:

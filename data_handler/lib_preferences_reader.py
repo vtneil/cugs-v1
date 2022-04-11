@@ -20,40 +20,61 @@ class PreferencesData:
         self.__pref = pref
         self.__mode = mode
         self.__format = ''
+        self.__pref_file_ext = ''
         self.__pref_dict = dict()
         self.__format_error = KeyError('Got {} as format but only accepts json, yaml, xml and toml formats.'
                                        .format(self.__format))
         self.__pref_error = TypeError('Got {} as pref but only accepts Union[str, dict].'
                                       .format(type(self.__pref)))
+        self.__format_parser = {'json': self.parseJSON,
+                                'toml': self.parseTOML,
+                                'xml': self.parseXML,
+                                'yaml': self.parseYAML,}
+        self.__format_writer = {'json': self.writeJSON,
+                                'toml': self.writeTOML,
+                                'xml': self.writeXML,
+                                'yaml': self.writeYAML,}
+
         if isinstance(self.__pref, str):
-            try:
-                self.__pref_dict = self.parseJSON(self.__pref, mode=self.__mode)
-                self.__format = 'json'
-            except ValueError or _json.decoder.JSONDecodeError:
-                pass
+            if '.' in self.__pref:
+                __idx_dot = self.__pref.rfind('.')
+                self.__pref_file_ext = self.__pref[__idx_dot+1:].lower()
 
-            try:
-                self.__pref_dict = self.parseTOML(self.__pref, mode=self.__mode)
-                self.__format = 'toml'
-            except ValueError or _toml.decoder.TomlDecodeError:
-                pass
+            if self.__pref_file_ext and self.__pref_file_ext in ['json', 'toml', 'xml', 'yaml']:
+                self.__format = self.__pref_file_ext
+                self.__pref_dict = self.__format_parser[self.__format](self.__pref, mode=self.__mode)
 
-            try:
-                self.__pref_dict = self.parseXML(self.__pref, mode=self.__mode)
-                self.__format = 'xml'
-            except ValueError or _xml.parsers.expat.ExpatError:
-                pass
+            else:
+                try:
+                    self.__pref_dict = self.parseJSON(self.__pref, mode=self.__mode)
+                    self.__format = 'json'
+                except ValueError or _json.decoder.JSONDecodeError:
+                    pass
 
-            try:
-                self.__pref_dict = self.parseYAML(self.__pref, mode=self.__mode)
-                self.__format = 'yaml'
-            except Exception:
-                raise self.__format_error
+                try:
+                    self.__pref_dict = self.parseTOML(self.__pref, mode=self.__mode)
+                    self.__format = 'toml'
+                except ValueError or _toml.decoder.TomlDecodeError:
+                    pass
+
+                try:
+                    self.__pref_dict = self.parseXML(self.__pref, mode=self.__mode)
+                    self.__format = 'xml'
+                except ValueError or _xml.parsers.expat.ExpatError:
+                    pass
+
+                try:
+                    self.__pref_dict = self.parseYAML(self.__pref, mode=self.__mode)
+                    self.__format = 'yaml'
+                except Exception:
+                    raise self.__format_error
 
         elif isinstance(self.__pref, dict):
             self.__pref_dict = self.__pref
         else:
             raise self.__pref_error
+        if not self.__format:
+            self.__format = 'json'
 
     def getPreferences(self) -> dict:
         '''
@@ -63,7 +84,7 @@ class PreferencesData:
         '''
         return self.__pref_dict
 
-    def writePreferences(self, file_format=None) -> bool:
+    def writePreferences(self, pref_dict=None, pref_file_name=None, file_format=None) -> bool:
         '''
         Write preferences to file.
         Internal Python functions only update the preferences dictionary, but
@@ -74,11 +95,25 @@ class PreferencesData:
         if file_format is None:
             __file_format = self.__format
         else:
-            __file_format = file_format
+            __file_format = file_format.lower()
 
-        if __file_format == 'json':
-            pass
+        if pref_dict is None:
+            __pref = self.__pref_dict
+        else:
+            __pref = pref_dict
 
+        if pref_file_name is None:
+            __pref_file_name = self.__pref
+        else:
+            __pref_file_name = pref_file_name
+
+        if not isinstance(__pref_file_name, str):
+            raise TypeError('File name only supports \'str\' not \'' + str(type(__pref_file_name)) + '\'')
+
+        if __file_format and __file_format in ['json', 'toml', 'xml', 'yaml']:
+            self.__format = self.__pref_file_ext
+            self.__pref_dict = self.__format_writer[self.__format](__pref, __pref)
+            return True
         return False
 
     def setdefault(self, key, value):

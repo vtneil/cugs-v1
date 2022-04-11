@@ -23,4 +23,3 @@ class ThreadWorker(QThread):
     def stop(self) -> None:
         self._isRunning = False
         self.terminate()
-

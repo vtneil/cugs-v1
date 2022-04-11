@@ -5,7 +5,7 @@ from PySide6.QtGui import QColor, QPen, QPainter
 class PyQtCharts:
     def __init__(self, ChartLayout: QChartView, ChartName='None (none)', UseScatter=False, UseSpline=True,
                  Color=QColor(255, 255, 255), LegendVisible=False) -> None:
-        '''
+        """
         Create Custom QChart and Data Attributes Set Class
         :param ChartLayout:
         :param ChartName:
@@ -13,7 +13,7 @@ class PyQtCharts:
         :param UseSpline:
         :param Color:
         :param LegendVisible:
-        '''
+        """
         self.chart_layout = ChartLayout
         self.chart_chart = QChart()
         self.scatter_series = QScatterSeries()
@@ -101,7 +101,7 @@ class PyQtCharts:
             self.chart = QLineSeries()
             self.chart1 = QLineSeries()
             self.chart2 = QLineSeries()
-            
+
         self.chart.setPen(self.pen_r)
         self.chart1.setPen(self.pen_g)
         self.chart2.setPen(self.pen_b)
@@ -154,22 +154,22 @@ class PyQtCharts:
         self.chart_layout.setChart(self.chart_chart)
 
     def updateMinMax(self) -> None:
-        '''
+        """
         Update minimum and maximum value of chart
 
         :return:
-        '''
+        """
         self.x_axis.setRange(min(self.x_data), max(self.x_data) + 0.2 * abs(max(self.x_data)))
         self.y_axis.setRange(
             min(self.y_data + self.y_alt1 + self.y_alt2) - 0.2 * abs(min(self.y_data + self.y_alt1 + self.y_alt2)),
             max(self.y_data + self.y_alt1 + self.y_alt2) + 0.2 * abs(max(self.y_data + self.y_alt1 + self.y_alt2)))
 
     def clearChart(self) -> None:
-        '''
+        """
         Clear chart
 
         :return:
-        '''
+        """
         self.chart.clear()
         self.chart1.clear()
         self.chart2.clear()
@@ -178,11 +178,11 @@ class PyQtCharts:
         self.chart_layout.setChart(self.chart_chart)
 
     def popChart(self) -> None:
-        '''
+        """
         Remove latest data from the chart
 
         :return:
-        '''
+        """
         if len(self.x_data) > 1:
             self.chart.remove(self.x_new, self.y_new)
             self.scatter_series.remove(self.x_new, self.y_new)
