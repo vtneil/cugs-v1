@@ -34,6 +34,7 @@ class LoadDirectory:
         self.name_earth_coord = 'gearthcoord' + self.device_id + '.kml'
         self.name_earth_live = 'gearthlive' + self.device_id + '.kml'
         self.path_csv = ''
+        self.path_raw = ''
         self.path_save_coord = ''
         self.path_temp_coord = self.__makeAbsolutePath(self.name_temp_coord)
         self.path_earth_coord = self.__makeAbsolutePath(self.name_earth_coord)
@@ -62,12 +63,16 @@ class LoadDirectory:
         self.__checkFolder()
         self.path_csv = self.__makeAbsolutePath(self.save_name + '_' + self.device_id +
                                                 '_' + str(data_no) + '.' + self.extension)
+        self.path_raw = self.__makeAbsolutePath(self.save_name + '_raw_' + self.device_id +
+                                                '_' + str(data_no) + '.txt')
         self.path_save_coord = self.__makeAbsolutePath(self.pre_save + '_' + self.device_id +
                                                        '_' + str(data_no) + '.kml')
         while _op.isfile(self.path_csv) or _op.isfile(self.path_save_coord):
             data_no += 1
             self.path_csv = self.__makeAbsolutePath(self.save_name + '_' + self.device_id +
                                                     '_' + str(data_no) + '.' + self.extension)
+            self.path_raw = self.__makeAbsolutePath(self.save_name + '_raw_' + self.device_id +
+                                                    '_' + str(data_no) + '.txt')
             self.path_save_coord = self.__makeAbsolutePath(self.pre_save + '_' + self.device_id +
                                                            '_' + str(data_no) + '.kml')
         return
@@ -166,7 +171,7 @@ class LoadDirectory:
             f_save.writelines(str_coord)
         return earth_coord_0 + color + earth_coord_1 + '\n'.join(__coord) + earth_coord_2
 
-    def appendDelimitedFile(self, raw_data: _Union[_np.ndarray, list, str], /, *, delimiter: str = ',') -> str:
+    def appendDelimitedFile(self, *args: _Union[_np.ndarray, list, str], delimiter: str = ',') -> list:
         """
         Append a data file in a form of delimited string file, e.g., CSV.
 
@@ -174,18 +179,25 @@ class LoadDirectory:
         :param delimiter: String delimiter
         :return: Raw data
         """
-        __raw_data = ''
-        if raw_data:
-            if isinstance(raw_data, list):
-                __raw_data = delimiter.join([str(dat) for dat in raw_data])
-            elif isinstance(raw_data, _np.ndarray):
-                __raw_data = delimiter.join([str(dat) for dat in raw_data])
-            elif isinstance(raw_data, str):
-                __raw_data = raw_data.strip()
-            else:
-                __raw_data = str(raw_data).strip()
-            with open(self.path_csv, 'a', encoding='utf-8') as file:
-                file.writelines([__raw_data, '\n'])
+        __raw_data = []
+        __raw_data_str = ''
+        for raw_data in args:
+            if raw_data:
+                if isinstance(raw_data, list):
+                    __raw_data.append(delimiter.join([str(dat) for dat in raw_data]))
+                elif isinstance(raw_data, _np.ndarray):
+                    __raw_data.append(delimiter.join([str(dat) for dat in raw_data]))
+                elif isinstance(raw_data, str):
+                    __raw_data_str += raw_data.strip()
+                else:
+                    __raw_data.append(str(raw_data).strip())
+        if __raw_data:
+            with open(self.path_csv, 'a', encoding='utf-8') as _file:
+                __lst_tmp = [''.join([__data, '\n']) for __data in __raw_data]
+                _file.writelines(__lst_tmp)
+        if __raw_data_str:
+            with open(self.path_raw, 'a', encoding='utf-8') as _file:
+                _file.writelines([__raw_data_str, '\n'])
         return __raw_data
 
     def getRootPath(self) -> str:
@@ -228,15 +240,15 @@ class LoadDirectory:
         return [raw_dict[key_avail] if key_avail in raw_dict else '' for key_avail in tuple_data]
 
     @staticmethod
-    def createFolder(foldername) -> None:
+    def createFolder(folder_name) -> None:
         """
         Create a directory (folder)
 
-        :param foldername: Folder or Subfolder name
+        :param folder_name: Folder or Subfolder name
         :return:
         """
-        if not _op.exists(foldername):
-            os.makedirs(foldername)
+        if not _op.exists(folder_name):
+            os.makedirs(folder_name)
         return
 
 

@@ -135,8 +135,9 @@ class LogSerial:
                         self.raw = self.raw.replace(self.payload, '', 1)
                         self._is_updated = True
 
-                        for __f, __args, __kwargs in func:
-                            __f(self.payload, *__args, **__kwargs)
+                        if func:
+                            for __f, __args, __kwargs in func:
+                                __f(self.payload, *__args, **__kwargs)
 
                 except _serial.serialutil.SerialException:
                     result = ''

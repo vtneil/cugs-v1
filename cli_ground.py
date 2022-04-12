@@ -1,14 +1,16 @@
 import sys
 import os
 import data_handler as ilib
+import numpy as np
 from typing import Union as _Union
 
 
 class ProgFullStackCLI:
     def __init__(self, tuple_data: _Union[list, tuple, set, dict], /, *,
-                 header=None, save_name=None, ext=None) -> None:
+                 header=None, save_name=None, ext=None, use_np: bool = False) -> None:
         # Back end Init
         self.exit_code = 0
+        self.use_np = use_np
         self.data_format = tuple_data
         self.header = header if header else 'SPARK2'
         self.save_name = save_name if save_name else 'test_file'
@@ -19,22 +21,37 @@ class ProgFullStackCLI:
         self.com_baudrate = 0
         self.com_portname = ''
         self.serial_logger = None
+        self.mpl_mpl = None
         self.func_list = [
             # ilib.wrapper(print, [], {}),
-            ilib.wrapper(ilib.printStyled, [], {'fg': 'red', 'bg': 'blue'}),
-            ilib.wrapper(self.backEnd, [], {})
+            ilib.wrapper(ilib.printStyled, fg='red', bg='white', style='bold'),
+            ilib.wrapper(self.backgroundTasks)
         ]
+
+        self.to_plot = []
+        self.dict_data_array = {}
 
     def start(self) -> None:
         self.getPortBaudFromUser()
+        self.to_plot = [elem for elem in self.getMplLabelFromUser() if elem in self.data_format]
+        print(self.to_plot)
+        if self.to_plot:
+            # self.mpl_mpl = ilib.MplCanvasCli(*self.to_plot)
+            pass
+
         self.com.connect(self.com_portname, self.com_baudrate)
         self.serial_logger = ilib.LogSerial(self.com.device, header=self.header)
+        self.backEnd()
+        return
+
+    def backEnd(self) -> None:
         self.serial_logger.readAll(*self.func_list)
         return
 
-    def backEnd(self, _get_data_from_serial, *args, **kwargs) -> None:
-        __data_dict = self.parser.parseData(_get_data_from_serial)
-        print(', '.join(['{}: {}'.format(k, v) for k, v in __data_dict.items()]))
+    def backgroundTasks(self, _get_data_from_serial) -> None:
+        __data_raw = _get_data_from_serial
+        __data_dict = self.parser.parseData(__data_raw)
+        print(', '.join(['{}: {}'.format(ilib.strStyled(k, style='bold', end=''), v) for k, v in __data_dict.items()]))
         #func keep data to total dict with numpy or list within dict
         print('\n')
         __coord = ilib.Coordinate(
@@ -43,13 +60,42 @@ class ProgFullStackCLI:
             altitude=__data_dict['bar_alt']
         )
         self.directory.appendEarthCoord(__coord)
-        self.directory.appendDelimitedFile(self.directory.dictToList(__data_dict, self.data_format))
+        self.directory.appendDelimitedFile(self.directory.dictToList(__data_dict, self.data_format), __data_raw)
+
+        if self.use_np:
+            for k, v in __data_dict.items():
+                if k not in self.dict_data_array:
+                    self.dict_data_array[k] = np.array([])
+                self.dict_data_array[k] = np.append(self.dict_data_array[k], v)
+        else:
+            for k, v in __data_dict.items():
+                if k not in self.dict_data_array:
+                    self.dict_data_array[k] = []
+                self.dict_data_array[k].append(v)
+
+        return
+
+    def frontEnd(self) -> None:
         return
 
     def listRefreshSerial(self) -> None:
         self.com.refreshPortList()
         self.com.printPort()
         return
+
+    def getMplLabelFromUser(self) -> list:
+        print(', '.join(['[' + elem + ']' for elem in self.data_format]))
+        print('-' * 50)
+        print('[ CLI_PROG ] ' + 'If you don\'t want to plot any data, leave blank. Input without [ and ]')
+        try:
+            __user_input = input('[ CLI_PROG ] ' + 'Input data you want to plot, separated by a blank space: ')\
+                .strip().split()
+        except KeyboardInterrupt:
+            return []
+
+        print('=' * 50)
+
+        return __user_input
 
     def getPortBaudFromUser(self) -> None:
         __port_name = ''
@@ -59,9 +105,10 @@ class ProgFullStackCLI:
         print('-' * 50)
         self.listRefreshSerial()
         print('-' * 50)
-        print('Type \'refresh\' to refresh port')
+        print('[ CLI_PROG ] ' + 'Type \'refresh\' to refresh port')
         try:
-            __user_input = input('Input ID from listed port (Leave blank if first from list): ').strip()
+            __user_input = input('[ CLI_PROG ] ' + 'Input ID from listed port (Leave blank if first from list): ')\
+                .strip()
         except KeyboardInterrupt:
             return
         if not __user_input:
@@ -81,7 +128,7 @@ class ProgFullStackCLI:
                 self.getPortBaudFromUser()
         if __goto_baud:
             try:
-                __user_input = input('Input Baudrate (Leave blank if 115200): ').strip()
+                __user_input = input('[ CLI_PROG ] ' + 'Input Baudrate (Leave blank if 115200): ').strip()
             except KeyboardInterrupt:
                 return
             if __user_input:
@@ -99,21 +146,32 @@ class ProgFullStackCLI:
             self.com_portname = __port_name
             self.com_baudrate = __baudrate
             ilib.scrollConsole()
-            print('Set {} as ComPort with baudrate={}'.format(self.com_portname, self.com_baudrate))
+            print('[ CLI_PROG ] ' + 'Set {} as ComPort with baudrate={}'.format(self.com_portname, self.com_baudrate))
             print('=' * 50)
             print()
         return
 
+    def stop(self):
+        self.thread_mpl.stop()
 
-if __name__ == '__main__':
+def run_prog():
     print('[ CLI_PROG ] ' + 'Start of Program')
     print()
     prog_preferences = ilib.PreferencesData('data_handler/cugs_preferences.json').getPreferences()
     data_format = prog_preferences['data_format']
     leading_header = prog_preferences['header']
-    prog = ProgFullStackCLI(data_format, header=leading_header)
+    prog = ProgFullStackCLI(data_format, header=leading_header, use_np=True)
     prog.start()
 
+    try:
+        prog.stop()
+        print('[ CLI_PROG ] ' + 'Threads stopped successfully.')
+    except AttributeError:
+        print('[ CLI_PROG ] ' + 'Tried to stop threads but the threads does not exist.')
     prog.com.disconnect()
     print()
     print('[ CLI_PROG ] ' + 'Program exited with code ' + str(prog.exit_code))
+
+
+if __name__ == '__main__':
+    run_prog()
