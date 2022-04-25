@@ -5,7 +5,7 @@ from collections import OrderedDict as _Dict
 
 class Parser:
     def __init__(self, data_format: _Union[list, tuple, dict, set], /, *,
-                 header: str = 'PSG', delimiter: str = ',', use_np=False) -> None:
+                 header: str = 'PSG', delimiter: str = ',', use_np=True) -> None:
         """
         A parser object
 

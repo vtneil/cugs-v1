@@ -8,6 +8,7 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
+from PySide6.QtCharts import QChartView
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -21,8 +22,6 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QMenu, QMenuBar, QPlainTextEdit, QPushButton,
     QSizePolicy, QStatusBar, QTabWidget, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
-
-from gui.mplwidget import MplWidget
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -540,7 +539,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addWidget(self.lb_main1)
 
-        self.mpl_c1 = MplWidget(self.fr_main1)
+        self.mpl_c1 = QChartView(self.fr_main1)
         self.mpl_c1.setObjectName(u"mpl_c1")
 
         self.verticalLayout_19.addWidget(self.mpl_c1)
@@ -564,7 +563,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_20.addWidget(self.lb_main2)
 
-        self.mpl_c2 = QWidget(self.fr_main2)
+        self.mpl_c2 = QChartView(self.fr_main2)
         self.mpl_c2.setObjectName(u"mpl_c2")
 
         self.verticalLayout_20.addWidget(self.mpl_c2)
@@ -599,7 +598,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.lb_sub1)
 
-        self.mpl_c3 = QWidget(self.fr_sub1)
+        self.mpl_c3 = QChartView(self.fr_sub1)
         self.mpl_c3.setObjectName(u"mpl_c3")
 
         self.verticalLayout_16.addWidget(self.mpl_c3)
@@ -623,7 +622,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.lb_sub2)
 
-        self.mpl_c4 = QWidget(self.fr_sub2)
+        self.mpl_c4 = QChartView(self.fr_sub2)
         self.mpl_c4.setObjectName(u"mpl_c4")
 
         self.verticalLayout_17.addWidget(self.mpl_c4)
@@ -647,7 +646,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_18.addWidget(self.lb_sub3)
 
-        self.mpl_c5 = QWidget(self.fr_sub3)
+        self.mpl_c5 = QChartView(self.fr_sub3)
         self.mpl_c5.setObjectName(u"mpl_c5")
 
         self.verticalLayout_18.addWidget(self.mpl_c5)
@@ -685,7 +684,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_23.addWidget(self.lb_sub4)
 
-        self.mpl_c6 = QWidget(self.fr_sub1_2)
+        self.mpl_c6 = QChartView(self.fr_sub1_2)
         self.mpl_c6.setObjectName(u"mpl_c6")
 
         self.verticalLayout_23.addWidget(self.mpl_c6)
@@ -709,7 +708,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_26.addWidget(self.lb_sub5)
 
-        self.mpl_c7 = QWidget(self.fr_sub3_3)
+        self.mpl_c7 = QChartView(self.fr_sub3_3)
         self.mpl_c7.setObjectName(u"mpl_c7")
 
         self.verticalLayout_26.addWidget(self.mpl_c7)
@@ -733,7 +732,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_24.addWidget(self.lb_sub6)
 
-        self.mpl_c8 = QWidget(self.fr_sub2_2)
+        self.mpl_c8 = QChartView(self.fr_sub2_2)
         self.mpl_c8.setObjectName(u"mpl_c8")
 
         self.verticalLayout_24.addWidget(self.mpl_c8)
@@ -757,7 +756,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_25.addWidget(self.lb_sub7)
 
-        self.mpl_c9 = QWidget(self.fr_sub3_2)
+        self.mpl_c9 = QChartView(self.fr_sub3_2)
         self.mpl_c9.setObjectName(u"mpl_c9")
 
         self.verticalLayout_25.addWidget(self.mpl_c9)

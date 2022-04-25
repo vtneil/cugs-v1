@@ -108,81 +108,80 @@ def reduceToN(data_list: _Union[tuple, list, dict, _np.ndarray], N: int = 50, *,
     :param weight: int
     :param mode: 'cut' or 'squeeze'
     :param avg: 'avg', 'avgmin', 'avgmax' or 'minmax'
-    :param np: use numpy?
     :return:
     """
     if isinstance(data_list, _np.ndarray):
-        return _np.array([])
+        __data_list = list(data_list)
     else:
         __data_list = data_list
-        __length = len(__data_list)
-        __weight = weight
-        __N = N
-        __avg = avg
-        if __weight <= 1:
-            __weight = 2
-        __N_weight = int(__N // __weight)
-        while __N_weight < 1:
-            __N_weight += 1
+    __length = len(__data_list)
+    __weight = weight
+    __N = N
+    __avg = avg
+    if __weight <= 1:
+        __weight = 2
+    __N_weight = int(__N // __weight)
+    while __N_weight < 1:
+        __N_weight += 1
 
-        if __length <= __N:
-            return __data_list
-        elif __N_weight < 1:
+    if __length <= __N:
+        return __data_list
+    elif __N_weight < 1:
+        return __data_list[-__N:]
+    else:
+        if mode == 'cut':
             return __data_list[-__N:]
-        else:
-            if mode == 'cut':
-                return __data_list[-__N:]
-            elif mode == 'squeeze':
-                if __N > 1:
-                    __to_cut = __data_list[:__N_weight - __N]
-                    __data_post_ = __data_list[-__N:]
-                    __empty = []
-                    __keep = __data_post_[__N_weight:]
-                    __dpp = (__length - __N) // __N_weight
-                    __delta = len(__to_cut) % __dpp
-                    __idx = 0
-                    if __avg == 'avg':
-                        while len(__empty) < __N_weight:
-                            if __idx < __N_weight - 1:
-                                __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
-                            else:
-                                __empty.append(sum(__to_cut[__idx * __dpp:]) / (__dpp + __delta))
-                            __idx += 1
-                    elif __avg == 'avgmax':
-                        while len(__empty) < __N_weight:
-                            if __idx < __N_weight - 1:
-                                __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
-                            else:
-                                __empty.append(max(__to_cut))
-                            __idx += 1
-                    elif __avg == 'avgmin':
-                        while len(__empty) < __N_weight:
-                            if __idx == 0:
-                                __empty.append(min(__to_cut))
-                            elif 0 < __idx < __N_weight - 1:
-                                __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
-                            else:
-                                __empty.append(sum(__to_cut[__idx * __dpp:]) / (__dpp + __delta))
-                            __idx += 1
-                    elif __avg == 'minmax':
-                        while len(__empty) < __N_weight:
-                            if __idx == 0:
-                                __empty.append(min(__to_cut))
-                            elif 0 < __idx < __N_weight - 1:
-                                __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
-                            else:
-                                __empty.append(max(__to_cut))
-                            __idx += 1
-                    else:
-                        raise AttributeError(
-                            '\'' + __avg + '\' is not in available avg. Available avgs are \'avg\', '
-                                           '\'avgmin\', \'avgmax\' and \'minmax\'.')
-                    return [*__empty, *__keep]
+        elif mode == 'squeeze':
+            if __N > 1:
+                __to_cut = __data_list[:__N_weight - __N]
+                __data_post_ = __data_list[-__N:]
+                __empty = []
+                __keep = __data_post_[__N_weight:]
+                __dpp = (__length - __N) // __N_weight
+                __delta = len(__to_cut) % __dpp
+                __idx = 0
+                if __avg == 'avg':
+                    while len(__empty) < __N_weight:
+                        if __idx < __N_weight - 1:
+                            __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
+                        else:
+                            __empty.append(sum(__to_cut[__idx * __dpp:]) / (__dpp + __delta))
+                        __idx += 1
+                elif __avg == 'avgmax':
+                    while len(__empty) < __N_weight:
+                        if __idx < __N_weight - 1:
+                            __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
+                        else:
+                            __empty.append(max(__to_cut))
+                        __idx += 1
+                elif __avg == 'avgmin':
+                    while len(__empty) < __N_weight:
+                        if __idx == 0:
+                            __empty.append(min(__to_cut))
+                        elif 0 < __idx < __N_weight - 1:
+                            __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
+                        else:
+                            __empty.append(sum(__to_cut[__idx * __dpp:]) / (__dpp + __delta))
+                        __idx += 1
+                elif __avg == 'minmax':
+                    while len(__empty) < __N_weight:
+                        if __idx == 0:
+                            __empty.append(min(__to_cut))
+                        elif 0 < __idx < __N_weight - 1:
+                            __empty.append(sum(__to_cut[__idx * __dpp:(1 + __idx) * __dpp]) / __dpp)
+                        else:
+                            __empty.append(max(__to_cut))
+                        __idx += 1
                 else:
-                    return __data_list
+                    raise AttributeError(
+                        '\'' + __avg + '\' is not in available avg. Available avgs are \'avg\', '
+                                       '\'avgmin\', \'avgmax\' and \'minmax\'.')
+                return [*__empty, *__keep]
             else:
-                raise AttributeError(
-                    '\'' + mode + '\' is not in available mode. Available modes are \'cut\' and \'squeeze\'.')
+                return __data_list
+        else:
+            raise AttributeError(
+                '\'' + mode + '\' is not in available mode. Available modes are \'cut\' and \'squeeze\'.')
 
 
 if __name__ == '__main__':

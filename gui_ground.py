@@ -24,7 +24,9 @@ class ProgFullStackGUI:
         self.com_baudrate = 0
         self.com_portname = ''
         self.serial_logger = None
-        self.mpl_mpl = None
+        self.start_mission_stat = False
+        self.pause_data = False
+
         self.func_list = [
             # ilib.wrapper(print, [], {}),
             ilib.wrapper(ilib.printStyled, fg='red', bg='white', style='bold'),
@@ -49,12 +51,10 @@ class ProgFullStackGUI:
             self.ui_main.mpl_c9
         ]
 
-        self.mpl_canvas = [ilib.MplCanvasQt(elem_mpl) for elem_mpl in self.mpl_widgets]
+        self.testUpdatePlot()
 
     def start(self):
         self.ui_main.show()
-        self.testUpdateMpl(self.mpl_canvas[0])
-        self.mpl_canvas[0].clearCanvas()
         return
 
     def connectButons(self) -> None:
@@ -69,7 +69,6 @@ class ProgFullStackGUI:
     def updateButtonsLogic(self) -> None:
         self.start_mission_stat = self.ui_main.btn_start_mission.isChecked()
         self.pause_data = self.ui_main.btn_start_pause_data.isChecked()
-
         return
 
     def setSerialDropDown(self) -> None:
@@ -94,23 +93,10 @@ class ProgFullStackGUI:
     def startMission(self) -> None:
         return
 
-    #### TEST ####
-    def testUpdateMpl(self, mpl_widget):
-        fs = 500
-        f = random.randint(1, 100)
-        ts = 1 / fs
-        length_of_signal = 100
-        t = np.linspace(0, 1, length_of_signal)
-
-        cosinus_signal = np.cos(2 * np.pi * f * t)
-        sinus_signal = np.sin(2 * np.pi * f * t)
-
-        mpl_widget.canvas.axes.clear()
-        mpl_widget.canvas.axes.plot(t, cosinus_signal)
-        mpl_widget.canvas.axes.plot(t, sinus_signal)
-        mpl_widget.canvas.axes.legend(('cosinus', 'sinus'), loc='upper right')
-        mpl_widget.canvas.axes.set_title('Cosinus - Sinus Signal')
-        mpl_widget.canvas.draw()
+    def testUpdatePlot(self):
+        self.c1 = ilib.PyQtPlot(self.ui_main.mpl_c1)
+        self.c1.plot(1, 1)
+        return
 
 
 def run_prog():

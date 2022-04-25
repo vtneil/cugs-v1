@@ -1,219 +1,154 @@
+import numpy as _np
 from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSplineSeries, QLineSeries
 from PySide6.QtGui import QColor, QPen, QPainter
 
 
-class PyQtCharts:
-    def __init__(self, ChartLayout: QChartView, ChartName='None (none)', UseScatter=False, UseSpline=True,
-                 Color=QColor(255, 255, 255), LegendVisible=False) -> None:
-        """
-        Create Custom QChart and Data Attributes Set Class
-        :param ChartLayout:
-        :param ChartName:
-        :param UseScatter:
-        :param UseSpline:
-        :param Color:
-        :param LegendVisible:
-        """
-        self.chart_layout = ChartLayout
-        self.chart_chart = QChart()
-        self.scatter_series = QScatterSeries()
-        self.chart_chart.createDefaultAxes()
-        self.x_axis = QValueAxis()
-        self.y_axis = QValueAxis()
+color_r = QColor(255, 0, 0)
+color_g = QColor(0, 255, 0)
+color_b = QColor(0, 0, 255)
 
-        self.legend_visible = LegendVisible
-        self.chart_name = ChartName
-        self.use_scatter = UseScatter
-        self.use_spline = UseSpline
+# Change ui QWidgets parent to QGraphicsView
+class PyQtPlot:
+    global color_r
+    global color_g
+    global color_b
 
-        self.is_dark = False
-        self.is_light = not self.is_dark
-        self.platform_name = ''
+    def __init__(self, ChartLayout: QChartView, ChartName: str = 'None (None)', *,
+                 Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None):
+        if line_type is None:
+            line_type = []
+        self.__legend = legend
+        self.__chart_name = ChartName
+        self.__color = Color
+        self.__bool_scatter = scatter
+        self.__line_list = list()
+        self.__chart_list = list()
 
-        self.x_data = []
-        self.y_data = []
-        self.y_alt1 = []
-        self.y_alt2 = []
-        self.x_new = 0
-        self.y_new = 0
-        self.y_new1 = 0
-        self.y_new2 = 0
-        self.x_min = 0
-        self.x_max = 10
-        self.y_min = 0
-        self.y_max = 10
-        self.y_min1 = 0
-        self.y_max1 = 1
-        self.y_min2 = 0
-        self.y_max2 = 1
+        self.color_r = color_r
+        self.color_g = color_g
+        self.color_b = color_b
 
-        self.color_r = QColor(255, 0, 0)
-        self.color_g = QColor(0, 255, 0)
-        self.color_b = QColor(0, 0, 255)
-        self.color = Color
-
-        self.pen_r = QPen(self.color_r)
-        self.pen_r.setWidth(2)
-        self.pen_g = QPen(self.color_g)
-        self.pen_g.setWidth(2)
-        self.pen_b = QPen(self.color_b)
-        self.pen_b.setWidth(2)
-        self.pen = QPen(self.color)
-
-        self.bg_light = QColor(255, 255, 255)
-        self.fg_light = QColor(21, 21, 21)
-        self.grid_light = QColor(230, 230, 230)
-
-        self.bg_dark = QColor(62, 67, 112)
-        self.fg_dark = QColor(203, 215, 255)
-        self.grid_dark = QColor(46, 49, 82)
-
-        self.bg = self.bg_dark
-        self.fg = self.fg_dark
-        self.grid = self.grid_dark
-
-        self.chart_layout.setRenderHint(QPainter.Antialiasing)
-        self.chart_chart.legend().setVisible(self.legend_visible)
-        self.chart_chart.setAnimationOptions(QChart.SeriesAnimations)
-        # self.chart_chart.setAnimationOptions(QChart.AllAnimations)
-        self.chart_chart.setTitle(self.chart_name)
-        self.chart_chart.setBackgroundVisible(True)
-        self.chart_chart.setBackgroundRoundness(12)
-        self.chart_chart.layout().setContentsMargins(0, 0, 0, 0)
-
-        self.chart_chart.setBackgroundBrush(self.bg)
-        self.chart_chart.setTitleBrush(self.fg)
-        self.x_axis.setLabelsBrush(self.fg)
-        self.x_axis.setGridLineColor(self.grid)
-        self.x_axis.setGridLineVisible(False)
-        self.y_axis.setLabelsBrush(self.fg)
-        self.y_axis.setGridLineColor(self.grid)
-        self.y_axis.setGridLineVisible(False)
-
-        self.x_axis.setRange(self.x_min, self.x_max)
-        self.y_axis.setRange(min(self.y_min, self.y_min1, self.y_min2), max(self.y_max, self.y_max1, self.y_max2))
-
-        if self.use_spline:
-            self.chart = QSplineSeries()
-            self.chart1 = QSplineSeries()
-            self.chart2 = QSplineSeries()
+        if line_type:
+            for __line_type in line_type:
+                if __line_type in ['line', 'spline']:
+                    self.__line_list.append(__line_type)
+                else:
+                    self.__line_list.append('line')
         else:
-            self.chart = QLineSeries()
-            self.chart1 = QLineSeries()
-            self.chart2 = QLineSeries()
+            self.__line_list.append('line')
 
-        self.chart.setPen(self.pen_r)
-        self.chart1.setPen(self.pen_g)
-        self.chart2.setPen(self.pen_b)
+        self.__y_len = len(self.__line_list)
 
-        self.chart_chart.addSeries(self.chart)
-        self.chart_chart.addSeries(self.chart1)
-        self.chart_chart.addSeries(self.chart2)
-        self.chart_chart.setAxisX(self.x_axis)
-        self.chart_chart.setAxisY(self.y_axis)
+        self.__pen_r = QPen(self.color_r)
+        self.__pen_r.setWidth(2)
+        self.__pen_g = QPen(self.color_g)
+        self.__pen_g.setWidth(2)
+        self.__pen_b = QPen(self.color_b)
+        self.__pen_b.setWidth(2)
+        self.__pen = QPen(self.__color)
 
-        if self.use_scatter:
-            self.scatter_series.setColor(self.color)
-            self.scatter_series.setMarkerSize(8)
-            self.chart_chart.addSeries(self.scatter_series)
+        self.__bg_light = QColor(255, 255, 255)
+        self.__fg_light = QColor(21, 21, 21)
+        self.__grid_light = QColor(230, 230, 230)
 
-        self.chart.attachAxis(self.x_axis)
-        self.chart.attachAxis(self.y_axis)
-        self.chart1.attachAxis(self.x_axis)
-        self.chart1.attachAxis(self.y_axis)
-        self.chart2.attachAxis(self.x_axis)
-        self.chart2.attachAxis(self.y_axis)
-        self.scatter_series.attachAxis(self.x_axis)
-        self.scatter_series.attachAxis(self.y_axis)
+        self.__bg_dark = QColor(62, 67, 112)
+        self.__fg_dark = QColor(203, 215, 255)
+        self.__grid_dark = QColor(46, 49, 82)
 
-        self.chart_layout.setChart(self.chart_chart)
+        self.__bg = self.__bg_light
+        self.__fg = self.__fg_light
+        self.__grid = self.__grid_light
 
-    def updateChart(self, x_new, y_new, y_new1=None, y_new2=None):
-        self.x_new = x_new
-        self.y_new = y_new
-        self.y_new1 = y_new1
-        self.y_new2 = y_new2
+        self.__chart_layout = ChartLayout
+        self.__chart_chart = QChart()
+        self.__chart_chart.createDefaultAxes()
+        self.__x_axis = QValueAxis()
+        self.__y_axis = QValueAxis()
 
-        self.chart.append(float(self.x_new), float(self.y_new))
-        self.x_data.append(float(self.x_new))
-        self.y_data.append(float(self.y_new))
+        self.__x_max = 1.0
+        self.__x_min = 0.0
+        self.__y_max = 1.0
+        self.__y_min = 0.0
 
-        if self.y_new1 is not None:
-            self.chart1.append(float(self.x_new), float(self.y_new1))
-            self.y_alt1.append(float(self.y_new1))
+        # self.__chart_layout.setRenderHint(QPainter.Antialiasing)
+        self.__chart_chart.legend().setVisible(self.__legend)
+        self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
+        self.__chart_chart.setTitle(self.__chart_name)
+        self.__chart_chart.setBackgroundVisible(True)
+        self.__chart_chart.setBackgroundRoundness(12)
+        self.__chart_chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.__chart_chart.setBackgroundBrush(self.__bg)
+        self.__chart_chart.setTitleBrush(self.__fg)
 
-        if self.y_new2 is not None:
-            self.chart2.append(float(self.x_new), float(self.y_new2))
-            self.y_alt2.append(float(self.y_new2))
-
-        if self.use_scatter:
-            self.scatter_series.append(float(self.x_new), float(self.y_new))
-
+        self.__x_axis.setLabelsBrush(self.__fg)
+        self.__x_axis.setGridLineColor(self.__grid)
+        self.__x_axis.setGridLineVisible(False)
+        self.__y_axis.setLabelsBrush(self.__fg)
+        self.__y_axis.setGridLineColor(self.__grid)
+        self.__y_axis.setGridLineVisible(False)
         self.updateMinMax()
 
-        self.chart_layout.setChart(self.chart_chart)
+        self.__chart_chart.setAxisX(self.__x_axis)
+        self.__chart_chart.setAxisY(self.__y_axis)
 
-    def updateMinMax(self) -> None:
-        """
-        Update minimum and maximum value of chart
+        self.__x_data = _np.array([], dtype='float')
+        self.__y_data = _np.array([[]], dtype='float')
 
-        :return:
-        """
-        self.x_axis.setRange(min(self.x_data), max(self.x_data) + 0.2 * abs(max(self.x_data)))
-        self.y_axis.setRange(
-            min(self.y_data + self.y_alt1 + self.y_alt2) - 0.2 * abs(min(self.y_data + self.y_alt1 + self.y_alt2)),
-            max(self.y_data + self.y_alt1 + self.y_alt2) + 0.2 * abs(max(self.y_data + self.y_alt1 + self.y_alt2)))
+    def plot(self, x_new, *y_new):
+        y_arr = _np.array([y_new], dtype='float')[:, :self.__y_len]
+        if not (self.__x_data.size and self.__y_data.size):
+            for __line_type in self.__line_list:
+                if __line_type == 'line':
+                    self.__chart_list.append(QLineSeries())
+                elif __line_type == 'spline':
+                    self.__chart_list.append(QSplineSeries())
+            for i, __chart in enumerate(self.__chart_list):
+                if i == 0:
+                    __chart.setPen(self.__pen_r)
+                elif i == 1:
+                    __chart.setPen(self.__pen_g)
+                else:
+                    __chart.setPen(self.__pen_b)
+                self.__chart_chart.addSeries(__chart)
+                __chart.attachAxis(self.__x_axis)
+                __chart.attachAxis(self.__y_axis)
+            self.__chart_layout.setChart(self.__chart_chart)
 
-    def clearChart(self) -> None:
-        """
-        Clear chart
+        self.__x_data = _np.concatenate(self.__x_data, x_new)
+        self.__y_data = _np.concatenate(self.__y_data, y_arr.T)
 
-        :return:
-        """
-        self.chart.clear()
-        self.chart1.clear()
-        self.chart2.clear()
-        self.scatter_series.clear()
+        for __y, __chart in zip(y_arr[0], self.__chart_list):
+            __chart.append(float(x_new), float(__y))
 
-        self.chart_layout.setChart(self.chart_chart)
-
-    def popChart(self) -> None:
-        """
-        Remove latest data from the chart
-
-        :return:
-        """
-        if len(self.x_data) > 1:
-            self.chart.remove(self.x_new, self.y_new)
-            self.scatter_series.remove(self.x_new, self.y_new)
-
-            if self.y_new1 is not None:
-                self.chart1.remove(self.x_new, self.y_new1)
-
-            if self.y_new2 is not None:
-                self.chart2.remove(self.x_new, self.y_new2)
-
-            self.x_data.pop()
-            self.x_new = self.x_data[len(self.x_data) - 1]
-
-        if len(self.y_data) > 1:
-            self.y_data.pop()
-            self.y_new = self.y_data[len(self.y_data) - 1]
-
-        if len(self.y_alt1) > 1:
-            self.y_alt1.pop()
-            self.y_new1 = self.y_alt1[len(self.y_alt1) - 1]
-
-        if len(self.y_alt2) > 1:
-            self.y_alt2.pop()
-            self.y_new2 = self.y_alt2[len(self.y_alt2) - 1]
-
-        if len(self.x_data) > 1:
-            self.updateMinMax()
-            pass
+        if x_new > self.__x_max:
+            self.__x_max = x_new
+        n_y_nax = _np.max(y_arr)
+        if n_y_nax > self.__y_max:
+            self.__y_max = n_y_nax
+        self.updateMinMax()
 
         return
 
+    def updateMinMax(self):
+        self.__x_axis.setRange(self.__x_min, self.__x_max)
+        self.__y_axis.setRange(self.__y_min, self.__y_max)
+        return
 
-if __name__ == '__main__':
-    pass
+    def clear(self):
+        for __chart in self.__chart_list:
+            __chart.clear()
+        self.__x_data = _np.array([], dtype='float')
+        self.__y_data = _np.array([[]], dtype='float')
+
+        return
+
+    def pop(self):
+        if self.__x_data.size > 0:
+            for __y, __chart in zip(self.__y_data, self.__chart_list):
+                __chart.remove(self.__x_data[-1], __y[-1])
+            self.__x_data = _np.delete(self.__x_data, -1)
+            self.__y_data = _np.delete(self.__y_data, -1, axis=1)
+            self.__x_max = _np.max(self.__x_data)
+            self.__y_max = _np.max(self.__y_data)
+            self.updateMinMax()
+        return

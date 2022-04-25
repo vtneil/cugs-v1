@@ -1301,7 +1301,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="MplWidget" name="mpl_c1" native="true"/>
+                 <widget class="QChartView" name="mpl_c1" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1355,7 +1355,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c2" native="true"/>
+                 <widget class="QChartView" name="mpl_c2" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1436,7 +1436,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c3" native="true"/>
+                 <widget class="QChartView" name="mpl_c3" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1490,7 +1490,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c4" native="true"/>
+                 <widget class="QChartView" name="mpl_c4" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1544,7 +1544,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c5" native="true"/>
+                 <widget class="QChartView" name="mpl_c5" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1625,7 +1625,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c6" native="true"/>
+                 <widget class="QChartView" name="mpl_c6" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1679,7 +1679,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c7" native="true"/>
+                 <widget class="QChartView" name="mpl_c7" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1733,7 +1733,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c8" native="true"/>
+                 <widget class="QChartView" name="mpl_c8" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1787,7 +1787,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="mpl_c9" native="true"/>
+                 <widget class="QChartView" name="mpl_c9" native="true"/>
                 </item>
                </layout>
               </widget>
@@ -1996,9 +1996,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MplWidget</class>
+   <class>QChartView</class>
    <extends>QWidget</extends>
-   <header>gui.mplwidget</header>
+   <header>PySide6.QtCharts.QChartView</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

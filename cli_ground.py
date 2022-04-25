@@ -21,7 +21,6 @@ class ProgFullStackCLI:
         self.com_baudrate = 0
         self.com_portname = ''
         self.serial_logger = None
-        self.mpl_mpl = None
         self.func_list = [
             # ilib.wrapper(print, [], {}),
             ilib.wrapper(ilib.printStyled, fg='red', bg='white', style='bold'),
@@ -29,16 +28,10 @@ class ProgFullStackCLI:
         ]
 
         self.to_plot = []
-        self.dict_data_array = {}
+        self.dict_data_array = dict()
 
     def start(self) -> None:
         self.getPortBaudFromUser()
-        self.to_plot = [elem for elem in self.getMplLabelFromUser() if elem in self.data_format]
-        print(self.to_plot)
-        if self.to_plot:
-            # self.mpl_mpl = ilib.MplCanvasCli(*self.to_plot)
-            pass
-
         self.com.connect(self.com_portname, self.com_baudrate)
         self.serial_logger = ilib.LogSerial(self.com.device, header=self.header)
         self.backEnd()
@@ -82,20 +75,6 @@ class ProgFullStackCLI:
         self.com.refreshPortList()
         self.com.printPort()
         return
-
-    def getMplLabelFromUser(self) -> list:
-        print(', '.join(['[' + elem + ']' for elem in self.data_format]))
-        print('-' * 50)
-        print('[ CLI_PROG ] ' + 'If you don\'t want to plot any data, leave blank. Input without [ and ]')
-        try:
-            __user_input = input('[ CLI_PROG ] ' + 'Input data you want to plot, separated by a blank space: ') \
-                .strip().split()
-        except KeyboardInterrupt:
-            return []
-
-        print('=' * 50)
-
-        return __user_input
 
     def getPortBaudFromUser(self) -> None:
         __port_name = ''
