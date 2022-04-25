@@ -9,21 +9,20 @@
 ################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-                            QMetaObject, QObject, QPoint, QRect,
-                            QSize, QTime, QUrl, Qt)
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-                           QCursor, QFont, QFontDatabase, QGradient,
-                           QIcon, QImage, QKeySequence, QLinearGradient,
-                           QPainter, QPalette, QPixmap, QRadialGradient,
-                           QTransform)
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
-                               QHBoxLayout, QHeaderView, QLabel, QMainWindow,
-                               QMenu, QMenuBar, QPlainTextEdit, QPushButton,
-                               QSizePolicy, QStatusBar, QTabWidget, QTableWidget,
-                               QTableWidgetItem, QVBoxLayout, QWidget)
+    QHBoxLayout, QHeaderView, QLabel, QMainWindow,
+    QMenu, QMenuBar, QPlainTextEdit, QPushButton,
+    QSizePolicy, QStatusBar, QTabWidget, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget)
 
 from gui.mplwidget import MplWidget
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -59,6 +58,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.fr_data_capture_2 = QFrame(self.tab_serial)
         self.fr_data_capture_2.setObjectName(u"fr_data_capture_2")
+        self.fr_data_capture_2.setMaximumSize(QSize(650, 16777215))
         self.fr_data_capture_2.setFrameShape(QFrame.StyledPanel)
         self.fr_data_capture_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_8 = QVBoxLayout(self.fr_data_capture_2)
@@ -67,6 +67,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.fr_d_c_cmd_2 = QFrame(self.fr_data_capture_2)
         self.fr_d_c_cmd_2.setObjectName(u"fr_d_c_cmd_2")
+        self.fr_d_c_cmd_2.setMinimumSize(QSize(650, 0))
+        self.fr_d_c_cmd_2.setMaximumSize(QSize(650, 16777215))
         self.fr_d_c_cmd_2.setFrameShape(QFrame.StyledPanel)
         self.fr_d_c_cmd_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.fr_d_c_cmd_2)
@@ -75,6 +77,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.fr_serial_sel = QFrame(self.fr_d_c_cmd_2)
         self.fr_serial_sel.setObjectName(u"fr_serial_sel")
+        self.fr_serial_sel.setMinimumSize(QSize(350, 0))
+        self.fr_serial_sel.setMaximumSize(QSize(350, 16777215))
         self.fr_serial_sel.setFrameShape(QFrame.StyledPanel)
         self.fr_serial_sel.setFrameShadow(QFrame.Raised)
         self.verticalLayout_27 = QVBoxLayout(self.fr_serial_sel)
@@ -117,10 +121,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_27.addWidget(self.combo_baud)
 
+
         self.horizontalLayout_6.addWidget(self.fr_serial_sel)
 
         self.fr_serial_btn = QFrame(self.fr_d_c_cmd_2)
         self.fr_serial_btn.setObjectName(u"fr_serial_btn")
+        self.fr_serial_btn.setMinimumSize(QSize(0, 0))
+        self.fr_serial_btn.setMaximumSize(QSize(16777215, 16777215))
         self.fr_serial_btn.setFrameShape(QFrame.StyledPanel)
         self.fr_serial_btn.setFrameShadow(QFrame.Raised)
         self.verticalLayout_13 = QVBoxLayout(self.fr_serial_btn)
@@ -130,7 +137,7 @@ class Ui_MainWindow(object):
         self.btn_serial_connect = QPushButton(self.fr_serial_btn)
         self.btn_serial_connect.setObjectName(u"btn_serial_connect")
         self.btn_serial_connect.setMinimumSize(QSize(120, 40))
-        self.btn_serial_connect.setMaximumSize(QSize(400, 40))
+        self.btn_serial_connect.setMaximumSize(QSize(99999, 40))
         self.btn_serial_connect.setFont(font)
         self.btn_serial_connect.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_serial_connect.setCheckable(False)
@@ -171,7 +178,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7.addWidget(self.btn_serial_disconnect)
 
+
         self.verticalLayout_13.addWidget(self.fr_bot_btn)
+
 
         self.horizontalLayout_6.addWidget(self.fr_serial_btn)
 
@@ -196,7 +205,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9.addWidget(self.lb_fr_d_c_2)
 
+
         self.verticalLayout_8.addWidget(self.fr_d_c_name_2)
+
 
         self.horizontalLayout_3.addWidget(self.fr_data_capture_2)
 
@@ -219,6 +230,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.text_serial_info)
 
+
         self.verticalLayout_10.addWidget(self.fr_i_d_cmd_2)
 
         self.fr_i_d_name_2 = QFrame(self.fr_image_data_2)
@@ -237,7 +249,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.lb_fr_i_d_2)
 
+
         self.verticalLayout_10.addWidget(self.fr_i_d_name_2)
+
 
         self.horizontalLayout_3.addWidget(self.fr_image_data_2)
 
@@ -290,6 +304,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.cb_write_kml)
 
+
         self.horizontalLayout_4.addWidget(self.fr_cb_write)
 
         self.btn_start_mission = QPushButton(self.fr_m_c_cmd)
@@ -302,6 +317,7 @@ class Ui_MainWindow(object):
         self.btn_start_mission.setChecked(False)
 
         self.horizontalLayout_4.addWidget(self.btn_start_mission)
+
 
         self.verticalLayout_2.addWidget(self.fr_m_c_cmd)
 
@@ -321,7 +337,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.lb_fr_m_c)
 
+
         self.verticalLayout_2.addWidget(self.fr_m_c_name)
+
 
         self.horizontalLayout_2.addWidget(self.fr_mission_control)
 
@@ -352,6 +370,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.btn_start_pause_data)
 
+
         self.verticalLayout_5.addWidget(self.fr_d_c_cmd)
 
         self.fr_d_c_name = QFrame(self.fr_data_capture)
@@ -370,7 +389,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.lb_fr_d_c)
 
+
         self.verticalLayout_5.addWidget(self.fr_d_c_name)
+
 
         self.horizontalLayout_2.addWidget(self.fr_data_capture)
 
@@ -405,7 +426,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.lb_fr_i_d)
 
+
         self.verticalLayout_7.addWidget(self.fr_i_d_name)
+
 
         self.horizontalLayout_2.addWidget(self.fr_image_data)
 
@@ -459,6 +482,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.btn_chart_clear)
 
+
         self.horizontalLayout_13.addWidget(self.fr_graphics_cmd)
 
         self.horizontalLayout_13.setStretch(0, 6)
@@ -474,6 +498,7 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd.addTab(self.tab_sys, "")
 
         self.horizontalLayout.addWidget(self.tabWidget_Cmd)
+
 
         self.verticalLayout.addWidget(self.fr_cen_1)
 
@@ -520,6 +545,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addWidget(self.mpl_c1)
 
+
         self.horizontalLayout_12.addWidget(self.fr_main1)
 
         self.fr_main2 = QFrame(self.fr_main_chart)
@@ -543,7 +569,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_20.addWidget(self.mpl_c2)
 
+
         self.horizontalLayout_12.addWidget(self.fr_main2)
+
 
         self.verticalLayout_15.addWidget(self.fr_main_chart)
 
@@ -576,6 +604,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.mpl_c3)
 
+
         self.horizontalLayout_11.addWidget(self.fr_sub1)
 
         self.fr_sub2 = QFrame(self.fr_sub_chart)
@@ -599,6 +628,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.mpl_c4)
 
+
         self.horizontalLayout_11.addWidget(self.fr_sub2)
 
         self.fr_sub3 = QFrame(self.fr_sub_chart)
@@ -621,6 +651,7 @@ class Ui_MainWindow(object):
         self.mpl_c5.setObjectName(u"mpl_c5")
 
         self.verticalLayout_18.addWidget(self.mpl_c5)
+
 
         self.horizontalLayout_11.addWidget(self.fr_sub3)
 
@@ -659,6 +690,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_23.addWidget(self.mpl_c6)
 
+
         self.horizontalLayout_10.addWidget(self.fr_sub1_2)
 
         self.fr_sub3_3 = QFrame(self.fr_sub_diagram)
@@ -681,6 +713,7 @@ class Ui_MainWindow(object):
         self.mpl_c7.setObjectName(u"mpl_c7")
 
         self.verticalLayout_26.addWidget(self.mpl_c7)
+
 
         self.horizontalLayout_10.addWidget(self.fr_sub3_3)
 
@@ -705,6 +738,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_24.addWidget(self.mpl_c8)
 
+
         self.horizontalLayout_10.addWidget(self.fr_sub2_2)
 
         self.fr_sub3_2 = QFrame(self.fr_sub_diagram)
@@ -728,7 +762,9 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_25.addWidget(self.mpl_c9)
 
+
         self.horizontalLayout_10.addWidget(self.fr_sub3_2)
+
 
         self.verticalLayout_15.addWidget(self.fr_sub_diagram)
 
@@ -845,8 +881,8 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd.setCurrentIndex(0)
         self.tabWidget_Monitor.setCurrentIndex(1)
 
-        QMetaObject.connectSlotsByName(MainWindow)
 
+        QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -868,8 +904,7 @@ class Ui_MainWindow(object):
         self.lb_fr_d_c_2.setText(QCoreApplication.translate("MainWindow", u"Serial Device Selection", None))
         self.text_serial_info.setPlainText(QCoreApplication.translate("MainWindow", u"Serial Information Area!", None))
         self.lb_fr_i_d_2.setText(QCoreApplication.translate("MainWindow", u"Serial Information", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_serial),
-                                      QCoreApplication.translate("MainWindow", u"Serial Port Connection", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_serial), QCoreApplication.translate("MainWindow", u"Serial Port Connection", None))
         self.cb_write_log.setText(QCoreApplication.translate("MainWindow", u"Write Mission Log CSV", None))
         self.cb_write_kml.setText(QCoreApplication.translate("MainWindow", u"Write Google Earth KML", None))
         self.btn_start_mission.setText(QCoreApplication.translate("MainWindow", u"Start Mission", None))
@@ -877,18 +912,13 @@ class Ui_MainWindow(object):
         self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Incoming Data", None))
         self.lb_fr_d_c.setText(QCoreApplication.translate("MainWindow", u"Data Capture Control", None))
         self.lb_fr_i_d.setText(QCoreApplication.translate("MainWindow", u"Image Data (Coming soon!)", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_data),
-                                      QCoreApplication.translate("MainWindow", u"Data Acquisition", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_uplink),
-                                      QCoreApplication.translate("MainWindow", u"Uplink Command", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_data), QCoreApplication.translate("MainWindow", u"Data Acquisition", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_uplink), QCoreApplication.translate("MainWindow", u"Uplink Command", None))
         self.btn_chart_pop.setText(QCoreApplication.translate("MainWindow", u"Pop Chart (Does not affect data)", None))
         self.btn_chart_clear.setText(QCoreApplication.translate("MainWindow", u"Clear Chart", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_graphics),
-                                      QCoreApplication.translate("MainWindow", u"Graphics Settings", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sim),
-                                      QCoreApplication.translate("MainWindow", u"Simulation", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sys),
-                                      QCoreApplication.translate("MainWindow", u"System", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_graphics), QCoreApplication.translate("MainWindow", u"Graphics Settings", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sim), QCoreApplication.translate("MainWindow", u"Simulation", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sys), QCoreApplication.translate("MainWindow", u"System", None))
         self.lb_main1.setText(QCoreApplication.translate("MainWindow", u"MAIN1 CHART LABEL", None))
         self.lb_main2.setText(QCoreApplication.translate("MainWindow", u"MAIN2 CHART LABEL", None))
         self.lb_sub1.setText(QCoreApplication.translate("MainWindow", u"SUB1 CHART LABEL", None))
@@ -917,13 +947,12 @@ class Ui_MainWindow(object):
         self.table_kv_payload.setSortingEnabled(__sortingEnabled)
 
         self.text_serial_mon.setPlainText(QCoreApplication.translate("MainWindow", u"Serial Monitor Area!", None))
-        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_serial_mon),
-                                          QCoreApplication.translate("MainWindow", u"Serial Monitor", None))
+        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_serial_mon), QCoreApplication.translate("MainWindow", u"Serial Monitor", None))
         self.text_sys_log.setPlainText(QCoreApplication.translate("MainWindow", u"System Log Area!", None))
-        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_sys_log),
-                                          QCoreApplication.translate("MainWindow", u"System Log", None))
+        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_sys_log), QCoreApplication.translate("MainWindow", u"System Log", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
     # retranslateUi
+
