@@ -50,10 +50,11 @@ class ComPort:
         :return:
         """
         if selected_name:
-            self.port = self.port_dict[selected_name]
+            self.port = self.port_dict[selected_name.strip()]
             try:
                 self.device = _serial.Serial(self.port, baudrate=int(baud), timeout=60)
                 print('[LOG_SERIAL] ' + 'Device ' + self.port + ' is successfully connected!')
+                print('[LOG_SERIAL] ' + 'with baud rate=' + str(baud) + '.')
                 return True
             except Exception:
                 print('[LOG_SERIAL] ' + 'Unexpected Error. Can\'t connect to port or the port is already connected!')

@@ -2,17 +2,15 @@
 import numpy as _np
 import matplotlib as _mpl
 import threading as _threading
+import gui.mplwidget as mplwidget
 from typing import Union as _Union
-from dataclasses import dataclass
 from matplotlib import pyplot as _plt
 from matplotlib import animation as _animation
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as _FigureCanvasQTAgg
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as _NavigationToolbar
 from matplotlib.figure import Figure as _Figure
-# from PySide6.QtWidgets import QMainWindow as _QMainWindow
-# from PySide6.QtWidgets import QApplication as _QApplication
-# from PySide6.QtWidgets import QVBoxLayout as _QVBoxLayout
-# from PySide6.QtWidgets import QWidget as _QWidget
+from PySide6.QtWidgets import QMainWindow as _QMainWindow
+from PySide6.QtWidgets import QApplication as _QApplication
+from PySide6.QtWidgets import QVBoxLayout as _QVBoxLayout
+from PySide6.QtWidgets import QWidget as _QWidget
 
 _mpl.use('QtAgg')
 _plt.style.use('bmh')
@@ -37,7 +35,7 @@ class MplDataClass:
             self.y_data = []
 
     def appendX(self, to_append):
-        if(isinstance(self.x_data, _np.ndarray)):
+        if (isinstance(self.x_data, _np.ndarray)):
             self.x_data = _np.append(self.x_data, to_append)
         else:
             self.x_data.append(to_append)
@@ -45,7 +43,7 @@ class MplDataClass:
 
     def appendY(self, *to_append):
         for i, __arr, __a in enumerate(zip(self.y_data, to_append)):
-            if(isinstance(self.y_data, _np.ndarray)):
+            if (isinstance(self.y_data, _np.ndarray)):
                 self.y_data[i] = _np.append(__arr, __a)
             else:
                 self.y_data[i].append(__a)
@@ -68,7 +66,7 @@ class MplCanvasCli:
         self.__use_np = use_np
         self.__data_x = _np.array([])
         self.__data_y = [_np.array([])]
-        self.__ani = _animation.FuncAnimation(_plt.gcf(), self.frontEndPlot, interval=self.__interval)
+        self.__ani = _animation.FuncAnimation(_plt.gcf(), self.frontEndPlot, interval=self.__interval, repeat=False)
         _plt.tight_layout()
         _plt.show()
 
@@ -106,6 +104,7 @@ class MplDataFetcher(_threading.Thread):
     MplDataFetcher (Upcoming)
 
     """
+
     def __init__(self, DataClass=MplDataClass, interval=500):
         _threading.Thread.__init__(self)
         self.__data_class = DataClass
@@ -119,8 +118,7 @@ class MplDataFetcher(_threading.Thread):
             pass
 
 
-
-class MplCanvasQt(_FigureCanvasQTAgg):
+class MplCanvasQt(mplwidget.MplWidget):
     def __init__(self, parent=None, width=5, height=4, dpi=100, use_np: bool = False, reduce_func=None) -> None:
         """
         Matplotlib class for PySide6 (Upcoming)
@@ -133,26 +131,27 @@ class MplCanvasQt(_FigureCanvasQTAgg):
         self.__canvas_width = width
         self.__canvas_height = height
         self.__canvas_dpi = dpi
-        self.__fig = _Figure(figsize=(self.__canvas_width, self.__canvas_height), dpi=self.__canvas_dpi)
-        self.__axes = self.__fig.add_subplot(111)
         self.__reduce_func = reduce_func
-        super(MplCanvasQt, self).__init__(self.__fig)
+        self.__use_np = use_np
+
+        mplwidget.MplWidget.__init__(self, parent, self.__canvas_width, self.__canvas_height, self.__canvas_dpi)
 
     def plotAll(self, data_x: _Union[list, _np.ndarray], data_y: _Union[list, _np.ndarray], mode: str = None):
         if mode:
-            self.__axes.plot(data_x, data_y, mode)
+            self.canvas.axes.plot(data_x, data_y, mode)
         else:
-            self.__axes.plot(data_x, data_y)
+            self.canvas.axes.plot(data_x, data_y)
 
     def updatePlot(self, data_x: _Union[list, _np.ndarray], data_y: _Union[list, _np.ndarray]):
         self.clearCanvas()
         self.plotAll(data_x, data_y, 'r')
-        self.__axes.draw()
+        self.canvas.axes.draw()
 
     def clearCanvas(self):
-        self.__axes.cla()
+        self.canvas.axes.cla()
 
 
 if __name__ == '__main__':
     mplcli = MplCanvasCli('xxx')
     mplcli.updatePlot(_np.array([1, 2, 3, 4, 5]), _np.array([3, 5, 8, 9, 1]))
+    # _ = input()

@@ -52,7 +52,7 @@ class ProgFullStackCLI:
         __data_raw = _get_data_from_serial
         __data_dict = self.parser.parseData(__data_raw)
         print(', '.join(['{}: {}'.format(ilib.strStyled(k, style='bold', end=''), v) for k, v in __data_dict.items()]))
-        #func keep data to total dict with numpy or list within dict
+        # func keep data to total dict with numpy or list within dict
         print('\n')
         __coord = ilib.Coordinate(
             latitude=__data_dict['gps_lat'],
@@ -88,7 +88,7 @@ class ProgFullStackCLI:
         print('-' * 50)
         print('[ CLI_PROG ] ' + 'If you don\'t want to plot any data, leave blank. Input without [ and ]')
         try:
-            __user_input = input('[ CLI_PROG ] ' + 'Input data you want to plot, separated by a blank space: ')\
+            __user_input = input('[ CLI_PROG ] ' + 'Input data you want to plot, separated by a blank space: ') \
                 .strip().split()
         except KeyboardInterrupt:
             return []
@@ -107,7 +107,7 @@ class ProgFullStackCLI:
         print('-' * 50)
         print('[ CLI_PROG ] ' + 'Type \'refresh\' to refresh port')
         try:
-            __user_input = input('[ CLI_PROG ] ' + 'Input ID from listed port (Leave blank if first from list): ')\
+            __user_input = input('[ CLI_PROG ] ' + 'Input ID from listed port (Leave blank if first from list): ') \
                 .strip()
         except KeyboardInterrupt:
             return
@@ -152,7 +152,8 @@ class ProgFullStackCLI:
         return
 
     def stop(self):
-        self.thread_mpl.stop()
+        return
+
 
 def run_prog():
     print('[ CLI_PROG ] ' + 'Start of Program')
@@ -171,6 +172,8 @@ def run_prog():
     prog.com.disconnect()
     print()
     print('[ CLI_PROG ] ' + 'Program exited with code ' + str(prog.exit_code))
+
+    return prog.exit_code
 
 
 if __name__ == '__main__':

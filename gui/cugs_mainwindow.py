@@ -8,20 +8,22 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCharts import QChartView
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
+                            QMetaObject, QObject, QPoint, QRect,
+                            QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-    QCursor, QFont, QFontDatabase, QGradient,
-    QIcon, QImage, QKeySequence, QLinearGradient,
-    QPainter, QPalette, QPixmap, QRadialGradient,
-    QTransform)
+                           QCursor, QFont, QFontDatabase, QGradient,
+                           QIcon, QImage, QKeySequence, QLinearGradient,
+                           QPainter, QPalette, QPixmap, QRadialGradient,
+                           QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
-    QHBoxLayout, QHeaderView, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPlainTextEdit, QPushButton,
-    QSizePolicy, QStatusBar, QTabWidget, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+                               QHBoxLayout, QHeaderView, QLabel, QMainWindow,
+                               QMenu, QMenuBar, QPlainTextEdit, QPushButton,
+                               QSizePolicy, QStatusBar, QTabWidget, QTableWidget,
+                               QTableWidgetItem, QVBoxLayout, QWidget)
+
+from gui.mplwidget import MplWidget
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -49,243 +51,6 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd = QTabWidget(self.fr_cen_1)
         self.tabWidget_Cmd.setObjectName(u"tabWidget_Cmd")
         self.tabWidget_Cmd.setTabPosition(QTabWidget.North)
-        self.tab_data = QWidget()
-        self.tab_data.setObjectName(u"tab_data")
-        self.horizontalLayout_2 = QHBoxLayout(self.tab_data)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.fr_mission_control = QFrame(self.tab_data)
-        self.fr_mission_control.setObjectName(u"fr_mission_control")
-        self.fr_mission_control.setFrameShape(QFrame.StyledPanel)
-        self.fr_mission_control.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.fr_mission_control)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.fr_m_c_cmd = QFrame(self.fr_mission_control)
-        self.fr_m_c_cmd.setObjectName(u"fr_m_c_cmd")
-        self.fr_m_c_cmd.setFrameShape(QFrame.StyledPanel)
-        self.fr_m_c_cmd.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_4 = QHBoxLayout(self.fr_m_c_cmd)
-        self.horizontalLayout_4.setSpacing(0)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(20, 0, 20, 0)
-        self.fr_cb_write = QFrame(self.fr_m_c_cmd)
-        self.fr_cb_write.setObjectName(u"fr_cb_write")
-        self.fr_cb_write.setFrameShape(QFrame.StyledPanel)
-        self.fr_cb_write.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_12 = QVBoxLayout(self.fr_cb_write)
-        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.cb_write_log = QCheckBox(self.fr_cb_write)
-        self.cb_write_log.setObjectName(u"cb_write_log")
-        font = QFont()
-        font.setPointSize(12)
-        self.cb_write_log.setFont(font)
-        self.cb_write_log.setCursor(QCursor(Qt.PointingHandCursor))
-        self.cb_write_log.setChecked(True)
-
-        self.verticalLayout_12.addWidget(self.cb_write_log)
-
-        self.cb_write_kml = QCheckBox(self.fr_cb_write)
-        self.cb_write_kml.setObjectName(u"cb_write_kml")
-        self.cb_write_kml.setFont(font)
-        self.cb_write_kml.setCursor(QCursor(Qt.PointingHandCursor))
-        self.cb_write_kml.setChecked(True)
-
-        self.verticalLayout_12.addWidget(self.cb_write_kml)
-
-
-        self.horizontalLayout_4.addWidget(self.fr_cb_write)
-
-        self.btn_start_mission = QPushButton(self.fr_m_c_cmd)
-        self.btn_start_mission.setObjectName(u"btn_start_mission")
-        self.btn_start_mission.setMinimumSize(QSize(90, 90))
-        self.btn_start_mission.setMaximumSize(QSize(120, 90))
-        font1 = QFont()
-        font1.setPointSize(10)
-        font1.setBold(True)
-        self.btn_start_mission.setFont(font1)
-        self.btn_start_mission.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_start_mission.setCheckable(True)
-        self.btn_start_mission.setChecked(False)
-
-        self.horizontalLayout_4.addWidget(self.btn_start_mission)
-
-
-        self.verticalLayout_2.addWidget(self.fr_m_c_cmd)
-
-        self.fr_m_c_name = QFrame(self.fr_mission_control)
-        self.fr_m_c_name.setObjectName(u"fr_m_c_name")
-        self.fr_m_c_name.setMaximumSize(QSize(16777215, 20))
-        self.fr_m_c_name.setFrameShape(QFrame.StyledPanel)
-        self.fr_m_c_name.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.fr_m_c_name)
-        self.verticalLayout_3.setSpacing(0)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.lb_fr_m_c = QLabel(self.fr_m_c_name)
-        self.lb_fr_m_c.setObjectName(u"lb_fr_m_c")
-        font2 = QFont()
-        font2.setPointSize(10)
-        self.lb_fr_m_c.setFont(font2)
-        self.lb_fr_m_c.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_3.addWidget(self.lb_fr_m_c)
-
-
-        self.verticalLayout_2.addWidget(self.fr_m_c_name)
-
-
-        self.horizontalLayout_2.addWidget(self.fr_mission_control)
-
-        self.fr_data_capture = QFrame(self.tab_data)
-        self.fr_data_capture.setObjectName(u"fr_data_capture")
-        self.fr_data_capture.setFrameShape(QFrame.StyledPanel)
-        self.fr_data_capture.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_5 = QVBoxLayout(self.fr_data_capture)
-        self.verticalLayout_5.setSpacing(0)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.fr_d_c_cmd = QFrame(self.fr_data_capture)
-        self.fr_d_c_cmd.setObjectName(u"fr_d_c_cmd")
-        self.fr_d_c_cmd.setFrameShape(QFrame.StyledPanel)
-        self.fr_d_c_cmd.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_5 = QHBoxLayout(self.fr_d_c_cmd)
-        self.horizontalLayout_5.setSpacing(0)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.horizontalLayout_5.setContentsMargins(20, 0, 20, 0)
-        self.btn_start_pause_data = QPushButton(self.fr_d_c_cmd)
-        self.btn_start_pause_data.setObjectName(u"btn_start_pause_data")
-        self.btn_start_pause_data.setMinimumSize(QSize(100, 90))
-        self.btn_start_pause_data.setMaximumSize(QSize(300, 90))
-        self.btn_start_pause_data.setFont(font1)
-        self.btn_start_pause_data.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_start_pause_data.setCheckable(True)
-        self.btn_start_pause_data.setChecked(False)
-
-        self.horizontalLayout_5.addWidget(self.btn_start_pause_data)
-
-
-        self.verticalLayout_5.addWidget(self.fr_d_c_cmd)
-
-        self.fr_d_c_name = QFrame(self.fr_data_capture)
-        self.fr_d_c_name.setObjectName(u"fr_d_c_name")
-        self.fr_d_c_name.setMaximumSize(QSize(16777215, 20))
-        self.fr_d_c_name.setFrameShape(QFrame.StyledPanel)
-        self.fr_d_c_name.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_4 = QVBoxLayout(self.fr_d_c_name)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.lb_fr_d_c = QLabel(self.fr_d_c_name)
-        self.lb_fr_d_c.setObjectName(u"lb_fr_d_c")
-        self.lb_fr_d_c.setFont(font2)
-        self.lb_fr_d_c.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_4.addWidget(self.lb_fr_d_c)
-
-
-        self.verticalLayout_5.addWidget(self.fr_d_c_name)
-
-
-        self.horizontalLayout_2.addWidget(self.fr_data_capture)
-
-        self.fr_image_data = QFrame(self.tab_data)
-        self.fr_image_data.setObjectName(u"fr_image_data")
-        self.fr_image_data.setFrameShape(QFrame.StyledPanel)
-        self.fr_image_data.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_7 = QVBoxLayout(self.fr_image_data)
-        self.verticalLayout_7.setSpacing(0)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.fr_i_d_cmd = QFrame(self.fr_image_data)
-        self.fr_i_d_cmd.setObjectName(u"fr_i_d_cmd")
-        self.fr_i_d_cmd.setFrameShape(QFrame.StyledPanel)
-        self.fr_i_d_cmd.setFrameShadow(QFrame.Raised)
-
-        self.verticalLayout_7.addWidget(self.fr_i_d_cmd)
-
-        self.fr_i_d_name = QFrame(self.fr_image_data)
-        self.fr_i_d_name.setObjectName(u"fr_i_d_name")
-        self.fr_i_d_name.setMaximumSize(QSize(16777215, 20))
-        self.fr_i_d_name.setFrameShape(QFrame.StyledPanel)
-        self.fr_i_d_name.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_6 = QVBoxLayout(self.fr_i_d_name)
-        self.verticalLayout_6.setSpacing(0)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.lb_fr_i_d = QLabel(self.fr_i_d_name)
-        self.lb_fr_i_d.setObjectName(u"lb_fr_i_d")
-        self.lb_fr_i_d.setFont(font2)
-        self.lb_fr_i_d.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_6.addWidget(self.lb_fr_i_d)
-
-
-        self.verticalLayout_7.addWidget(self.fr_i_d_name)
-
-
-        self.horizontalLayout_2.addWidget(self.fr_image_data)
-
-        self.horizontalLayout_2.setStretch(0, 3)
-        self.horizontalLayout_2.setStretch(1, 2)
-        self.horizontalLayout_2.setStretch(2, 2)
-        self.tabWidget_Cmd.addTab(self.tab_data, "")
-        self.tab_uplink = QWidget()
-        self.tab_uplink.setObjectName(u"tab_uplink")
-        self.tabWidget_Cmd.addTab(self.tab_uplink, "")
-        self.tab_graphics = QWidget()
-        self.tab_graphics.setObjectName(u"tab_graphics")
-        self.verticalLayout_28 = QVBoxLayout(self.tab_graphics)
-        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
-        self.fr_d_c_cmd_3 = QFrame(self.tab_graphics)
-        self.fr_d_c_cmd_3.setObjectName(u"fr_d_c_cmd_3")
-        self.fr_d_c_cmd_3.setFrameShape(QFrame.StyledPanel)
-        self.fr_d_c_cmd_3.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_13 = QHBoxLayout(self.fr_d_c_cmd_3)
-        self.horizontalLayout_13.setSpacing(0)
-        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
-        self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.fr_graphics_cmd = QFrame(self.fr_d_c_cmd_3)
-        self.fr_graphics_cmd.setObjectName(u"fr_graphics_cmd")
-        self.fr_graphics_cmd.setFrameShape(QFrame.StyledPanel)
-        self.fr_graphics_cmd.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_14 = QHBoxLayout(self.fr_graphics_cmd)
-        self.horizontalLayout_14.setSpacing(0)
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.horizontalLayout_14.setContentsMargins(20, 10, 20, 10)
-        self.btn_chart_pop = QPushButton(self.fr_graphics_cmd)
-        self.btn_chart_pop.setObjectName(u"btn_chart_pop")
-        self.btn_chart_pop.setMinimumSize(QSize(120, 40))
-        self.btn_chart_pop.setMaximumSize(QSize(400, 40))
-        self.btn_chart_pop.setFont(font1)
-        self.btn_chart_pop.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_chart_pop.setCheckable(False)
-        self.btn_chart_pop.setChecked(False)
-
-        self.horizontalLayout_14.addWidget(self.btn_chart_pop)
-
-        self.btn_chart_clear = QPushButton(self.fr_graphics_cmd)
-        self.btn_chart_clear.setObjectName(u"btn_chart_clear")
-        self.btn_chart_clear.setMinimumSize(QSize(120, 40))
-        self.btn_chart_clear.setMaximumSize(QSize(240, 40))
-        self.btn_chart_clear.setFont(font1)
-        self.btn_chart_clear.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_chart_clear.setStyleSheet(u"color: rgb(222, 0, 0);")
-        self.btn_chart_clear.setCheckable(False)
-        self.btn_chart_clear.setChecked(False)
-
-        self.horizontalLayout_14.addWidget(self.btn_chart_clear)
-
-
-        self.horizontalLayout_13.addWidget(self.fr_graphics_cmd)
-
-        self.horizontalLayout_13.setStretch(0, 6)
-
-        self.verticalLayout_28.addWidget(self.fr_d_c_cmd_3)
-
-        self.tabWidget_Cmd.addTab(self.tab_graphics, "")
         self.tab_serial = QWidget()
         self.tab_serial.setObjectName(u"tab_serial")
         self.horizontalLayout_3 = QHBoxLayout(self.tab_serial)
@@ -320,7 +85,10 @@ class Ui_MainWindow(object):
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(0, 20))
         self.label.setMaximumSize(QSize(16777215, 20))
-        self.label.setFont(font1)
+        font = QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        self.label.setFont(font)
 
         self.verticalLayout_27.addWidget(self.label)
 
@@ -333,7 +101,7 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setMinimumSize(QSize(0, 20))
         self.label_2.setMaximumSize(QSize(16777215, 20))
-        self.label_2.setFont(font1)
+        self.label_2.setFont(font)
 
         self.verticalLayout_27.addWidget(self.label_2)
 
@@ -349,7 +117,6 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_27.addWidget(self.combo_baud)
 
-
         self.horizontalLayout_6.addWidget(self.fr_serial_sel)
 
         self.fr_serial_btn = QFrame(self.fr_d_c_cmd_2)
@@ -364,7 +131,7 @@ class Ui_MainWindow(object):
         self.btn_serial_connect.setObjectName(u"btn_serial_connect")
         self.btn_serial_connect.setMinimumSize(QSize(120, 40))
         self.btn_serial_connect.setMaximumSize(QSize(400, 40))
-        self.btn_serial_connect.setFont(font1)
+        self.btn_serial_connect.setFont(font)
         self.btn_serial_connect.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_serial_connect.setCheckable(False)
         self.btn_serial_connect.setChecked(False)
@@ -383,7 +150,9 @@ class Ui_MainWindow(object):
         self.btn_serial_refresh.setObjectName(u"btn_serial_refresh")
         self.btn_serial_refresh.setMinimumSize(QSize(120, 40))
         self.btn_serial_refresh.setMaximumSize(QSize(240, 40))
-        self.btn_serial_refresh.setFont(font2)
+        font1 = QFont()
+        font1.setPointSize(10)
+        self.btn_serial_refresh.setFont(font1)
         self.btn_serial_refresh.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_serial_refresh.setCheckable(False)
         self.btn_serial_refresh.setChecked(False)
@@ -394,7 +163,7 @@ class Ui_MainWindow(object):
         self.btn_serial_disconnect.setObjectName(u"btn_serial_disconnect")
         self.btn_serial_disconnect.setMinimumSize(QSize(120, 40))
         self.btn_serial_disconnect.setMaximumSize(QSize(240, 40))
-        self.btn_serial_disconnect.setFont(font1)
+        self.btn_serial_disconnect.setFont(font)
         self.btn_serial_disconnect.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_serial_disconnect.setStyleSheet(u"color: rgb(222, 0, 0);")
         self.btn_serial_disconnect.setCheckable(False)
@@ -402,9 +171,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7.addWidget(self.btn_serial_disconnect)
 
-
         self.verticalLayout_13.addWidget(self.fr_bot_btn)
-
 
         self.horizontalLayout_6.addWidget(self.fr_serial_btn)
 
@@ -424,14 +191,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.lb_fr_d_c_2 = QLabel(self.fr_d_c_name_2)
         self.lb_fr_d_c_2.setObjectName(u"lb_fr_d_c_2")
-        self.lb_fr_d_c_2.setFont(font2)
+        self.lb_fr_d_c_2.setFont(font1)
         self.lb_fr_d_c_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_9.addWidget(self.lb_fr_d_c_2)
 
-
         self.verticalLayout_8.addWidget(self.fr_d_c_name_2)
-
 
         self.horizontalLayout_3.addWidget(self.fr_data_capture_2)
 
@@ -454,7 +219,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.text_serial_info)
 
-
         self.verticalLayout_10.addWidget(self.fr_i_d_cmd_2)
 
         self.fr_i_d_name_2 = QFrame(self.fr_image_data_2)
@@ -468,20 +232,240 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.lb_fr_i_d_2 = QLabel(self.fr_i_d_name_2)
         self.lb_fr_i_d_2.setObjectName(u"lb_fr_i_d_2")
-        self.lb_fr_i_d_2.setFont(font2)
+        self.lb_fr_i_d_2.setFont(font1)
         self.lb_fr_i_d_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_11.addWidget(self.lb_fr_i_d_2)
 
-
         self.verticalLayout_10.addWidget(self.fr_i_d_name_2)
-
 
         self.horizontalLayout_3.addWidget(self.fr_image_data_2)
 
         self.horizontalLayout_3.setStretch(0, 2)
         self.horizontalLayout_3.setStretch(1, 1)
         self.tabWidget_Cmd.addTab(self.tab_serial, "")
+        self.tab_data = QWidget()
+        self.tab_data.setObjectName(u"tab_data")
+        self.horizontalLayout_2 = QHBoxLayout(self.tab_data)
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.fr_mission_control = QFrame(self.tab_data)
+        self.fr_mission_control.setObjectName(u"fr_mission_control")
+        self.fr_mission_control.setFrameShape(QFrame.StyledPanel)
+        self.fr_mission_control.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.fr_mission_control)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.fr_m_c_cmd = QFrame(self.fr_mission_control)
+        self.fr_m_c_cmd.setObjectName(u"fr_m_c_cmd")
+        self.fr_m_c_cmd.setFrameShape(QFrame.StyledPanel)
+        self.fr_m_c_cmd.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.fr_m_c_cmd)
+        self.horizontalLayout_4.setSpacing(0)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(20, 0, 20, 0)
+        self.fr_cb_write = QFrame(self.fr_m_c_cmd)
+        self.fr_cb_write.setObjectName(u"fr_cb_write")
+        self.fr_cb_write.setFrameShape(QFrame.StyledPanel)
+        self.fr_cb_write.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_12 = QVBoxLayout(self.fr_cb_write)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.cb_write_log = QCheckBox(self.fr_cb_write)
+        self.cb_write_log.setObjectName(u"cb_write_log")
+        font2 = QFont()
+        font2.setPointSize(12)
+        self.cb_write_log.setFont(font2)
+        self.cb_write_log.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cb_write_log.setChecked(True)
+
+        self.verticalLayout_12.addWidget(self.cb_write_log)
+
+        self.cb_write_kml = QCheckBox(self.fr_cb_write)
+        self.cb_write_kml.setObjectName(u"cb_write_kml")
+        self.cb_write_kml.setFont(font2)
+        self.cb_write_kml.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cb_write_kml.setChecked(True)
+
+        self.verticalLayout_12.addWidget(self.cb_write_kml)
+
+        self.horizontalLayout_4.addWidget(self.fr_cb_write)
+
+        self.btn_start_mission = QPushButton(self.fr_m_c_cmd)
+        self.btn_start_mission.setObjectName(u"btn_start_mission")
+        self.btn_start_mission.setMinimumSize(QSize(90, 90))
+        self.btn_start_mission.setMaximumSize(QSize(120, 90))
+        self.btn_start_mission.setFont(font)
+        self.btn_start_mission.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_start_mission.setCheckable(True)
+        self.btn_start_mission.setChecked(False)
+
+        self.horizontalLayout_4.addWidget(self.btn_start_mission)
+
+        self.verticalLayout_2.addWidget(self.fr_m_c_cmd)
+
+        self.fr_m_c_name = QFrame(self.fr_mission_control)
+        self.fr_m_c_name.setObjectName(u"fr_m_c_name")
+        self.fr_m_c_name.setMaximumSize(QSize(16777215, 20))
+        self.fr_m_c_name.setFrameShape(QFrame.StyledPanel)
+        self.fr_m_c_name.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.fr_m_c_name)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.lb_fr_m_c = QLabel(self.fr_m_c_name)
+        self.lb_fr_m_c.setObjectName(u"lb_fr_m_c")
+        self.lb_fr_m_c.setFont(font1)
+        self.lb_fr_m_c.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.lb_fr_m_c)
+
+        self.verticalLayout_2.addWidget(self.fr_m_c_name)
+
+        self.horizontalLayout_2.addWidget(self.fr_mission_control)
+
+        self.fr_data_capture = QFrame(self.tab_data)
+        self.fr_data_capture.setObjectName(u"fr_data_capture")
+        self.fr_data_capture.setFrameShape(QFrame.StyledPanel)
+        self.fr_data_capture.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_5 = QVBoxLayout(self.fr_data_capture)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.fr_d_c_cmd = QFrame(self.fr_data_capture)
+        self.fr_d_c_cmd.setObjectName(u"fr_d_c_cmd")
+        self.fr_d_c_cmd.setFrameShape(QFrame.StyledPanel)
+        self.fr_d_c_cmd.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.fr_d_c_cmd)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(20, 0, 20, 0)
+        self.btn_start_pause_data = QPushButton(self.fr_d_c_cmd)
+        self.btn_start_pause_data.setObjectName(u"btn_start_pause_data")
+        self.btn_start_pause_data.setMinimumSize(QSize(100, 90))
+        self.btn_start_pause_data.setMaximumSize(QSize(300, 90))
+        self.btn_start_pause_data.setFont(font)
+        self.btn_start_pause_data.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_start_pause_data.setCheckable(True)
+        self.btn_start_pause_data.setChecked(False)
+
+        self.horizontalLayout_5.addWidget(self.btn_start_pause_data)
+
+        self.verticalLayout_5.addWidget(self.fr_d_c_cmd)
+
+        self.fr_d_c_name = QFrame(self.fr_data_capture)
+        self.fr_d_c_name.setObjectName(u"fr_d_c_name")
+        self.fr_d_c_name.setMaximumSize(QSize(16777215, 20))
+        self.fr_d_c_name.setFrameShape(QFrame.StyledPanel)
+        self.fr_d_c_name.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_4 = QVBoxLayout(self.fr_d_c_name)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.lb_fr_d_c = QLabel(self.fr_d_c_name)
+        self.lb_fr_d_c.setObjectName(u"lb_fr_d_c")
+        self.lb_fr_d_c.setFont(font1)
+        self.lb_fr_d_c.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_4.addWidget(self.lb_fr_d_c)
+
+        self.verticalLayout_5.addWidget(self.fr_d_c_name)
+
+        self.horizontalLayout_2.addWidget(self.fr_data_capture)
+
+        self.fr_image_data = QFrame(self.tab_data)
+        self.fr_image_data.setObjectName(u"fr_image_data")
+        self.fr_image_data.setFrameShape(QFrame.StyledPanel)
+        self.fr_image_data.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_7 = QVBoxLayout(self.fr_image_data)
+        self.verticalLayout_7.setSpacing(0)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.fr_i_d_cmd = QFrame(self.fr_image_data)
+        self.fr_i_d_cmd.setObjectName(u"fr_i_d_cmd")
+        self.fr_i_d_cmd.setFrameShape(QFrame.StyledPanel)
+        self.fr_i_d_cmd.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_7.addWidget(self.fr_i_d_cmd)
+
+        self.fr_i_d_name = QFrame(self.fr_image_data)
+        self.fr_i_d_name.setObjectName(u"fr_i_d_name")
+        self.fr_i_d_name.setMaximumSize(QSize(16777215, 20))
+        self.fr_i_d_name.setFrameShape(QFrame.StyledPanel)
+        self.fr_i_d_name.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_6 = QVBoxLayout(self.fr_i_d_name)
+        self.verticalLayout_6.setSpacing(0)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.lb_fr_i_d = QLabel(self.fr_i_d_name)
+        self.lb_fr_i_d.setObjectName(u"lb_fr_i_d")
+        self.lb_fr_i_d.setFont(font1)
+        self.lb_fr_i_d.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_6.addWidget(self.lb_fr_i_d)
+
+        self.verticalLayout_7.addWidget(self.fr_i_d_name)
+
+        self.horizontalLayout_2.addWidget(self.fr_image_data)
+
+        self.horizontalLayout_2.setStretch(0, 3)
+        self.horizontalLayout_2.setStretch(1, 2)
+        self.horizontalLayout_2.setStretch(2, 2)
+        self.tabWidget_Cmd.addTab(self.tab_data, "")
+        self.tab_uplink = QWidget()
+        self.tab_uplink.setObjectName(u"tab_uplink")
+        self.tabWidget_Cmd.addTab(self.tab_uplink, "")
+        self.tab_graphics = QWidget()
+        self.tab_graphics.setObjectName(u"tab_graphics")
+        self.verticalLayout_28 = QVBoxLayout(self.tab_graphics)
+        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
+        self.fr_d_c_cmd_3 = QFrame(self.tab_graphics)
+        self.fr_d_c_cmd_3.setObjectName(u"fr_d_c_cmd_3")
+        self.fr_d_c_cmd_3.setFrameShape(QFrame.StyledPanel)
+        self.fr_d_c_cmd_3.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_13 = QHBoxLayout(self.fr_d_c_cmd_3)
+        self.horizontalLayout_13.setSpacing(0)
+        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.horizontalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.fr_graphics_cmd = QFrame(self.fr_d_c_cmd_3)
+        self.fr_graphics_cmd.setObjectName(u"fr_graphics_cmd")
+        self.fr_graphics_cmd.setFrameShape(QFrame.StyledPanel)
+        self.fr_graphics_cmd.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_14 = QHBoxLayout(self.fr_graphics_cmd)
+        self.horizontalLayout_14.setSpacing(0)
+        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
+        self.horizontalLayout_14.setContentsMargins(20, 10, 20, 10)
+        self.btn_chart_pop = QPushButton(self.fr_graphics_cmd)
+        self.btn_chart_pop.setObjectName(u"btn_chart_pop")
+        self.btn_chart_pop.setMinimumSize(QSize(120, 40))
+        self.btn_chart_pop.setMaximumSize(QSize(400, 40))
+        self.btn_chart_pop.setFont(font)
+        self.btn_chart_pop.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_chart_pop.setCheckable(False)
+        self.btn_chart_pop.setChecked(False)
+
+        self.horizontalLayout_14.addWidget(self.btn_chart_pop)
+
+        self.btn_chart_clear = QPushButton(self.fr_graphics_cmd)
+        self.btn_chart_clear.setObjectName(u"btn_chart_clear")
+        self.btn_chart_clear.setMinimumSize(QSize(120, 40))
+        self.btn_chart_clear.setMaximumSize(QSize(240, 40))
+        self.btn_chart_clear.setFont(font)
+        self.btn_chart_clear.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_chart_clear.setStyleSheet(u"color: rgb(222, 0, 0);")
+        self.btn_chart_clear.setCheckable(False)
+        self.btn_chart_clear.setChecked(False)
+
+        self.horizontalLayout_14.addWidget(self.btn_chart_clear)
+
+        self.horizontalLayout_13.addWidget(self.fr_graphics_cmd)
+
+        self.horizontalLayout_13.setStretch(0, 6)
+
+        self.verticalLayout_28.addWidget(self.fr_d_c_cmd_3)
+
+        self.tabWidget_Cmd.addTab(self.tab_graphics, "")
         self.tab_sim = QWidget()
         self.tab_sim.setObjectName(u"tab_sim")
         self.tabWidget_Cmd.addTab(self.tab_sim, "")
@@ -490,7 +474,6 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd.addTab(self.tab_sys, "")
 
         self.horizontalLayout.addWidget(self.tabWidget_Cmd)
-
 
         self.verticalLayout.addWidget(self.fr_cen_1)
 
@@ -528,15 +511,14 @@ class Ui_MainWindow(object):
         self.lb_main1.setObjectName(u"lb_main1")
         self.lb_main1.setMinimumSize(QSize(0, 20))
         self.lb_main1.setMaximumSize(QSize(16777215, 20))
-        self.lb_main1.setFont(font2)
+        self.lb_main1.setFont(font1)
 
         self.verticalLayout_19.addWidget(self.lb_main1)
 
-        self.chart_main1 = QChartView(self.fr_main1)
-        self.chart_main1.setObjectName(u"chart_main1")
+        self.mpl_c1 = MplWidget(self.fr_main1)
+        self.mpl_c1.setObjectName(u"mpl_c1")
 
-        self.verticalLayout_19.addWidget(self.chart_main1)
-
+        self.verticalLayout_19.addWidget(self.mpl_c1)
 
         self.horizontalLayout_12.addWidget(self.fr_main1)
 
@@ -552,18 +534,16 @@ class Ui_MainWindow(object):
         self.lb_main2.setObjectName(u"lb_main2")
         self.lb_main2.setMinimumSize(QSize(0, 20))
         self.lb_main2.setMaximumSize(QSize(16777215, 20))
-        self.lb_main2.setFont(font2)
+        self.lb_main2.setFont(font1)
 
         self.verticalLayout_20.addWidget(self.lb_main2)
 
-        self.chart_main2 = QChartView(self.fr_main2)
-        self.chart_main2.setObjectName(u"chart_main2")
+        self.mpl_c2 = QWidget(self.fr_main2)
+        self.mpl_c2.setObjectName(u"mpl_c2")
 
-        self.verticalLayout_20.addWidget(self.chart_main2)
-
+        self.verticalLayout_20.addWidget(self.mpl_c2)
 
         self.horizontalLayout_12.addWidget(self.fr_main2)
-
 
         self.verticalLayout_15.addWidget(self.fr_main_chart)
 
@@ -587,15 +567,14 @@ class Ui_MainWindow(object):
         self.lb_sub1.setObjectName(u"lb_sub1")
         self.lb_sub1.setMinimumSize(QSize(0, 20))
         self.lb_sub1.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub1.setFont(font2)
+        self.lb_sub1.setFont(font1)
 
         self.verticalLayout_16.addWidget(self.lb_sub1)
 
-        self.chart_sub1 = QChartView(self.fr_sub1)
-        self.chart_sub1.setObjectName(u"chart_sub1")
+        self.mpl_c3 = QWidget(self.fr_sub1)
+        self.mpl_c3.setObjectName(u"mpl_c3")
 
-        self.verticalLayout_16.addWidget(self.chart_sub1)
-
+        self.verticalLayout_16.addWidget(self.mpl_c3)
 
         self.horizontalLayout_11.addWidget(self.fr_sub1)
 
@@ -611,15 +590,14 @@ class Ui_MainWindow(object):
         self.lb_sub2.setObjectName(u"lb_sub2")
         self.lb_sub2.setMinimumSize(QSize(0, 20))
         self.lb_sub2.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub2.setFont(font2)
+        self.lb_sub2.setFont(font1)
 
         self.verticalLayout_17.addWidget(self.lb_sub2)
 
-        self.chart_sub2 = QChartView(self.fr_sub2)
-        self.chart_sub2.setObjectName(u"chart_sub2")
+        self.mpl_c4 = QWidget(self.fr_sub2)
+        self.mpl_c4.setObjectName(u"mpl_c4")
 
-        self.verticalLayout_17.addWidget(self.chart_sub2)
-
+        self.verticalLayout_17.addWidget(self.mpl_c4)
 
         self.horizontalLayout_11.addWidget(self.fr_sub2)
 
@@ -635,15 +613,14 @@ class Ui_MainWindow(object):
         self.lb_sub3.setObjectName(u"lb_sub3")
         self.lb_sub3.setMinimumSize(QSize(0, 20))
         self.lb_sub3.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub3.setFont(font2)
+        self.lb_sub3.setFont(font1)
 
         self.verticalLayout_18.addWidget(self.lb_sub3)
 
-        self.chart_sub3 = QChartView(self.fr_sub3)
-        self.chart_sub3.setObjectName(u"chart_sub3")
+        self.mpl_c5 = QWidget(self.fr_sub3)
+        self.mpl_c5.setObjectName(u"mpl_c5")
 
-        self.verticalLayout_18.addWidget(self.chart_sub3)
-
+        self.verticalLayout_18.addWidget(self.mpl_c5)
 
         self.horizontalLayout_11.addWidget(self.fr_sub3)
 
@@ -673,15 +650,14 @@ class Ui_MainWindow(object):
         self.lb_sub4.setObjectName(u"lb_sub4")
         self.lb_sub4.setMinimumSize(QSize(0, 20))
         self.lb_sub4.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub4.setFont(font2)
+        self.lb_sub4.setFont(font1)
 
         self.verticalLayout_23.addWidget(self.lb_sub4)
 
-        self.chart_sub4 = QChartView(self.fr_sub1_2)
-        self.chart_sub4.setObjectName(u"chart_sub4")
+        self.mpl_c6 = QWidget(self.fr_sub1_2)
+        self.mpl_c6.setObjectName(u"mpl_c6")
 
-        self.verticalLayout_23.addWidget(self.chart_sub4)
-
+        self.verticalLayout_23.addWidget(self.mpl_c6)
 
         self.horizontalLayout_10.addWidget(self.fr_sub1_2)
 
@@ -697,15 +673,14 @@ class Ui_MainWindow(object):
         self.lb_sub5.setObjectName(u"lb_sub5")
         self.lb_sub5.setMinimumSize(QSize(0, 20))
         self.lb_sub5.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub5.setFont(font2)
+        self.lb_sub5.setFont(font1)
 
         self.verticalLayout_26.addWidget(self.lb_sub5)
 
-        self.chart_sub5 = QChartView(self.fr_sub3_3)
-        self.chart_sub5.setObjectName(u"chart_sub5")
+        self.mpl_c7 = QWidget(self.fr_sub3_3)
+        self.mpl_c7.setObjectName(u"mpl_c7")
 
-        self.verticalLayout_26.addWidget(self.chart_sub5)
-
+        self.verticalLayout_26.addWidget(self.mpl_c7)
 
         self.horizontalLayout_10.addWidget(self.fr_sub3_3)
 
@@ -721,15 +696,14 @@ class Ui_MainWindow(object):
         self.lb_sub6.setObjectName(u"lb_sub6")
         self.lb_sub6.setMinimumSize(QSize(0, 20))
         self.lb_sub6.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub6.setFont(font2)
+        self.lb_sub6.setFont(font1)
 
         self.verticalLayout_24.addWidget(self.lb_sub6)
 
-        self.chart_6 = QChartView(self.fr_sub2_2)
-        self.chart_6.setObjectName(u"chart_6")
+        self.mpl_c8 = QWidget(self.fr_sub2_2)
+        self.mpl_c8.setObjectName(u"mpl_c8")
 
-        self.verticalLayout_24.addWidget(self.chart_6)
-
+        self.verticalLayout_24.addWidget(self.mpl_c8)
 
         self.horizontalLayout_10.addWidget(self.fr_sub2_2)
 
@@ -745,18 +719,16 @@ class Ui_MainWindow(object):
         self.lb_sub7.setObjectName(u"lb_sub7")
         self.lb_sub7.setMinimumSize(QSize(0, 20))
         self.lb_sub7.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub7.setFont(font2)
+        self.lb_sub7.setFont(font1)
 
         self.verticalLayout_25.addWidget(self.lb_sub7)
 
-        self.chart_sub7 = QChartView(self.fr_sub3_2)
-        self.chart_sub7.setObjectName(u"chart_sub7")
+        self.mpl_c9 = QWidget(self.fr_sub3_2)
+        self.mpl_c9.setObjectName(u"mpl_c9")
 
-        self.verticalLayout_25.addWidget(self.chart_sub7)
-
+        self.verticalLayout_25.addWidget(self.mpl_c9)
 
         self.horizontalLayout_10.addWidget(self.fr_sub3_2)
-
 
         self.verticalLayout_15.addWidget(self.fr_sub_diagram)
 
@@ -873,34 +845,22 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd.setCurrentIndex(0)
         self.tabWidget_Monitor.setCurrentIndex(1)
 
-
         QMetaObject.connectSlotsByName(MainWindow)
+
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionAbout_CUGS.setText(QCoreApplication.translate("MainWindow", u"About CUGS", None))
-        self.cb_write_log.setText(QCoreApplication.translate("MainWindow", u"Write Mission Log CSV", None))
-        self.cb_write_kml.setText(QCoreApplication.translate("MainWindow", u"Write Google Earth KML", None))
-        self.btn_start_mission.setText(QCoreApplication.translate("MainWindow", u"Start Mission", None))
-        self.lb_fr_m_c.setText(QCoreApplication.translate("MainWindow", u"Mission Control", None))
-        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Incoming Data", None))
-        self.lb_fr_d_c.setText(QCoreApplication.translate("MainWindow", u"Data Capture Control", None))
-        self.lb_fr_i_d.setText(QCoreApplication.translate("MainWindow", u"Image Data (Coming soon!)", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_data), QCoreApplication.translate("MainWindow", u"Data Acquisition", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_uplink), QCoreApplication.translate("MainWindow", u"Uplink Command", None))
-        self.btn_chart_pop.setText(QCoreApplication.translate("MainWindow", u"Pop Chart (Does not affect data)", None))
-        self.btn_chart_clear.setText(QCoreApplication.translate("MainWindow", u"Clear Chart", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_graphics), QCoreApplication.translate("MainWindow", u"Graphics Settings", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Device Serial Port", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Baud Rate", None))
-        self.combo_baud.setItemText(0, QCoreApplication.translate("MainWindow", u"9600", None))
-        self.combo_baud.setItemText(1, QCoreApplication.translate("MainWindow", u"2400", None))
-        self.combo_baud.setItemText(2, QCoreApplication.translate("MainWindow", u"4800", None))
-        self.combo_baud.setItemText(3, QCoreApplication.translate("MainWindow", u"19200", None))
-        self.combo_baud.setItemText(4, QCoreApplication.translate("MainWindow", u"38400", None))
-        self.combo_baud.setItemText(5, QCoreApplication.translate("MainWindow", u"57600", None))
-        self.combo_baud.setItemText(6, QCoreApplication.translate("MainWindow", u"115200", None))
+        self.combo_baud.setItemText(0, QCoreApplication.translate("MainWindow", u"115200", None))
+        self.combo_baud.setItemText(1, QCoreApplication.translate("MainWindow", u"9600", None))
+        self.combo_baud.setItemText(2, QCoreApplication.translate("MainWindow", u"2400", None))
+        self.combo_baud.setItemText(3, QCoreApplication.translate("MainWindow", u"4800", None))
+        self.combo_baud.setItemText(4, QCoreApplication.translate("MainWindow", u"19200", None))
+        self.combo_baud.setItemText(5, QCoreApplication.translate("MainWindow", u"38400", None))
+        self.combo_baud.setItemText(6, QCoreApplication.translate("MainWindow", u"57600", None))
 
         self.btn_serial_connect.setText(QCoreApplication.translate("MainWindow", u"Connect", None))
         self.btn_serial_refresh.setText(QCoreApplication.translate("MainWindow", u"Refresh", None))
@@ -908,9 +868,27 @@ class Ui_MainWindow(object):
         self.lb_fr_d_c_2.setText(QCoreApplication.translate("MainWindow", u"Serial Device Selection", None))
         self.text_serial_info.setPlainText(QCoreApplication.translate("MainWindow", u"Serial Information Area!", None))
         self.lb_fr_i_d_2.setText(QCoreApplication.translate("MainWindow", u"Serial Information", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_serial), QCoreApplication.translate("MainWindow", u"Serial Port Connection", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sim), QCoreApplication.translate("MainWindow", u"Simulation", None))
-        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sys), QCoreApplication.translate("MainWindow", u"System", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_serial),
+                                      QCoreApplication.translate("MainWindow", u"Serial Port Connection", None))
+        self.cb_write_log.setText(QCoreApplication.translate("MainWindow", u"Write Mission Log CSV", None))
+        self.cb_write_kml.setText(QCoreApplication.translate("MainWindow", u"Write Google Earth KML", None))
+        self.btn_start_mission.setText(QCoreApplication.translate("MainWindow", u"Start Mission", None))
+        self.lb_fr_m_c.setText(QCoreApplication.translate("MainWindow", u"Mission Control", None))
+        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Incoming Data", None))
+        self.lb_fr_d_c.setText(QCoreApplication.translate("MainWindow", u"Data Capture Control", None))
+        self.lb_fr_i_d.setText(QCoreApplication.translate("MainWindow", u"Image Data (Coming soon!)", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_data),
+                                      QCoreApplication.translate("MainWindow", u"Data Acquisition", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_uplink),
+                                      QCoreApplication.translate("MainWindow", u"Uplink Command", None))
+        self.btn_chart_pop.setText(QCoreApplication.translate("MainWindow", u"Pop Chart (Does not affect data)", None))
+        self.btn_chart_clear.setText(QCoreApplication.translate("MainWindow", u"Clear Chart", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_graphics),
+                                      QCoreApplication.translate("MainWindow", u"Graphics Settings", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sim),
+                                      QCoreApplication.translate("MainWindow", u"Simulation", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_sys),
+                                      QCoreApplication.translate("MainWindow", u"System", None))
         self.lb_main1.setText(QCoreApplication.translate("MainWindow", u"MAIN1 CHART LABEL", None))
         self.lb_main2.setText(QCoreApplication.translate("MainWindow", u"MAIN2 CHART LABEL", None))
         self.lb_sub1.setText(QCoreApplication.translate("MainWindow", u"SUB1 CHART LABEL", None))
@@ -939,12 +917,13 @@ class Ui_MainWindow(object):
         self.table_kv_payload.setSortingEnabled(__sortingEnabled)
 
         self.text_serial_mon.setPlainText(QCoreApplication.translate("MainWindow", u"Serial Monitor Area!", None))
-        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_serial_mon), QCoreApplication.translate("MainWindow", u"Serial Monitor", None))
+        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_serial_mon),
+                                          QCoreApplication.translate("MainWindow", u"Serial Monitor", None))
         self.text_sys_log.setPlainText(QCoreApplication.translate("MainWindow", u"System Log Area!", None))
-        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_sys_log), QCoreApplication.translate("MainWindow", u"System Log", None))
+        self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_sys_log),
+                                          QCoreApplication.translate("MainWindow", u"System Log", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
     # retranslateUi
-
