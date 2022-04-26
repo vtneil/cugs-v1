@@ -20,18 +20,16 @@ In `data_handler`:
 
 3. `lib_gis.py` includes self-explainatory `Coordinate` dataclass and `Gis` class for calculating most GIS values, e.g., Arc Angle, Arc Length, Line of Sight.
 
-4. `lib_matplotlibchart.py` is for interfacing MATPLOTLIB with PyQt GUI.
+4. `lib_qchart.py` is for interfacing and plotting QChart in QGraphicsView object.
 
-5. `lib_pyqtchart.py` is for interfacing PYQTGRAPH with PyQt GUI.
+5. `lib_parse_data.py` is for parsing data as specified in `data_format.txt`. It includes basic functionality of converting raw delimited string to ordered dictionary of data with its according key, and reducing data `list` set to improve performance when plotting charts.
 
-6. `lib_parse_data.py` is for parsing data as specified in `data_format.txt`. It includes basic functionality of converting raw delimited string to ordered dictionary of data with its according key, and reducing data `list` set to improve performance when plotting charts.
+6. `lib_mqtt.py` is for usages with MQTT subscribing and publishing topics.
 
-7. `lib_mqtt.py` is for usages with MQTT subscribing and publishing topics.
+7. `lib_serial_tools` is for creating a serial manager object and a serial device logger object.
 
-8. `lib_serial_tools` is for creating a serial manager object and a serial device logger object.
+8. `lib_threading` initializes `QThread` object for working with passed `class`. Signal functionality is also implemented.
 
-9. `lib_threading` initializes `QThread` object for working with passed `class`. Signal functionality is also implemented.
-
-10. `lib_time` create a current-time and delta-time objects.
+9. `lib_time` create a current-time and delta-time objects.
 
 ---
