@@ -4,6 +4,7 @@ import gui as guilib
 import numpy as np
 from typing import Union as _Union
 from PySide6.QtWidgets import QApplication
+from PySide6.QtCore import Qt
 
 
 class ProgFullStackGUI:
@@ -106,6 +107,8 @@ def run_prog():
     prog_preferences = ilib.PreferencesData('data_handler/cugs_preferences.json').getPreferences()
     data_format = prog_preferences['data_format']
     leading_header = prog_preferences['header']
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
     app = QApplication(sys.argv)
 
     prog = ProgFullStackGUI(data_format, header=leading_header, use_np=True)

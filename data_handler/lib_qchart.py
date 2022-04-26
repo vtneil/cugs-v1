@@ -2,7 +2,7 @@ import numpy as _np
 from PySide6.QtWidgets import QGraphicsView
 from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSplineSeries, QLineSeries
 from PySide6.QtGui import QColor, QPen, QPainter
-# from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt
 
 
 color_r = QColor(255, 0, 0)
@@ -73,6 +73,7 @@ class PyQtPlot:
         self.__y_min = 0.0
 
         self.__chart_layout.setRenderHint(QPainter.Antialiasing)
+        self.__chart_layout.setResizeAnchor(QGraphicsView.NoAnchor)
         self.__chart_chart.legend().setVisible(self.__legend)
         self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
         self.__chart_chart.setTitle(self.__chart_name)
