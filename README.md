@@ -20,7 +20,7 @@ In `data_handler`:
 
 3. `lib_gis.py` includes self-explainatory `Coordinate` dataclass and `Gis` class for calculating most GIS values, e.g., Arc Angle, Arc Length, Line of Sight.
 
-4. `lib_qchart.py` is for interfacing and plotting QChart in QGraphicsView object.
+4. `lib_qchart.py` is for interfacing and plotting QChart in QGraphicsView object. (**Currently not available**)
 
 5. `lib_parse_data.py` is for parsing data as specified in `data_format.txt`. It includes basic functionality of converting raw delimited string to ordered dictionary of data with its according key, and reducing data `list` set to improve performance when plotting charts.
 
