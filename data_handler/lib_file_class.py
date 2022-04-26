@@ -103,7 +103,7 @@ class LoadDirectory:
         return
 
     def appendEarthCoord(self, coords: _Coordinate, /, *,
-                         color: _Union[str, tuple[int, int, int, int]] = 'ff00ffff') -> str:
+                         color: _Union[str, tuple] = 'ff00ffff') -> str:
         """
         Append new coordinates to Google Earth KML coordinates file.
 

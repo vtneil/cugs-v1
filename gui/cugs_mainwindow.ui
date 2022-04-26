@@ -72,7 +72,7 @@
           <enum>QTabWidget::North</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="tab_serial">
           <attribute name="title">
@@ -1044,6 +1044,11 @@
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="tab_state">
+          <attribute name="title">
+           <string>State</string>
+          </attribute>
+         </widget>
          <widget class="QWidget" name="tab_uplink">
           <attribute name="title">
            <string>Uplink Command</string>
@@ -1277,6 +1282,9 @@
                  <number>0</number>
                 </property>
                 <item>
+                 <widget class="QGraphicsView" name="mpl_c1"/>
+                </item>
+                <item>
                  <widget class="QLabel" name="lb_main1">
                   <property name="minimumSize">
                    <size>
@@ -1299,9 +1307,6 @@
                    <string>MAIN1 CHART LABEL</string>
                   </property>
                  </widget>
-                </item>
-                <item>
-                 <widget class="QGraphicsView" name="mpl_c1"/>
                 </item>
                </layout>
               </widget>
@@ -1331,6 +1336,9 @@
                  <number>0</number>
                 </property>
                 <item>
+                 <widget class="QGraphicsView" name="mpl_c2"/>
+                </item>
+                <item>
                  <widget class="QLabel" name="lb_main2">
                   <property name="minimumSize">
                    <size>
@@ -1353,9 +1361,6 @@
                    <string>MAIN2 CHART LABEL</string>
                   </property>
                  </widget>
-                </item>
-                <item>
-                 <widget class="QGraphicsView" name="mpl_c2"/>
                 </item>
                </layout>
               </widget>
@@ -1412,6 +1417,9 @@
                  <number>0</number>
                 </property>
                 <item>
+                 <widget class="QGraphicsView" name="mpl_c3"/>
+                </item>
+                <item>
                  <widget class="QLabel" name="lb_sub1">
                   <property name="minimumSize">
                    <size>
@@ -1434,9 +1442,6 @@
                    <string>SUB1 CHART LABEL</string>
                   </property>
                  </widget>
-                </item>
-                <item>
-                 <widget class="QGraphicsView" name="mpl_c3"/>
                 </item>
                </layout>
               </widget>
@@ -1466,6 +1471,9 @@
                  <number>0</number>
                 </property>
                 <item>
+                 <widget class="QGraphicsView" name="mpl_c4"/>
+                </item>
+                <item>
                  <widget class="QLabel" name="lb_sub2">
                   <property name="minimumSize">
                    <size>
@@ -1488,9 +1496,6 @@
                    <string>SUB2 CHART LABEL</string>
                   </property>
                  </widget>
-                </item>
-                <item>
-                 <widget class="QGraphicsView" name="mpl_c4"/>
                 </item>
                </layout>
               </widget>
@@ -1520,6 +1525,9 @@
                  <number>0</number>
                 </property>
                 <item>
+                 <widget class="QGraphicsView" name="mpl_c5"/>
+                </item>
+                <item>
                  <widget class="QLabel" name="lb_sub3">
                   <property name="minimumSize">
                    <size>
@@ -1542,9 +1550,6 @@
                    <string>SUB3 CHART LABEL</string>
                   </property>
                  </widget>
-                </item>
-                <item>
-                 <widget class="QGraphicsView" name="mpl_c5"/>
                 </item>
                </layout>
               </widget>
@@ -1806,7 +1811,10 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_14" stretch="1,1,1">
+         <layout class="QVBoxLayout" name="verticalLayout_14" stretch="1,2,1">
+          <property name="spacing">
+           <number>4</number>
+          </property>
           <property name="leftMargin">
            <number>0</number>
           </property>
@@ -1847,6 +1855,24 @@
           </item>
           <item>
            <widget class="QTableWidget" name="table_kv_payload">
+            <property name="styleSheet">
+             <string notr="true">font: 11pt &quot;Consolas&quot;;</string>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>120</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>75</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
             <row>
              <property name="text">
               <string>1</string>
@@ -1882,7 +1908,7 @@
           <item>
            <widget class="QTabWidget" name="tabWidget_Monitor">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="tab_serial_mon">
              <attribute name="title">
@@ -1906,6 +1932,9 @@
               </property>
               <item>
                <widget class="QPlainTextEdit" name="text_serial_mon">
+                <property name="styleSheet">
+                 <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+                </property>
                 <property name="plainText">
                  <string>Serial Monitor Area!</string>
                 </property>
@@ -1935,6 +1964,9 @@
               </property>
               <item>
                <widget class="QPlainTextEdit" name="text_sys_log">
+                <property name="styleSheet">
+                 <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+                </property>
                 <property name="plainText">
                  <string>System Log Area!</string>
                 </property>

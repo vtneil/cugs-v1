@@ -25,5 +25,16 @@
             "ang_z",
             "batt_volt",
             "cmd_echo"
-          ]
+          ],
+  "use_plot":
+  {
+    "x": "packet_count",
+    "y":
+            [
+              "bar_alt",
+              "temp1",
+              "gps_alt"
+            ]
+  },
+  "state": "state"
 }

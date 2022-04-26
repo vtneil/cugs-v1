@@ -5,7 +5,7 @@ from collections import OrderedDict as _Dict
 
 class Parser:
     def __init__(self, data_format: _Union[list, tuple, dict, set], /, *,
-                 header: str = 'PSG', delimiter: str = ',', use_np=True) -> None:
+                 header: str = 'PSG', delimiter: str = ',') -> None:
         """
         A parser object
 
@@ -19,19 +19,33 @@ class Parser:
         self.__delimiter = delimiter
         self.__data_dict = dict()
         self.__is_valid = False
-        self.__use_numpy = use_np
 
     def createBlankDataDict(self, *, ordered: bool = True) -> _Union[_Dict, dict]:
-        if self.__use_numpy:
-            if ordered:
-                return _Dict([(k, _np.array([])) for k in self.__data_format])
-            else:
-                return {k: _np.array([]) for k in self.__data_format}
+        if ordered:
+            return _Dict([(k, _np.array([])) for k in self.__data_format])
         else:
-            if ordered:
-                return _Dict([(k, []) for k in self.__data_format])
-            else:
-                return {k: [] for k in self.__data_format}
+            return {k: _np.array([]) for k in self.__data_format}
+
+    def append(self, target_dict: dict, data_dict: _Union[str, dict]):
+        if isinstance(data_dict, str):
+            ins_dict = self.parseData(data_dict)
+        else:
+            ins_dict = data_dict
+        for k, v in ins_dict.items():
+            if k in target_dict:
+                target_dict[k] = _np.append(target_dict[k], v)
+        return
+
+    def appendNew(self, target_dict: dict, data_dict: _Union[str, dict]):
+        _target_dict = {k: v for k, v in target_dict.items()}
+        if isinstance(data_dict, str):
+            ins_dict = self.parseData(data_dict)
+        else:
+            ins_dict = data_dict
+        for k, v in ins_dict.items():
+            if k in _target_dict:
+                _target_dict[k] = _np.append(_target_dict[k], v)
+        return _target_dict
 
     def parseData(self, raw_text, /, *, ordered: bool = True) -> _Union[_Dict, dict]:
         """

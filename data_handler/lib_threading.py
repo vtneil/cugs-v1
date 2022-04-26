@@ -1,44 +1,33 @@
-from PySide6.QtCore import QThread, Signal
-from threading import Thread
 import time
+import data_handler as _ilib
+from PySide6.QtCore import QThread, Signal
 
-
-class PyThreadWorker(Thread):
-    def __init__(self, InputClass, interval=500):
-        """
-        Upcoming features for CLI thread.
-        :param InputClass:
-        :param interval:
-        """
-        Thread.__init__(self)
-
-        self.__InputClass = InputClass
-        self.__interval = interval / 1000
-
-    def run(self):
-        while True:
-            time.sleep(self.__interval)
-
-
-class QThreadWorker(QThread):
+class ThreadSerial(QThread):
     msg_carrier = Signal(object)
 
-    def __init__(self, InputClass, /, *args, parent=None, **kwargs) -> None:
-        super(QThreadWorker, self).__init__(parent)
+    def __init__(self, *args, parent=None, serial_logger, **kwargs) -> None:
+        super(ThreadSerial, self).__init__(parent)
+        self.serial_logger = serial_logger
         self.args = args
         self.kwargs = kwargs
-        self.cls = InputClass
         self._isRunning = True
 
     def __del__(self) -> None:
-        self.wait()
+        try:
+            self.wait()
+        except RuntimeError:
+            pass
+        return
 
     def run(self) -> None:
-        try:
-            self.cls(*self.args, **self.kwargs)
-        except TypeError:
-            raise TypeError('Missing positional/keyword Arguments')
+        self.serial_logger.readAll(_ilib.wrapper(self.update_msg))
+        return
 
     def stop(self) -> None:
         self._isRunning = False
         self.terminate()
+        return
+
+    def update_msg(self, str_out) -> None:
+        self.msg_carrier.emit(str_out)
+        return
