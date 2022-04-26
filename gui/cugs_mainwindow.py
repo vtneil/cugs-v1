@@ -527,22 +527,22 @@ class Ui_MainWindow(object):
         self.fr_main1.setObjectName(u"fr_main1")
         self.fr_main1.setFrameShape(QFrame.StyledPanel)
         self.fr_main1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_19 = QVBoxLayout(self.fr_main1)
-        self.verticalLayout_19.setSpacing(0)
-        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
-        self.verticalLayout_19.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_16 = QVBoxLayout(self.fr_main1)
+        self.verticalLayout_16.setSpacing(0)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
         self.lb_main1 = QLabel(self.fr_main1)
         self.lb_main1.setObjectName(u"lb_main1")
         self.lb_main1.setMinimumSize(QSize(0, 20))
         self.lb_main1.setMaximumSize(QSize(16777215, 20))
         self.lb_main1.setFont(font1)
 
-        self.verticalLayout_19.addWidget(self.lb_main1)
+        self.verticalLayout_16.addWidget(self.lb_main1)
 
         self.mpl_c1 = QChartView(self.fr_main1)
         self.mpl_c1.setObjectName(u"mpl_c1")
 
-        self.verticalLayout_19.addWidget(self.mpl_c1)
+        self.verticalLayout_16.addWidget(self.mpl_c1)
 
 
         self.horizontalLayout_12.addWidget(self.fr_main1)
@@ -551,22 +551,22 @@ class Ui_MainWindow(object):
         self.fr_main2.setObjectName(u"fr_main2")
         self.fr_main2.setFrameShape(QFrame.StyledPanel)
         self.fr_main2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_20 = QVBoxLayout(self.fr_main2)
-        self.verticalLayout_20.setSpacing(0)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.verticalLayout_20.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_17 = QVBoxLayout(self.fr_main2)
+        self.verticalLayout_17.setSpacing(0)
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
         self.lb_main2 = QLabel(self.fr_main2)
         self.lb_main2.setObjectName(u"lb_main2")
         self.lb_main2.setMinimumSize(QSize(0, 20))
         self.lb_main2.setMaximumSize(QSize(16777215, 20))
         self.lb_main2.setFont(font1)
 
-        self.verticalLayout_20.addWidget(self.lb_main2)
+        self.verticalLayout_17.addWidget(self.lb_main2)
 
         self.mpl_c2 = QChartView(self.fr_main2)
         self.mpl_c2.setObjectName(u"mpl_c2")
 
-        self.verticalLayout_20.addWidget(self.mpl_c2)
+        self.verticalLayout_17.addWidget(self.mpl_c2)
 
 
         self.horizontalLayout_12.addWidget(self.fr_main2)
@@ -586,22 +586,22 @@ class Ui_MainWindow(object):
         self.fr_sub1.setObjectName(u"fr_sub1")
         self.fr_sub1.setFrameShape(QFrame.StyledPanel)
         self.fr_sub1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_16 = QVBoxLayout(self.fr_sub1)
-        self.verticalLayout_16.setSpacing(0)
-        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
-        self.verticalLayout_16.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_18 = QVBoxLayout(self.fr_sub1)
+        self.verticalLayout_18.setSpacing(0)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.lb_sub1 = QLabel(self.fr_sub1)
         self.lb_sub1.setObjectName(u"lb_sub1")
         self.lb_sub1.setMinimumSize(QSize(0, 20))
         self.lb_sub1.setMaximumSize(QSize(16777215, 20))
         self.lb_sub1.setFont(font1)
 
-        self.verticalLayout_16.addWidget(self.lb_sub1)
+        self.verticalLayout_18.addWidget(self.lb_sub1)
 
         self.mpl_c3 = QChartView(self.fr_sub1)
         self.mpl_c3.setObjectName(u"mpl_c3")
 
-        self.verticalLayout_16.addWidget(self.mpl_c3)
+        self.verticalLayout_18.addWidget(self.mpl_c3)
 
 
         self.horizontalLayout_11.addWidget(self.fr_sub1)
@@ -610,22 +610,22 @@ class Ui_MainWindow(object):
         self.fr_sub2.setObjectName(u"fr_sub2")
         self.fr_sub2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_17 = QVBoxLayout(self.fr_sub2)
-        self.verticalLayout_17.setSpacing(0)
-        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
-        self.verticalLayout_17.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_19 = QVBoxLayout(self.fr_sub2)
+        self.verticalLayout_19.setSpacing(0)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
         self.lb_sub2 = QLabel(self.fr_sub2)
         self.lb_sub2.setObjectName(u"lb_sub2")
         self.lb_sub2.setMinimumSize(QSize(0, 20))
         self.lb_sub2.setMaximumSize(QSize(16777215, 20))
         self.lb_sub2.setFont(font1)
 
-        self.verticalLayout_17.addWidget(self.lb_sub2)
+        self.verticalLayout_19.addWidget(self.lb_sub2)
 
         self.mpl_c4 = QChartView(self.fr_sub2)
         self.mpl_c4.setObjectName(u"mpl_c4")
 
-        self.verticalLayout_17.addWidget(self.mpl_c4)
+        self.verticalLayout_19.addWidget(self.mpl_c4)
 
 
         self.horizontalLayout_11.addWidget(self.fr_sub2)
@@ -634,22 +634,22 @@ class Ui_MainWindow(object):
         self.fr_sub3.setObjectName(u"fr_sub3")
         self.fr_sub3.setFrameShape(QFrame.StyledPanel)
         self.fr_sub3.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_18 = QVBoxLayout(self.fr_sub3)
-        self.verticalLayout_18.setSpacing(0)
-        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.verticalLayout_18.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_20 = QVBoxLayout(self.fr_sub3)
+        self.verticalLayout_20.setSpacing(0)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
         self.lb_sub3 = QLabel(self.fr_sub3)
         self.lb_sub3.setObjectName(u"lb_sub3")
         self.lb_sub3.setMinimumSize(QSize(0, 20))
         self.lb_sub3.setMaximumSize(QSize(16777215, 20))
         self.lb_sub3.setFont(font1)
 
-        self.verticalLayout_18.addWidget(self.lb_sub3)
+        self.verticalLayout_20.addWidget(self.lb_sub3)
 
         self.mpl_c5 = QChartView(self.fr_sub3)
         self.mpl_c5.setObjectName(u"mpl_c5")
 
-        self.verticalLayout_18.addWidget(self.mpl_c5)
+        self.verticalLayout_20.addWidget(self.mpl_c5)
 
 
         self.horizontalLayout_11.addWidget(self.fr_sub3)
@@ -673,9 +673,12 @@ class Ui_MainWindow(object):
         self.fr_sub1_2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub1_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_23 = QVBoxLayout(self.fr_sub1_2)
-        self.verticalLayout_23.setSpacing(0)
         self.verticalLayout_23.setObjectName(u"verticalLayout_23")
-        self.verticalLayout_23.setContentsMargins(0, 4, 4, 0)
+        self.mpl_c6 = QChartView(self.fr_sub1_2)
+        self.mpl_c6.setObjectName(u"mpl_c6")
+
+        self.verticalLayout_23.addWidget(self.mpl_c6)
+
         self.lb_sub4 = QLabel(self.fr_sub1_2)
         self.lb_sub4.setObjectName(u"lb_sub4")
         self.lb_sub4.setMinimumSize(QSize(0, 20))
@@ -684,58 +687,27 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_23.addWidget(self.lb_sub4)
 
-        self.mpl_c6 = QChartView(self.fr_sub1_2)
-        self.mpl_c6.setObjectName(u"mpl_c6")
-
-        self.verticalLayout_23.addWidget(self.mpl_c6)
-
 
         self.horizontalLayout_10.addWidget(self.fr_sub1_2)
-
-        self.fr_sub3_3 = QFrame(self.fr_sub_diagram)
-        self.fr_sub3_3.setObjectName(u"fr_sub3_3")
-        self.fr_sub3_3.setFrameShape(QFrame.StyledPanel)
-        self.fr_sub3_3.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_26 = QVBoxLayout(self.fr_sub3_3)
-        self.verticalLayout_26.setSpacing(0)
-        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
-        self.verticalLayout_26.setContentsMargins(0, 4, 4, 0)
-        self.lb_sub5 = QLabel(self.fr_sub3_3)
-        self.lb_sub5.setObjectName(u"lb_sub5")
-        self.lb_sub5.setMinimumSize(QSize(0, 20))
-        self.lb_sub5.setMaximumSize(QSize(16777215, 20))
-        self.lb_sub5.setFont(font1)
-
-        self.verticalLayout_26.addWidget(self.lb_sub5)
-
-        self.mpl_c7 = QChartView(self.fr_sub3_3)
-        self.mpl_c7.setObjectName(u"mpl_c7")
-
-        self.verticalLayout_26.addWidget(self.mpl_c7)
-
-
-        self.horizontalLayout_10.addWidget(self.fr_sub3_3)
 
         self.fr_sub2_2 = QFrame(self.fr_sub_diagram)
         self.fr_sub2_2.setObjectName(u"fr_sub2_2")
         self.fr_sub2_2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub2_2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_24 = QVBoxLayout(self.fr_sub2_2)
-        self.verticalLayout_24.setSpacing(0)
-        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
-        self.verticalLayout_24.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_25 = QVBoxLayout(self.fr_sub2_2)
+        self.verticalLayout_25.setObjectName(u"verticalLayout_25")
+        self.mpl_c7 = QChartView(self.fr_sub2_2)
+        self.mpl_c7.setObjectName(u"mpl_c7")
+
+        self.verticalLayout_25.addWidget(self.mpl_c7)
+
         self.lb_sub6 = QLabel(self.fr_sub2_2)
         self.lb_sub6.setObjectName(u"lb_sub6")
         self.lb_sub6.setMinimumSize(QSize(0, 20))
         self.lb_sub6.setMaximumSize(QSize(16777215, 20))
         self.lb_sub6.setFont(font1)
 
-        self.verticalLayout_24.addWidget(self.lb_sub6)
-
-        self.mpl_c8 = QChartView(self.fr_sub2_2)
-        self.mpl_c8.setObjectName(u"mpl_c8")
-
-        self.verticalLayout_24.addWidget(self.mpl_c8)
+        self.verticalLayout_25.addWidget(self.lb_sub6)
 
 
         self.horizontalLayout_10.addWidget(self.fr_sub2_2)
@@ -744,25 +716,45 @@ class Ui_MainWindow(object):
         self.fr_sub3_2.setObjectName(u"fr_sub3_2")
         self.fr_sub3_2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub3_2.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_25 = QVBoxLayout(self.fr_sub3_2)
-        self.verticalLayout_25.setSpacing(0)
-        self.verticalLayout_25.setObjectName(u"verticalLayout_25")
-        self.verticalLayout_25.setContentsMargins(0, 4, 4, 0)
+        self.verticalLayout_26 = QVBoxLayout(self.fr_sub3_2)
+        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.mpl_c8 = QChartView(self.fr_sub3_2)
+        self.mpl_c8.setObjectName(u"mpl_c8")
+
+        self.verticalLayout_26.addWidget(self.mpl_c8)
+
         self.lb_sub7 = QLabel(self.fr_sub3_2)
         self.lb_sub7.setObjectName(u"lb_sub7")
         self.lb_sub7.setMinimumSize(QSize(0, 20))
         self.lb_sub7.setMaximumSize(QSize(16777215, 20))
         self.lb_sub7.setFont(font1)
 
-        self.verticalLayout_25.addWidget(self.lb_sub7)
-
-        self.mpl_c9 = QChartView(self.fr_sub3_2)
-        self.mpl_c9.setObjectName(u"mpl_c9")
-
-        self.verticalLayout_25.addWidget(self.mpl_c9)
+        self.verticalLayout_26.addWidget(self.lb_sub7)
 
 
         self.horizontalLayout_10.addWidget(self.fr_sub3_2)
+
+        self.fr_sub3_3 = QFrame(self.fr_sub_diagram)
+        self.fr_sub3_3.setObjectName(u"fr_sub3_3")
+        self.fr_sub3_3.setFrameShape(QFrame.StyledPanel)
+        self.fr_sub3_3.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_24 = QVBoxLayout(self.fr_sub3_3)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.mpl_c9 = QChartView(self.fr_sub3_3)
+        self.mpl_c9.setObjectName(u"mpl_c9")
+
+        self.verticalLayout_24.addWidget(self.mpl_c9)
+
+        self.lb_sub5 = QLabel(self.fr_sub3_3)
+        self.lb_sub5.setObjectName(u"lb_sub5")
+        self.lb_sub5.setMinimumSize(QSize(0, 20))
+        self.lb_sub5.setMaximumSize(QSize(16777215, 20))
+        self.lb_sub5.setFont(font1)
+
+        self.verticalLayout_24.addWidget(self.lb_sub5)
+
+
+        self.horizontalLayout_10.addWidget(self.fr_sub3_3)
 
 
         self.verticalLayout_15.addWidget(self.fr_sub_diagram)
@@ -924,9 +916,9 @@ class Ui_MainWindow(object):
         self.lb_sub2.setText(QCoreApplication.translate("MainWindow", u"SUB2 CHART LABEL", None))
         self.lb_sub3.setText(QCoreApplication.translate("MainWindow", u"SUB3 CHART LABEL", None))
         self.lb_sub4.setText(QCoreApplication.translate("MainWindow", u"SUB4 CHART LABEL", None))
-        self.lb_sub5.setText(QCoreApplication.translate("MainWindow", u"SUB5 CHART LABEL", None))
         self.lb_sub6.setText(QCoreApplication.translate("MainWindow", u"SUB6 CHART LABEL", None))
         self.lb_sub7.setText(QCoreApplication.translate("MainWindow", u"SUB7 CHART LABEL", None))
+        self.lb_sub5.setText(QCoreApplication.translate("MainWindow", u"SUB5 CHART LABEL", None))
         self.lb_kv_table.setText(QCoreApplication.translate("MainWindow", u"Data Payload Key-Value Pairs Table", None))
         ___qtablewidgetitem = self.table_kv_payload.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Key", None));

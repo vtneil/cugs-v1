@@ -15,9 +15,15 @@ def run(mode='cli'):
 def main(argv):
     if len(argv) == 1:
         run(mode=argv[0])
+    elif len(argv) == 0:
+        run(mode='gui')
     else:
-        pass
+        raise ValueError(
+            "Running CUGS must have 0 to 1 argument. "
+            "0 argument will run CUGS in GUI mode. "
+            "Available arguments are: \"gui\" and \"cli\""
+        )
 
 
 if __name__ == '__main__':
-    run(mode='gui')
+    main(sys.argv[1:])

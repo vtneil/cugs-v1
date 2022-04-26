@@ -254,14 +254,14 @@ if __name__ == '__main__':
     # s = PreferencesData.parseXML('<EmpData><EmpID>12345</EmpID><EmpName>Vivatsathorn</EmpName></EmpData>', mode='str')
     s = PreferencesData.parseYAML('hello:\n    - image\n    - command', strict_validate=False)
     ptr = {'x': {'hello': 'image', 'tt': 'command', 'qq': ['jkdashifk', 'dghsdhfj']}}
-    PreferencesData.writeJSON(ptr, 'write_test_no_usage/writejson')
-    print(PreferencesData.parseJSON('write_test_no_usage/writejson', 'file'))
+    PreferencesData.writeJSON(ptr, 'unused_file_write_test/writejson')
+    print(PreferencesData.parseJSON('unused_file_write_test/writejson', 'file'))
 
-    PreferencesData.writeTOML(ptr, 'write_test_no_usage/writetoml')
-    print(PreferencesData.parseTOML('write_test_no_usage/writetoml', 'file'))
+    PreferencesData.writeTOML(ptr, 'unused_file_write_test/writetoml')
+    print(PreferencesData.parseTOML('unused_file_write_test/writetoml', 'file'))
 
-    PreferencesData.writeXML(ptr, 'write_test_no_usage/writexml')
-    print(PreferencesData.parseXML('write_test_no_usage/writexml', 'file'))
+    PreferencesData.writeXML(ptr, 'unused_file_write_test/writexml')
+    print(PreferencesData.parseXML('unused_file_write_test/writexml', 'file'))
 
-    PreferencesData.writeYAML(ptr, 'write_test_no_usage/writeyaml')
-    print(PreferencesData.parseYAML('write_test_no_usage/writeyaml', 'file'))
+    PreferencesData.writeYAML(ptr, 'unused_file_write_test/writeyaml')
+    print(PreferencesData.parseYAML('unused_file_write_test/writeyaml', 'file'))

@@ -1,5 +1,3 @@
-import sys
-import os
 import data_handler as ilib
 import numpy as np
 from typing import Union as _Union

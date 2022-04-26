@@ -1,6 +1,8 @@
 import numpy as _np
+from PySide6.QtWidgets import QGraphicsView
 from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSplineSeries, QLineSeries
 from PySide6.QtGui import QColor, QPen, QPainter
+# from PySide6.QtCore import Qt
 
 
 color_r = QColor(255, 0, 0)
@@ -13,11 +15,12 @@ class PyQtPlot:
     global color_g
     global color_b
 
-    def __init__(self, ChartLayout: QChartView, ChartName: str = 'None (None)', *,
+    def __init__(self, ChartLayout: QGraphicsView, ChartName: str = 'None (None)', *,
                  Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None):
         if line_type is None:
             line_type = []
         self.__legend = legend
+        self.__chart_layout = QChartView(ChartLayout)
         self.__chart_name = ChartName
         self.__color = Color
         self.__bool_scatter = scatter
@@ -59,7 +62,6 @@ class PyQtPlot:
         self.__fg = self.__fg_light
         self.__grid = self.__grid_light
 
-        self.__chart_layout = ChartLayout
         self.__chart_chart = QChart()
         self.__chart_chart.createDefaultAxes()
         self.__x_axis = QValueAxis()
@@ -70,7 +72,7 @@ class PyQtPlot:
         self.__y_max = 1.0
         self.__y_min = 0.0
 
-        # self.__chart_layout.setRenderHint(QPainter.Antialiasing)
+        self.__chart_layout.setRenderHint(QPainter.Antialiasing)
         self.__chart_chart.legend().setVisible(self.__legend)
         self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
         self.__chart_chart.setTitle(self.__chart_name)
@@ -102,6 +104,8 @@ class PyQtPlot:
                     self.__chart_list.append(QLineSeries())
                 elif __line_type == 'spline':
                     self.__chart_list.append(QSplineSeries())
+            if self.__bool_scatter:
+                self.__chart_list.append(QScatterSeries())
             for i, __chart in enumerate(self.__chart_list):
                 if i == 0:
                     __chart.setPen(self.__pen_r)
@@ -114,8 +118,8 @@ class PyQtPlot:
                 __chart.attachAxis(self.__y_axis)
             self.__chart_layout.setChart(self.__chart_chart)
 
-        self.__x_data = _np.concatenate(self.__x_data, x_new)
-        self.__y_data = _np.concatenate(self.__y_data, y_arr.T)
+        self.__x_data = _np.append(self.__x_data, x_new)
+        self.__y_data = _np.concatenate((self.__y_data, y_arr.T), axis=1)
 
         for __y, __chart in zip(y_arr[0], self.__chart_list):
             __chart.append(float(x_new), float(__y))

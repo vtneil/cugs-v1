@@ -1,9 +1,7 @@
 import sys
-import os
 import data_handler as ilib
 import gui as guilib
 import numpy as np
-import random
 from typing import Union as _Union
 from PySide6.QtWidgets import QApplication
 
@@ -26,6 +24,8 @@ class ProgFullStackGUI:
         self.serial_logger = None
         self.start_mission_stat = False
         self.pause_data = False
+        self.dict_data_array = dict()
+        _t = np.array([])
 
         self.func_list = [
             # ilib.wrapper(print, [], {}),
@@ -73,8 +73,8 @@ class ProgFullStackGUI:
 
     def setSerialDropDown(self) -> None:
         self.ui_main.combo_serial.clear()
-        self.com.port_list = self.com.listPorts()
-        self.ui_main.combo_serial.addItems(self.com.port_list)
+        self.com.refreshPortList()
+        self.ui_main.combo_serial.addItems(self.com.port_dict)
         return
 
     def setupThreadTimer(self) -> None:
@@ -87,7 +87,8 @@ class ProgFullStackGUI:
     def serialConnect(self) -> None:
         self.com_baudrate = int(self.ui_main.combo_baud.currentText())
         self.com_portname = self.ui_main.combo_serial.currentText()
-        self.com.connect(self.com_portname, self.com_baudrate)
+        if self.com.connect(self.com_portname, self.com_baudrate):
+            self.ui_main.tabWidget_Cmd.setCurrentWidget(self.ui_main.tab_data)
         return
 
     def startMission(self) -> None:
@@ -95,7 +96,7 @@ class ProgFullStackGUI:
 
     def testUpdatePlot(self):
         self.c1 = ilib.PyQtPlot(self.ui_main.mpl_c1)
-        self.c1.plot(1, 1)
+        self.c1.plot(1, 2)
         return
 
 

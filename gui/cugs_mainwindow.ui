@@ -72,7 +72,7 @@
           <enum>QTabWidget::North</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="tab_serial">
           <attribute name="title">
@@ -1239,7 +1239,7 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,1">
              <property name="spacing">
               <number>2</number>
              </property>
@@ -1260,7 +1260,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_19">
+               <layout class="QVBoxLayout" name="verticalLayout_16">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1268,10 +1268,10 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
@@ -1301,7 +1301,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QChartView" name="mpl_c1" native="true"/>
+                 <widget class="QGraphicsView" name="mpl_c1"/>
                 </item>
                </layout>
               </widget>
@@ -1314,7 +1314,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_20">
+               <layout class="QVBoxLayout" name="verticalLayout_17">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1322,10 +1322,10 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
@@ -1355,7 +1355,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QChartView" name="mpl_c2" native="true"/>
+                 <widget class="QGraphicsView" name="mpl_c2"/>
                 </item>
                </layout>
               </widget>
@@ -1395,7 +1395,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_16">
+               <layout class="QVBoxLayout" name="verticalLayout_18">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1403,10 +1403,10 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
@@ -1436,7 +1436,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QChartView" name="mpl_c3" native="true"/>
+                 <widget class="QGraphicsView" name="mpl_c3"/>
                 </item>
                </layout>
               </widget>
@@ -1449,7 +1449,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_17">
+               <layout class="QVBoxLayout" name="verticalLayout_19">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1457,10 +1457,10 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
@@ -1490,7 +1490,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QChartView" name="mpl_c4" native="true"/>
+                 <widget class="QGraphicsView" name="mpl_c4"/>
                 </item>
                </layout>
               </widget>
@@ -1503,7 +1503,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_18">
+               <layout class="QVBoxLayout" name="verticalLayout_20">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1511,10 +1511,10 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
@@ -1544,7 +1544,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QChartView" name="mpl_c5" native="true"/>
+                 <widget class="QGraphicsView" name="mpl_c5"/>
                 </item>
                </layout>
               </widget>
@@ -1560,9 +1560,9 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,1,1">
              <property name="spacing">
-              <number>2</number>
+              <number>0</number>
              </property>
              <property name="leftMargin">
               <number>0</number>
@@ -1592,14 +1592,17 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
+                <item>
+                 <widget class="QGraphicsView" name="mpl_c6"/>
+                </item>
                 <item>
                  <widget class="QLabel" name="lb_sub4">
                   <property name="minimumSize">
@@ -1624,63 +1627,6 @@
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QChartView" name="mpl_c6" native="true"/>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_sub3_3">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_26">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>4</number>
-                </property>
-                <property name="rightMargin">
-                 <number>4</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_sub5">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>SUB5 CHART LABEL</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QChartView" name="mpl_c7" native="true"/>
-                </item>
                </layout>
               </widget>
              </item>
@@ -1692,7 +1638,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_24">
+               <layout class="QVBoxLayout" name="verticalLayout_25">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1700,14 +1646,17 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
+                <item>
+                 <widget class="QGraphicsView" name="mpl_c7"/>
+                </item>
                 <item>
                  <widget class="QLabel" name="lb_sub6">
                   <property name="minimumSize">
@@ -1732,9 +1681,6 @@
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QChartView" name="mpl_c8" native="true"/>
-                </item>
                </layout>
               </widget>
              </item>
@@ -1746,7 +1692,7 @@
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_25">
+               <layout class="QVBoxLayout" name="verticalLayout_26">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1754,14 +1700,17 @@
                  <number>0</number>
                 </property>
                 <property name="topMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>4</number>
+                 <number>0</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
+                <item>
+                 <widget class="QGraphicsView" name="mpl_c8"/>
+                </item>
                 <item>
                  <widget class="QLabel" name="lb_sub7">
                   <property name="minimumSize">
@@ -1786,8 +1735,59 @@
                   </property>
                  </widget>
                 </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_sub3_3">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_24">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
-                 <widget class="QChartView" name="mpl_c9" native="true"/>
+                 <widget class="QGraphicsView" name="mpl_c9"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_sub5">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>SUB5 CHART LABEL</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -1994,14 +1994,6 @@
    </property>
   </action>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QChartView</class>
-   <extends>QWidget</extends>
-   <header>PySide6.QtCharts.QChartView</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
