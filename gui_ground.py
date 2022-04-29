@@ -16,7 +16,7 @@ class ProgFullStackGUI:
         self.use_np = use_np
         self.data_format = tuple_data
         self.header = header if header else 'SPARK2'
-        self.save_name = save_name if save_name else 'test_file'
+        self.save_name = save_name if save_name else 'test_file' 
         self.extension = ext if ext else 'csv'
 
         # Objects Initialization
@@ -102,11 +102,18 @@ class ProgFullStackGUI:
         self.serial_plain_text = serial_text_in
         self.serial_parsed_text = self.parser.parseData(serial_text_in)
         self.parser.append(self.dict_data_array, self.serial_parsed_text)
-        __coord = ilib.Coordinate(
-            latitude=self.serial_parsed_text['gps_lat'],
-            longitude=self.serial_parsed_text['gps_lon'],
-            altitude=self.serial_parsed_text['bar_alt']
-        )
+        try:
+            __coord = ilib.Coordinate(
+                latitude=self.serial_parsed_text['gps_lat'],
+                longitude=self.serial_parsed_text['gps_lon'],
+                altitude=self.serial_parsed_text['bar_alt']
+            )
+        except KeyError:
+            __coord = ilib.Coordinate(
+                latitude=0,
+                longitude=0,
+                altitude=0
+            )
 
         # Serial Monitor
         self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
@@ -149,7 +156,7 @@ class ProgFullStackGUI:
         return
 
     def serialDisconnect(self) -> None:
-        if self.com.disconnect:
+        if self.com.disconnect():
             self.serial_connected = False
         return
 
@@ -162,10 +169,10 @@ class ProgFullStackGUI:
         return
 
 
-def run_prog():
+def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     print('[ GUI_PROG ] ' + 'Start of Program')
     print()
-    prog_preferences = ilib.PreferencesData('data_handler/cugs_preferences.json').getPreferences()
+    prog_preferences = ilib.PreferencesData('data_handler/' + pref_file_name).getPreferences()
     data_format = prog_preferences['data_format']
     leading_header = prog_preferences['header']
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)

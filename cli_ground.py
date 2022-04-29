@@ -42,14 +42,22 @@ class ProgFullStackCLI:
     def backgroundTasks(self, _get_data_from_serial) -> None:
         __data_raw = _get_data_from_serial
         __data_dict = self.parser.parseData(__data_raw)
+        print(__data_raw.split(','))
         print(', '.join(['{}: {}'.format(ilib.strStyled(k, style='bold', end=''), v) for k, v in __data_dict.items()]))
         # func keep data to total dict with numpy or list within dict
         print('\n')
-        __coord = ilib.Coordinate(
-            latitude=__data_dict['gps_lat'],
-            longitude=__data_dict['gps_lon'],
-            altitude=__data_dict['bar_alt']
-        )
+        try:
+            __coord = ilib.Coordinate(
+                latitude=__data_dict['gps_lat'],
+                longitude=__data_dict['gps_lon'],
+                altitude=__data_dict['bar_alt']
+            )
+        except KeyError:
+            __coord = ilib.Coordinate(
+                latitude=0,
+                longitude=0,
+                altitude=0
+            )
         self.directory.appendEarthCoord(__coord)
         self.directory.appendDelimitedFile(self.directory.dictToList(__data_dict, self.data_format), __data_raw)
 
@@ -132,10 +140,10 @@ class ProgFullStackCLI:
         return
 
 
-def run_prog():
+def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     print('[ CLI_PROG ] ' + 'Start of Program')
     print()
-    prog_preferences = ilib.PreferencesData('data_handler/cugs_preferences.json').getPreferences()
+    prog_preferences = ilib.PreferencesData('data_handler/' + pref_file_name).getPreferences()
     data_format = prog_preferences['data_format']
     leading_header = prog_preferences['header']
     prog = ProgFullStackCLI(data_format, header=leading_header, use_np=True)

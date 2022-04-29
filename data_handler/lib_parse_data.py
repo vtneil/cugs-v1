@@ -57,6 +57,7 @@ class Parser:
         :return: Parsed keys values dictionary
         """
         __list_raw_text = raw_text.strip().split(self.__delimiter)
+        if __list_raw_text[-1] == '': __list_raw_text = __list_raw_text[:-1]
         __list_raw_text = __list_raw_text[:self.__len_data_format] + self.__len_data_format * [None]
         self.__is_valid = self.__len_data_format == len(__list_raw_text)
         if ordered:

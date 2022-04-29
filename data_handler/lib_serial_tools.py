@@ -142,6 +142,8 @@ class LogSerial:
 
                 except _serial.serialutil.SerialException:
                     result = ''
+                except TypeError:
+                    result = ''
         except KeyboardInterrupt:
             pass
         print('_' * 20 + 'END_SERIAL' + '_' * 20)
