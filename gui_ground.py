@@ -23,6 +23,7 @@ class ProgFullStackGUI:
 
         # Objects Initialization
         self.ui_main = guilib.GuiLoader('gui/cugs_mainwindow.ui').ui
+        self.ui_csv = guilib.GuiLoader('gui/cugs_csv_liveview.ui').ui
         self.parser = ilib.Parser(self.data_format, header=self.header)
         self.directory = ilib.LoadDirectory(__file__, self.save_name, self.extension)
         self.com = ilib.ComPort()
