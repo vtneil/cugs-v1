@@ -6,8 +6,9 @@ from lib.lib_parse_data import Parser
 from lib.lib_preferences_reader import PreferencesData
 from lib.lib_serial_tools import ComPort
 from lib.lib_serial_tools import LogSerial
-from lib.lib_qchart import PyQtPlot
+from lib.lib_qelement import PyQtPlot
 from lib.lib_threading import ThreadSerial
 from lib.lib_log import Log
-from lib.lib_mqtt import *
+from lib.lib_mqtt import MQTTBrokerHandler
+from lib.lib_mqtt import MQTTClientHandler
 from lib.lib_misc import *

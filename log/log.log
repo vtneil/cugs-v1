@@ -1861,3 +1861,92 @@ TypeError: byref() argument must be a ctypes instance, not 'NoneType'
 [INFO] In root - 02-May-22 11:37:04 - [LOG_SERIAL] COM7 has been successfully closed!
 [INFO] In root - 02-May-22 11:37:04 - [GUI_PROG] Program exited with code 0
 [INFO] In root - 02-May-22 11:37:04 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 02-May-22 12:30:22 - [GUI_PROG] Start of Program
+[INFO] In root - 02-May-22 12:30:26 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 12:30:26 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 12:30:26 - [LOG_THREAD] Try stopping the serial thread.
+[WARNING] In root - 02-May-22 12:30:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:28 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:29 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:30 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 12:30:31 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[ERROR] In root - 02-May-22 12:30:32 - [MAIN] Serial port disconnected.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 134, in readAll
+    self.raw += self.__read()
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 180, in __read
+    __s = self._pStrip(self.device.read().decode('utf-8')).strip()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 285, in read
+    ctypes.byref(self._overlapped_read))
+TypeError: byref() argument must be a ctypes instance, not 'NoneType'
+[INFO] In root - 02-May-22 12:30:32 - [LOG_SERIAL] COM7 has been successfully closed!
+[ERROR] In root - 02-May-22 12:30:34 - [LOG_SERIAL] The port has not been initialized.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 94, in disconnect
+    if self.device.isOpen():
+AttributeError: 'ComPort' object has no attribute 'device'
+[INFO] In root - 02-May-22 12:30:34 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 02-May-22 12:30:34 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 02-May-22 12:36:12 - [GUI_PROG] Start of Program
+[INFO] In root - 02-May-22 12:36:14 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 12:36:14 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 12:36:14 - [LOG_THREAD] Try stopping the serial thread.
+[ERROR] In root - 02-May-22 12:46:05 - [MAIN] Serial port disconnected.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 134, in readAll
+    self.raw += self.__read()
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 180, in __read
+    __s = self._pStrip(self.device.read().decode('utf-8')).strip()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 285, in read
+    ctypes.byref(self._overlapped_read))
+TypeError: byref() argument must be a ctypes instance, not 'NoneType'
+[INFO] In root - 02-May-22 12:46:05 - [LOG_SERIAL] COM7 has been successfully closed!
+[INFO] In root - 02-May-22 12:46:05 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 02-May-22 12:46:05 - [LOG_THREAD] Serial thread stopped and deleted successfully.

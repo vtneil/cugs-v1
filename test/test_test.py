@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QApplication
 from lib import lib_preferences_reader as lpref
 from lib import lib_parse_data as lparse
 from lib import lib_file_class as lfile
-from lib import lib_qchart as lchart
+from lib import lib_qelement as lchart
 from lib import lib_serial_tools as lserial
 from lib.lib_gis import *
 from gui.gui_class import *

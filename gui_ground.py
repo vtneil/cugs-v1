@@ -116,8 +116,8 @@ class ProgFullStackGUI:
                 longitude=None,
                 altitude=None
             )
-            self.logger.warn('GPS Latitude, GPS Longitude, Barometric Altitude are not valid! '
-                             'Using Coordinate(0, 0, 0) instead.')
+            # self.logger.warn('GPS Latitude, GPS Longitude, Barometric Altitude are not valid! '
+            #                  'Using Coordinate(0, 0, 0) instead.')
 
         # Serial Monitor
         self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
