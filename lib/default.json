@@ -36,5 +36,6 @@
               "gps_alt"
             ]
   },
-  "state": "state"
+  "state": "state",
+  "placeholder": 0
 }

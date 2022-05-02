@@ -1,7 +1,8 @@
 import sys
-import data_handler as ilib
+import lib as ilib
 import gui as guilib
 import numpy as np
+from lib import Log
 from typing import Union as _Union
 from PySide6.QtWidgets import QApplication, QTableWidgetItem
 from PySide6.QtCore import Qt
@@ -18,6 +19,7 @@ class ProgFullStackGUI:
         self.header = header if header else 'SPARK2'
         self.save_name = save_name if save_name else 'test_file' 
         self.extension = ext if ext else 'csv'
+        self.logger = Log(target='GUI_STACK')
 
         # Objects Initialization
         self.ui_main = guilib.GuiLoader('gui/cugs_mainwindow.ui').ui
@@ -60,7 +62,7 @@ class ProgFullStackGUI:
         # Other
         self.testUpdatePlot()
 
-    def setupUi(self):
+    def setupUi(self) -> None:
         self.ui_main.setWindowTitle("CU Ground Station V1")
         self.ui_main.combo_serial.clear()
         self.ui_main.text_serial_mon.clear()
@@ -73,7 +75,7 @@ class ProgFullStackGUI:
 
         return
 
-    def start(self):
+    def start(self) -> None:
         self.ui_main.show()
         return
 
@@ -110,10 +112,12 @@ class ProgFullStackGUI:
             )
         except KeyError:
             __coord = ilib.Coordinate(
-                latitude=0,
-                longitude=0,
-                altitude=0
+                latitude=None,
+                longitude=None,
+                altitude=None
             )
+            self.logger.warn('GPS Latitude, GPS Longitude, Barometric Altitude are not valid! '
+                             'Using Coordinate(0, 0, 0) instead.')
 
         # Serial Monitor
         self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
@@ -163,16 +167,17 @@ class ProgFullStackGUI:
     def startMission(self) -> None:
         return
 
-    def testUpdatePlot(self):
+    def testUpdatePlot(self) -> None:
         for c in self.mpl_widgets:
             c.plot(1, 2)
         return
 
 
 def run_prog(pref_file_name: str = 'cugs_preferences.json'):
-    print('[ GUI_PROG ] ' + 'Start of Program')
+    log = Log(target='GUI_PROG')
+    log.info('Start of Program')
     print()
-    prog_preferences = ilib.PreferencesData('data_handler/' + pref_file_name).getPreferences()
+    prog_preferences = ilib.PreferencesData('lib/' + pref_file_name).getPreferences()
     data_format = prog_preferences['data_format']
     leading_header = prog_preferences['header']
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
@@ -185,7 +190,7 @@ def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     app.exec()
     prog.com.disconnect()
     print()
-    print('[ GUI_PROG ] ' + 'Program exited with code ' + str(prog.exit_code))
+    log.info('Program exited with code ' + str(prog.exit_code))
 
     return prog.exit_code
 

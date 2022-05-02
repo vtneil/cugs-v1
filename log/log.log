@@ -1,0 +1,1863 @@
+[INFO] In root - 02-May-22 11:31:16 - [GUI_PROG]Start of Program
+[INFO] In root - 02-May-22 11:32:09 - [GUI_PROG]Start of Program
+[ERROR] In root - 02-May-22 11:32:20 - [LOG_SERIAL]The port has not been initialized.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 94, in disconnect
+    if self.device.isOpen():
+AttributeError: 'NoneType' object has no attribute 'isOpen'
+[INFO] In root - 02-May-22 11:32:20 - [GUI_PROG]Program exited with code 0
+[INFO] In root - 02-May-22 11:33:00 - [GUI_PROG] Start of Program
+[INFO] In root - 02-May-22 11:33:02 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 11:33:02 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 11:33:02 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 02-May-22 11:33:09 - [LOG_SERIAL] COM7 has been successfully closed!
+[INFO] In root - 02-May-22 11:33:09 - [GUI_PROG] Program exited with code 0
+[ERROR] In root - 02-May-22 11:33:09 - [LOG_THREAD] Unable to delete the  serial thread.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_threading.py", line 19, in __del__
+    self.wait()
+RuntimeError: Internal C++ object (ThreadSerial) already deleted.
+[INFO] In root - 02-May-22 11:34:01 - [GUI_PROG] Start of Program
+[INFO] In root - 02-May-22 11:34:05 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 11:34:05 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 11:34:05 - [LOG_THREAD] Try stopping the serial thread.
+[WARNING] In root - 02-May-22 11:34:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:12 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:13 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:13 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:14 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:14 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:15 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:15 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:16 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:16 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:17 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:17 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:18 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:18 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:19 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:19 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:20 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:20 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:21 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:21 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:22 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:22 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:23 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:23 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:24 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:24 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:25 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:25 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:26 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:26 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Raw Data File appended successfully!
+[ERROR] In root - 02-May-22 11:34:27 - [MAIN] Unknown Serial Exception
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 134, in readAll
+    self.raw += self.__read()
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 180, in __read
+    __s = self._pStrip(self.device.read().decode('utf-8')).strip()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 287, in read
+    raise SerialException("ReadFile failed ({!r})".format(ctypes.WinError()))
+serial.serialutil.SerialException: ReadFile failed (OSError(9, 'The handle is invalid.', None, 6))
+[INFO] In root - 02-May-22 11:34:27 - [LOG_SERIAL] COM7 has been successfully closed!
+[WARNING] In root - 02-May-22 11:34:27 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:27 - [LOG_FILE] Raw Data File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_THREAD] Try stopping the serial thread.
+[WARNING] In root - 02-May-22 11:34:41 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:41 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:41 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:41 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:41 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:41 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:42 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:42 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:43 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:43 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:44 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:44 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:45 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:45 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:46 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:46 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:47 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:47 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:48 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:48 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:49 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:50 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:51 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:52 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:53 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:34:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:34:54 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:34:54 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:34:54 - [LOG_FILE] Raw Data File appended successfully!
+[ERROR] In root - 02-May-22 11:34:54 - [MAIN] Serial port disconnected.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 134, in readAll
+    self.raw += self.__read()
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 180, in __read
+    __s = self._pStrip(self.device.read().decode('utf-8')).strip()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 285, in read
+    ctypes.byref(self._overlapped_read))
+TypeError: byref() argument must be a ctypes instance, not 'NoneType'
+[INFO] In root - 02-May-22 11:34:54 - [LOG_SERIAL] COM7 has been successfully closed!
+[ERROR] In root - 02-May-22 11:34:55 - [LOG_SERIAL] The port has not been initialized.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 94, in disconnect
+    if self.device.isOpen():
+AttributeError: 'ComPort' object has no attribute 'device'
+[INFO] In root - 02-May-22 11:34:55 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 02-May-22 11:34:55 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 02-May-22 11:36:03 - [GUI_PROG] Start of Program
+[INFO] In root - 02-May-22 11:36:05 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_THREAD] Try stopping the serial thread.
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:05 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:05 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:06 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:06 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:07 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:07 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:08 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:08 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:09 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:09 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:10 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:10 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:11 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:11 - [LOG_FILE] Raw Data File appended successfully!
+[WARNING] In root - 02-May-22 11:36:12 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[INFO] In root - 02-May-22 11:36:12 - [LOG_FILE] Earth Coord File appended successfully!
+[INFO] In root - 02-May-22 11:36:12 - [LOG_FILE] Delimited File appended successfully!
+[INFO] In root - 02-May-22 11:36:12 - [LOG_FILE] Raw Data File appended successfully!
+[INFO] In root - 02-May-22 11:36:12 - [LOG_SERIAL] COM7 has been successfully closed!
+[INFO] In root - 02-May-22 11:36:12 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 02-May-22 11:36:47 - [GUI_PROG] Start of Program
+[INFO] In root - 02-May-22 11:36:49 - [LOG_SERIAL] Device COM7 is successfully connected!
+[INFO] In root - 02-May-22 11:36:49 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 02-May-22 11:36:49 - [LOG_THREAD] Try stopping the serial thread.
+[WARNING] In root - 02-May-22 11:36:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:49 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:50 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:51 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:52 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:53 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:54 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:55 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:56 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:57 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:58 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:36:59 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:00 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:01 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:02 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:03 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[WARNING] In root - 02-May-22 11:37:04 - [GUI_STACK] GPS Latitude, GPS Longitude, Barometric Altitude are not valid! Using Coordinate(0, 0, 0) instead.
+[ERROR] In root - 02-May-22 11:37:04 - [MAIN] Serial port disconnected.
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 134, in readAll
+    self.raw += self.__read()
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 180, in __read
+    __s = self._pStrip(self.device.read().decode('utf-8')).strip()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 285, in read
+    ctypes.byref(self._overlapped_read))
+TypeError: byref() argument must be a ctypes instance, not 'NoneType'
+[INFO] In root - 02-May-22 11:37:04 - [LOG_SERIAL] COM7 has been successfully closed!
+[INFO] In root - 02-May-22 11:37:04 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 02-May-22 11:37:04 - [LOG_THREAD] Serial thread stopped and deleted successfully.

@@ -8,6 +8,7 @@ import xml as _xml
 from typing import Union as _Union
 from collections import OrderedDict as _Dict
 from io import StringIO as _String
+from lib.lib_log import Log
 
 
 class PreferencesData:
@@ -20,7 +21,6 @@ class PreferencesData:
         self.__pref = pref
         self.__mode = mode
         self.__format = ''
-        self.__pref_file_ext = ''
         self.__pref_dict = dict()
         self.__format_error = KeyError('Got {} as format but only accepts json, yaml, xml and toml formats.'
                                        .format(self.__format))
@@ -34,38 +34,48 @@ class PreferencesData:
                                 'toml': self.writeTOML,
                                 'xml': self.writeXML,
                                 'yaml': self.writeYAML}
+        self.logger = Log(target='PREF_LOADER')
 
         if isinstance(self.__pref, str):
             if '.' in self.__pref:
                 __idx_dot = self.__pref.rfind('.')
-                self.__pref_file_ext = self.__pref[__idx_dot+1:].lower()
+                self.__format = self.__pref[__idx_dot+1:].lower()
+                self.logger.debug('Extension found: ' + self.__format)
 
-            if self.__pref_file_ext and self.__pref_file_ext in ['json', 'toml', 'xml', 'yaml']:
-                self.__format = self.__pref_file_ext
+            if self.__format and self.__format in ['json', 'toml', 'xml', 'yaml']:
                 self.__pref_dict = self.__format_parser[self.__format](self.__pref, mode=self.__mode)
+                self.logger.debug('Extension correct: ' + self.__format)
 
             else:
                 try:
                     self.__pref_dict = self.parseJSON(self.__pref, mode=self.__mode)
                     self.__format = 'json'
+                    self.logger.info('Preferences format is JSON. Using JSON Loader.')
+                    self.logger.info('Loaded JSON as dictionary')
                 except ValueError or _json.decoder.JSONDecodeError:
                     pass
 
                 try:
                     self.__pref_dict = self.parseTOML(self.__pref, mode=self.__mode)
                     self.__format = 'toml'
+                    self.logger.info('Preferences format is TOML. Using TOML Loader.')
+                    self.logger.info('Loaded TOML as dictionary')
                 except ValueError or _toml.decoder.TomlDecodeError:
                     pass
 
                 try:
                     self.__pref_dict = self.parseXML(self.__pref, mode=self.__mode)
                     self.__format = 'xml'
+                    self.logger.info('Preferences format is XML. Using XML Tree Loader.')
+                    self.logger.info('Loaded XML as dictionary')
                 except ValueError or _xml.parsers.expat.ExpatError:
                     pass
 
                 try:
                     self.__pref_dict = self.parseYAML(self.__pref, mode=self.__mode)
                     self.__format = 'yaml'
+                    self.logger.info('Preferences format is YAML. Using YAML Loader.')
+                    self.logger.info('Loaded YAML as dictionary')
                 except Exception:
                     raise self.__format_error
 
@@ -111,7 +121,6 @@ class PreferencesData:
             raise TypeError('File name only supports \'str\' not \'' + str(type(__pref_file_name)) + '\'')
 
         if __file_format and __file_format in ['json', 'toml', 'xml', 'yaml']:
-            self.__format = self.__pref_file_ext
             self.__pref_dict = self.__format_writer[self.__format](__pref, __pref)
             return True
         return False

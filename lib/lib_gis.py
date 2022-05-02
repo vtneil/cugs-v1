@@ -8,9 +8,9 @@ class Coordinate:
     """
     A class of coordinate consisting of latitude, longitude, altitude
     """
-    latitude: _Union[int, float, str]
-    longitude: _Union[int, float, str]
-    altitude: _Union[int, float, str]
+    latitude: _Union[int, float, str, None]
+    longitude: _Union[int, float, str, None]
+    altitude: _Union[int, float, str, None]
 
     def __post_init__(self):
         """
@@ -18,9 +18,20 @@ class Coordinate:
 
         :return:
         """
-        self.latitude = float(self.latitude)
-        self.longitude = float(self.longitude)
-        self.altitude = float(self.altitude)
+        if self.latitude is None:
+            self.latitude = 0.0
+        else:
+            self.latitude = float(self.latitude)
+
+        if self.longitude is None:
+            self.longitude = 0.0
+        else:
+            self.longitude = float(self.longitude)
+
+        if self.altitude is None:
+            self.altitude = 0.0
+        else:
+            self.altitude = float(self.altitude)
 
     def __bool__(self):
         return self.__len__() > 0

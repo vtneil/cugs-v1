@@ -1,4 +1,5 @@
-import data_handler as ilib
+import lib as ilib
+import logging as log
 import numpy as np
 from typing import Union as _Union
 
@@ -118,7 +119,7 @@ class ProgFullStackCLI:
                 return
             if __user_input:
                 if __user_input in ['4800', '9600', '19200', '38400', '57600', '76800', '115200'] \
-                        and __user_input.isdigit():
+                        or __user_input.isdigit():
                     __baudrate = int(__user_input)
                     print('-' * 50)
                 else:
@@ -136,14 +137,14 @@ class ProgFullStackCLI:
             print()
         return
 
-    def stop(self):
+    def stop(self) -> None:
         return
 
 
 def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     print('[ CLI_PROG ] ' + 'Start of Program')
     print()
-    prog_preferences = ilib.PreferencesData('data_handler/' + pref_file_name).getPreferences()
+    prog_preferences = ilib.PreferencesData('lib/' + pref_file_name).getPreferences()
     data_format = prog_preferences['data_format']
     leading_header = prog_preferences['header']
     prog = ProgFullStackCLI(data_format, header=leading_header, use_np=True)

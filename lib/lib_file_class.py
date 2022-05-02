@@ -2,7 +2,8 @@ import os.path as _op
 import numpy as _np
 import os
 from typing import Union as _Union
-from data_handler.lib_gis import Coordinate as _Coordinate
+from lib.lib_log import Log
+from lib.lib_gis import Coordinate as _Coordinate
 from collections import OrderedDict as _Dict
 
 
@@ -21,6 +22,7 @@ class LoadDirectory:
         :param device_id: Device identification number or test number for files
         :param folder_name" Subfolder name for all data and temporary files to be saved
         """
+        self.logger = Log(target='LOG_FILE')
         self.dir_filename = dir_filename
         self.global_path = self.getRootPath()
         self.device_id = str(device_id)
@@ -51,6 +53,7 @@ class LoadDirectory:
         :return:
         """
         self.createFolder(self.folder_name)
+        self.logger.debug('Checked folder.')
         return
 
     def __checkPath(self, data_no: int = 1) -> None:
@@ -75,6 +78,7 @@ class LoadDirectory:
                                                     '_' + str(data_no) + '.txt')
             self.path_save_coord = self.__makeAbsolutePath(self.pre_save + '_' + self.device_id +
                                                            '_' + str(data_no) + '.kml')
+        self.logger.debug('Checked path.')
         return
 
     def __makeAbsolutePath(self, filename) -> str:
@@ -86,6 +90,7 @@ class LoadDirectory:
         """
         folder = self.folder_name + '/' + filename
         path = _op.join(self.global_path, folder)
+        self.logger.debug('Absolute path created.')
         return str(path)
 
     def __renewPath(self) -> None:
@@ -100,6 +105,7 @@ class LoadDirectory:
             os.remove(self.path_earth_coord)
         if not _op.isfile(self.path_earth_live):
             self.createEarthLive(filename=self.path_earth_live, coord_filename=self.path_earth_coord)
+        self.logger.debug('Path renewed.')
         return
 
     def appendEarthCoord(self, coords: _Coordinate, /, *,
@@ -169,6 +175,7 @@ class LoadDirectory:
             str_coord.append(earth_coord_2)
             f_gearth.writelines(str_coord)
             f_save.writelines(str_coord)
+        self.logger.debug('Earth Coord File appended successfully!')
         return earth_coord_0 + color + earth_coord_1 + '\n'.join(__coord) + earth_coord_2
 
     def appendDelimitedFile(self, *args: _Union[_np.ndarray, list, str], delimiter: str = ',') -> list:
@@ -195,9 +202,11 @@ class LoadDirectory:
             with open(self.path_csv, 'a', encoding='utf-8') as _file:
                 __lst_tmp = [''.join([__data, '\n']) for __data in __raw_data]
                 _file.writelines(__lst_tmp)
+                self.logger.debug('Delimited File appended successfully!')
         if __raw_data_str:
             with open(self.path_raw, 'a', encoding='utf-8') as _file:
                 _file.writelines([__raw_data_str, '\n'])
+                self.logger.debug('Raw Data File appended successfully!')
         return __raw_data
 
     def getRootPath(self) -> str:
@@ -209,8 +218,7 @@ class LoadDirectory:
         __filename = self.dir_filename
         return _op.abspath(_op.dirname(__filename))
 
-    @staticmethod
-    def createEarthLive(*, filename: str, coord_filename: str) -> str:
+    def createEarthLive(self, *, filename: str, coord_filename: str) -> str:
         """
         Create or overwrite Google Earth Live Feed KML file.
 
@@ -232,6 +240,8 @@ class LoadDirectory:
             f.writelines(earth_live_pre)
             f.writelines(coord_filename)
             f.writelines(earth_live_post)
+
+        self.logger.debug('Earth Live File created successfully!')
 
         return earth_live_pre + coord_filename + earth_live_post
 

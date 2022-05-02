@@ -39,7 +39,9 @@
             "gyr_z2",
             "dir_x1",
             "dir_y1",
-            "dir_z1"
+            "dir_z1",
+            "du1",
+            "du2"
           ],
   "use_plot":
   {
@@ -51,5 +53,6 @@
               "gps_alt"
             ]
   },
-  "state": "state"
+  "state": "state",
+  "placeholder": 0
 }

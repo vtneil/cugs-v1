@@ -1,6 +1,7 @@
 import serial as _serial
 import serial.tools.list_ports as _serial_port
 from typing import Union as _Union
+from lib.lib_log import Log
 
 
 class ComPort:
@@ -15,6 +16,7 @@ class ComPort:
         self.port = str()
         self.port_port = None
         self.device = None
+        self.logger = Log(target='LOG_SERIAL')
 
     def listPorts(self) -> dict:
         """
@@ -53,15 +55,15 @@ class ComPort:
             self.port = self.port_dict[selected_name.strip()]
             try:
                 self.device = _serial.Serial(self.port, baudrate=int(baud), timeout=60)
-                print('[LOG_SERIAL] ' + 'Device ' + self.port + ' is successfully connected!')
-                print('[LOG_SERIAL] ' + 'with baud rate=' + str(baud) + '.')
+                self.logger.info('Device ' + self.port + ' is successfully connected!')
+                self.logger.info('with baud rate=' + str(baud) + '.')
                 return True
             except Exception:
-                print('[LOG_SERIAL] ' + 'Unexpected Error. Can\'t connect to port or the port is already connected!')
-                print('[LOG_SERIAL] ' + 'PORT ID: ' + self.port)
+                self.logger.exception('Unexpected Error. Can\'t connect to port or the port is already connected!')
+                self.logger.critical('PORT ID: ' + self.port)
                 return False
         else:
-            print('[LOG_SERIAL] ' + 'There is no serial port selected. Select the serial port from the list.')
+            self.logger.warn('There is no serial port selected. Select the serial port from the list.')
             return False
 
     def printPort(self) -> None:
@@ -76,8 +78,10 @@ class ComPort:
         :return:
         """
         if self.device.isOpen():
+            self.logger.debug('The device port {} is opened.'.format(self.port))
             return True
         else:
+            self.logger.debug('The device port is closed or not initialized.')
             return False
 
     def disconnect(self) -> bool:
@@ -90,12 +94,12 @@ class ComPort:
             if self.device.isOpen():
                 self.device.close()
                 del self.device
-                print('[LOG_SERIAL] ' + self.port + ' has been successfully closed!')
+                self.logger.info(self.port + ' has been successfully closed!')
             else:
-                print('[LOG_SERIAL] ' + self.port + ' has already been disconnected!')
+                self.logger.warn(self.port + ' has already been disconnected!')
             return True
         except AttributeError:
-            print('[LOG_SERIAL] ' + 'The port has not been initialized.')
+            self.logger.exception('The port has not been initialized.')
             return False
 
 
@@ -115,6 +119,7 @@ class LogSerial:
         self._is_updated = False
         self._find1 = 0
         self._find2 = 0
+        self.logger = Log()
 
     def readAll(self, *func) -> None:
         """
@@ -122,10 +127,9 @@ class LogSerial:
 
         :return:
         """
-        result = None
-        print('_' * 20 + 'LOG_SERIAL' + '_' * 20)
+        result = True
         try:
-            while result is None:
+            while result:
                 try:
                     self.raw += self.__read()
                     self._find1 = self.raw.find(self.header)
@@ -141,12 +145,13 @@ class LogSerial:
                                 __f(self.payload, *__args, **__kwargs)
 
                 except _serial.serialutil.SerialException:
-                    result = ''
+                    self.logger.exception('Unknown Serial Exception')
+                    result = False
                 except TypeError:
-                    result = ''
+                    self.logger.exception('Serial port disconnected.')
+                    result = False
         except KeyboardInterrupt:
             pass
-        print('_' * 20 + 'END_SERIAL' + '_' * 20)
 
     def isUpdated(self) -> bool:
         """

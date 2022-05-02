@@ -1,17 +1,17 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from data_handler import lib_preferences_reader as lpref
-from data_handler import lib_parse_data as lparse
-from data_handler import lib_file_class as lfile
-from data_handler import lib_qchart as lchart
-from data_handler import lib_serial_tools as lserial
-from data_handler.lib_gis import *
+from lib import lib_preferences_reader as lpref
+from lib import lib_parse_data as lparse
+from lib import lib_file_class as lfile
+from lib import lib_qchart as lchart
+from lib import lib_serial_tools as lserial
+from lib.lib_gis import *
 from gui.gui_class import *
 
 
 if __name__ == '__main__':
     print('Start of PROG')
-    list_data_format = lpref.PreferencesData('data_handler/cugs_preferences.json')
+    list_data_format = lpref.PreferencesData('lib/cugs_preferences.json')
     # list_data_format.writePreferences('crab')
     # app = QApplication(sys.argv)
     # ui_home = gc.LoadUi('gui/hw_ref.ui')
