@@ -1,19 +1,16 @@
 import lib as ilib
-import logging as log
 import numpy as np
 from typing import Union as _Union
 
 
 class ProgFullStackCLI:
-    def __init__(self, tuple_data: _Union[list, tuple, set, dict], /, *,
-                 header=None, save_name=None, ext=None, use_np: bool = False) -> None:
-        # Back end Init
+    def __init__(self, pref_dict: dict) -> None:
+        # Back end Initialization
         self.exit_code = 0
-        self.use_np = use_np
-        self.data_format = tuple_data
-        self.header = header if header else 'SPARK2'
-        self.save_name = save_name if save_name else 'test_file'
-        self.extension = ext if ext else 'csv'
+        self.data_format = pref_dict['data_format']
+        self.header = pref_dict['header'] if pref_dict['header'] else 'SPARK2'
+        self.save_name = pref_dict['file_name'] if pref_dict['file_name'] else 'test_file'
+        self.extension = pref_dict['file_ext'] if pref_dict['file_ext'] else 'csv'
         self.parser = ilib.Parser(self.data_format, header=self.header)
         self.directory = ilib.LoadDirectory(__file__, self.save_name, self.extension)
         self.com = ilib.ComPort()
@@ -62,16 +59,10 @@ class ProgFullStackCLI:
         self.directory.appendEarthCoord(__coord)
         self.directory.appendDelimitedFile(self.directory.dictToList(__data_dict, self.data_format), __data_raw)
 
-        if self.use_np:
-            for k, v in __data_dict.items():
-                if k not in self.dict_data_array:
-                    self.dict_data_array[k] = np.array([])
-                self.dict_data_array[k] = np.append(self.dict_data_array[k], v)
-        else:
-            for k, v in __data_dict.items():
-                if k not in self.dict_data_array:
-                    self.dict_data_array[k] = []
-                self.dict_data_array[k].append(v)
+        for k, v in __data_dict.items():
+            if k not in self.dict_data_array:
+                self.dict_data_array[k] = np.array([])
+            self.dict_data_array[k] = np.append(self.dict_data_array[k], v)
 
         return
 

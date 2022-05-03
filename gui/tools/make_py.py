@@ -33,6 +33,8 @@ def main(argv):
     ui_dir = f_dir + "\{}\{}\"".format(subf, name_ui)
     command_os = "pyside6-uic " + ui_dir + " > " + py_dir
     os.system(command_os)
+    print('Executed command: \'' + command_os + '\'')
+    print('Please check the result accordingly.')
     return 0
 
 

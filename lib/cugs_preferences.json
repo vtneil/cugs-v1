@@ -1,6 +1,49 @@
 {
   "header": "SPARK2",
+  "delimiter": ",",
+  "file_name": "test",
+  "file_ext": "csv",
   "data_format":
+          [
+            "team_id",
+            "mission_time",
+            "packet_count",
+            "device_id",
+            "mode",
+            "state",
+            "gps_alt",
+            "bar_alt",
+            "imu_alt",
+            "gps_time",
+            "gps_lat",
+            "gps_lon",
+            "gps_sats",
+            "temp1",
+            "temp2",
+            "acc_x",
+            "acc_y",
+            "acc_z",
+            "ang_x",
+            "ang_y",
+            "ang_z",
+            "batt_volt",
+            "cmd_echo"
+          ],
+  "plot_engine": "qchart",
+  "use_plot":
+  {
+    "x": "packet_count",
+    "y":
+            [
+              "bar_alt",
+              "temp1",
+              "gps_alt"
+            ]
+  },
+  "state": "state",
+  "placeholder": 0,
+  "main_ui": "gui/cugs_mainwindow.ui",
+  "data_format_sub":
           [
             "team_id",
             "packet_count",
@@ -42,17 +85,5 @@
             "dir_z1",
             "du1",
             "du2"
-          ],
-  "use_plot":
-  {
-    "x": "packet_count",
-    "y":
-            [
-              "bar_alt",
-              "temp1",
-              "gps_alt"
-            ]
-  },
-  "state": "state",
-  "placeholder": 0
+          ]
 }

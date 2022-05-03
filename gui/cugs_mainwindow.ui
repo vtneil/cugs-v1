@@ -1314,7 +1314,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c1"/>
+                 <widget class="QWidget" name="mpl_c1"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_main1">
@@ -1368,7 +1368,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c2"/>
+                 <widget class="QWidget" name="mpl_c2"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_main2">
@@ -1449,7 +1449,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c3"/>
+                 <widget class="QWidget" name="mpl_c3"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub1">
@@ -1503,7 +1503,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c4"/>
+                 <widget class="QWidget" name="mpl_c4"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub2">
@@ -1557,7 +1557,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c5"/>
+                 <widget class="QWidget" name="mpl_c5"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub3">
@@ -1638,7 +1638,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c6"/>
+                 <widget class="QWidget" name="mpl_c6"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub4">
@@ -1692,7 +1692,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c7"/>
+                 <widget class="QWidget" name="mpl_c7"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub6">
@@ -1746,7 +1746,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c8"/>
+                 <widget class="QWidget" name="mpl_c8"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub7">
@@ -1800,7 +1800,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QGraphicsView" name="mpl_c9"/>
+                 <widget class="QWidget" name="mpl_c9"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub5">

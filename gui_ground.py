@@ -1,45 +1,56 @@
 import sys
 import lib as ilib
 import gui as guilib
-import numpy as np
+# import numpy as np
 from lib import Log
-from typing import Union as _Union
+# from typing import Union as _Union
 from PySide6.QtWidgets import QApplication, QTableWidgetItem
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QTextCursor
 
 
 class ProgFullStackGUI:
-    def __init__(self, tuple_data: _Union[list, tuple, set, dict], /, *,
-                 header=None, save_name=None, ext=None, use_np: bool = False) -> None:
+    def __init__(self, pref_dict: dict) -> None:
         # Back end Initialization
         self.exit_code = 0
-        self.use_np = use_np
-        self.data_format = tuple_data
-        self.header = header if header else 'SPARK2'
-        self.save_name = save_name if save_name else 'test_file' 
-        self.extension = ext if ext else 'csv'
+        self.data_format = pref_dict['data_format']
+        self.header = pref_dict['header'] if pref_dict['header'] else 'SPARK2'
+        self.save_name = pref_dict['file_name'] if pref_dict['file_name'] else 'test_file'
+        self.extension = pref_dict['file_ext'] if pref_dict['file_ext'] else 'csv'
+        self.main_ui_file = pref_dict['main_ui'] if pref_dict['main_ui'] else 'gui/cugs_mainwindow.ui'
+        self.plot_engine = pref_dict['plot_engine'] if pref_dict['plot_engine'] else 'qchart'
+        self.to_plot_x = pref_dict['use_plot']['x']
+        self.to_plot_y = pref_dict['use_plot']['y']
         self.logger = Log(target='GUI_STACK')
 
         # Objects Initialization
-        self.ui_main = guilib.GuiLoader('gui/cugs_mainwindow.ui').ui
+        self.ui_main = guilib.GuiLoader(self.main_ui_file).ui
         self.ui_csv = guilib.GuiLoader('gui/cugs_csv_liveview.ui').ui
         self.parser = ilib.Parser(self.data_format, header=self.header)
         self.directory = ilib.LoadDirectory(__file__, self.save_name, self.extension)
         self.com = ilib.ComPort()
         self.mpl_widgets = [
-            ilib.PyQtPlot(e) for e in [
-                self.ui_main.mpl_c1,
-                self.ui_main.mpl_c2,
-                self.ui_main.mpl_c3,
-                self.ui_main.mpl_c4,
-                self.ui_main.mpl_c5,
-                self.ui_main.mpl_c6,
-                self.ui_main.mpl_c7,
-                self.ui_main.mpl_c8,
-                self.ui_main.mpl_c9
-            ]
+            self.ui_main.mpl_c1,
+            self.ui_main.mpl_c2,
+            self.ui_main.mpl_c3,
+            self.ui_main.mpl_c4,
+            self.ui_main.mpl_c5,
+            self.ui_main.mpl_c6,
+            self.ui_main.mpl_c7,
+            self.ui_main.mpl_c8,
+            self.ui_main.mpl_c9
         ]
+        if self.plot_engine == 'qchart':
+            self.mpl_charts = [
+                ilib.QChartData(mpl_w) for mpl_w in self.mpl_widgets
+            ]
+        else:
+            self.mpl_charts = [
+                ilib.PyQtGraphData(mpl_w) for mpl_w in self.mpl_widgets
+            ]
+
+        self.table_main = ilib.QTableData(self.ui_main.table_kv_payload)
+        self.table_csv = ilib.QTableData(self.ui_csv.table_csv)
 
         # Variables Initialization
         self.com_baudrate = 0
@@ -49,7 +60,7 @@ class ProgFullStackGUI:
         self.serial_connected = False
         self.serial_thread = None
         self.serial_plain_text = ''
-        self.serial_parsed_text = dict()
+        self.serial_parsed_dict = dict()
         self.start_mission_stat = False
         self.pause_data = False
         self.dict_data_array = self.parser.createBlankDataDict()
@@ -61,7 +72,7 @@ class ProgFullStackGUI:
         self.setSerialDropDown()
 
         # Other
-        self.testUpdatePlot()
+        pass
 
     def setupUi(self) -> None:
         self.ui_main.setWindowTitle("CU Ground Station V1")
@@ -86,55 +97,15 @@ class ProgFullStackGUI:
         self.ui_main.btn_serial_refresh.clicked.connect(self.listRefreshSerial)
         self.ui_main.btn_start_mission.clicked.connect(self.updateButtonsLogic)
         self.ui_main.btn_start_pause_data.clicked.connect(self.updateButtonsLogic)
-
-        return
-
-    def updateButtonsLogic(self) -> None:
-        self.start_mission_stat = self.ui_main.btn_start_mission.isChecked()
-        self.pause_data = self.ui_main.btn_start_pause_data.isChecked()
+        self.ui_main.btn_csv_live.clicked.connect(self.startCsvLiveView)
+        self.ui_csv.btn_clear.clicked.connect(lambda: self.table_csv.clear())
+        self.ui_csv.btn_pop.clicked.connect(lambda: self.table_csv.pop())
         return
 
     def setSerialDropDown(self) -> None:
         self.ui_main.combo_serial.clear()
         self.com.refreshPortList()
         self.ui_main.combo_serial.addItems(self.com.port_dict)
-        return
-
-    def updateBackEnds(self, serial_text_in) -> None:
-        # Raw Data Processing
-        self.serial_plain_text = serial_text_in
-        self.serial_parsed_text = self.parser.parseData(serial_text_in)
-        self.parser.append(self.dict_data_array, self.serial_parsed_text)
-        try:
-            __coord = ilib.Coordinate(
-                latitude=self.serial_parsed_text['gps_lat'],
-                longitude=self.serial_parsed_text['gps_lon'],
-                altitude=self.serial_parsed_text['bar_alt']
-            )
-        except KeyError:
-            __coord = ilib.Coordinate(
-                latitude=None,
-                longitude=None,
-                altitude=None
-            )
-            # self.logger.warn('GPS Latitude, GPS Longitude, Barometric Altitude are not valid! '
-            #                  'Using Coordinate(0, 0, 0) instead.')
-
-        # Serial Monitor
-        self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
-        self.ui_main.text_serial_mon.moveCursor(QTextCursor.End)
-
-        # Key-Value Table
-        self.ui_main.table_kv_payload.setRowCount(len(self.serial_parsed_text))
-        for r, (k, v) in enumerate(self.serial_parsed_text.items()):
-            self.ui_main.table_kv_payload.setItem(r, 0, QTableWidgetItem(k))
-            self.ui_main.table_kv_payload.setItem(r, 1, QTableWidgetItem(str(v)))
-
-        # File Appending
-        self.directory.appendEarthCoord(__coord)
-        self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_text, self.data_format),
-                                           self.serial_plain_text)
-
         return
 
     def setupThreadSerial(self) -> None:
@@ -168,29 +139,83 @@ class ProgFullStackGUI:
     def startMission(self) -> None:
         return
 
-    def testUpdatePlot(self) -> None:
-        for c in self.mpl_widgets:
-            c.plot(1, 2)
+    def startCsvLiveView(self) -> None:
+        self.ui_csv.setWindowTitle("CU Ground Station V1 - CSV Tabular Liveview")
+        self.ui_csv.show()
+        return
+
+    def updateButtonsLogic(self) -> None:
+        self.start_mission_stat = self.ui_main.btn_start_mission.isChecked()
+        self.pause_data = self.ui_main.btn_start_pause_data.isChecked()
+        return
+
+    def updateBackEnds(self, serial_text_in) -> None:
+        # Raw Data Processing
+        self.serial_plain_text = serial_text_in
+        self.serial_parsed_dict = self.parser.parseData(serial_text_in)
+        self.parser.append(self.dict_data_array, self.serial_parsed_dict)
+        try:
+            __coord = ilib.Coordinate(
+                latitude=self.serial_parsed_dict['gps_lat'],
+                longitude=self.serial_parsed_dict['gps_lon'],
+                altitude=self.serial_parsed_dict['bar_alt']
+            )
+        except KeyError:
+            __coord = ilib.Coordinate(
+                latitude=None,
+                longitude=None,
+                altitude=None
+            )
+
+        # Serial Monitor
+        self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
+        self.ui_main.text_serial_mon.moveCursor(QTextCursor.End)
+
+        # File Appending
+        self.directory.appendEarthCoord(__coord)
+        self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_dict, self.data_format),
+                                           self.serial_plain_text)
+
+        # Key-Value Table
+        self.table_main.appendVector(self.serial_parsed_dict)
+
+        # CSV Liveview Table
+        self.table_csv.appendTable(self.serial_parsed_dict)
+
+        # Update plot data
+        self.updatePlot()
+
+        return
+
+    def updatePlot(self) -> None:
+        if self.to_plot_x in self.serial_parsed_dict:
+            if type(self.serial_parsed_dict[self.to_plot_x]) in [int, float]:
+                __to_plot_data = []
+
+                for __chart, __key in zip(self.mpl_charts, self.to_plot_y):
+                    if __key in self.serial_parsed_dict:
+                        if type(self.serial_parsed_dict[__key]) in [int, float]:
+                            __to_plot_data.append([__chart, self.serial_parsed_dict[__key], __key])
+
+                for __chart, __data_y, __key in __to_plot_data:
+                    __chart.append(float(self.serial_parsed_dict[self.to_plot_x]), __data_y)
+                    __chart.setTitle(__data_y, __key)
         return
 
 
 def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     log = Log(target='GUI_PROG')
     log.info('Start of Program')
-    print()
     prog_preferences = ilib.PreferencesData('lib/' + pref_file_name).getPreferences()
-    data_format = prog_preferences['data_format']
-    leading_header = prog_preferences['header']
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
     app = QApplication(sys.argv)
 
-    prog = ProgFullStackGUI(data_format, header=leading_header, use_np=True)
+    prog = ProgFullStackGUI(prog_preferences)
     prog.start()
 
     app.exec()
     prog.com.disconnect()
-    print()
     log.info('Program exited with code ' + str(prog.exit_code))
 
     return prog.exit_code

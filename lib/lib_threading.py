@@ -24,12 +24,12 @@ class ThreadSerial(QThread):
         return
 
     def run(self) -> None:
-        self.logger.info('Try stopping the serial thread.')
+        self.logger.info('Starting the serial thread.')
         self.serial_logger.readAll(_ilib.wrapper(self.update_msg))
         return
 
     def stop(self) -> None:
-        self.logger.info('Try stopping the thread.')
+        self.logger.info('Try stopping the serial thread.')
         self._isRunning = False
         self.terminate()
         return

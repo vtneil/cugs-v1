@@ -1,26 +1,37 @@
 import numpy as _np
-from PySide6.QtWidgets import QGraphicsView
+import pyqtgraph as _pg
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem, QAbstractItemView
 from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSplineSeries, QLineSeries
 from PySide6.QtGui import QColor, QPen, QPainter
-from PySide6.QtCore import Qt
+# from PySide6.QtCore import Qt
 
 
 color_r = QColor(255, 0, 0)
 color_g = QColor(0, 255, 0)
 color_b = QColor(0, 0, 255)
 
-# Change ui QWidgets parent to QGraphicsView
-class PyQtPlot:
+# Change ui QWidgets parent to QWidget
+class QChartData:
     global color_r
     global color_g
     global color_b
 
-    def __init__(self, ChartLayout: QGraphicsView, ChartName: str = 'None (None)', *,
+    def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
                  Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None):
+        """
+        QGraphicsView Data Object
+
+        :param ChartWidget:
+        :param ChartName:
+        :param Color:
+        :param legend:
+        :param scatter:
+        :param line_type:
+        """
         if line_type is None:
             line_type = []
         self.__legend = legend
-        self.__chart_layout = QChartView(ChartLayout)
+        self.__chart_widget = ChartWidget
         self.__chart_name = ChartName
         self.__color = Color
         self.__bool_scatter = scatter
@@ -30,17 +41,6 @@ class PyQtPlot:
         self.color_r = color_r
         self.color_g = color_g
         self.color_b = color_b
-
-        if line_type:
-            for __line_type in line_type:
-                if __line_type in ['line', 'spline']:
-                    self.__line_list.append(__line_type)
-                else:
-                    self.__line_list.append('line')
-        else:
-            self.__line_list.append('line')
-
-        self.__y_len = len(self.__line_list)
 
         self.__pen_r = QPen(self.color_r)
         self.__pen_r.setWidth(2)
@@ -62,7 +62,37 @@ class PyQtPlot:
         self.__fg = self.__fg_light
         self.__grid = self.__grid_light
 
+        # Chart Layout
         self.__chart_chart = QChart()
+        self.__chart_chart.legend().setVisible(self.__legend)
+        self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
+        self.__chart_chart.setTitle(self.__chart_name)
+        self.__chart_chart.setBackgroundVisible(True)
+        self.__chart_chart.setBackgroundRoundness(4)
+        self.__chart_chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.__chart_chart.setBackgroundBrush(self.__bg)
+        self.__chart_chart.setTitleBrush(self.__fg)
+
+        # self.__chart_view = QChartView(self.__chart_chart)
+        self.__chart_view = QChartView()
+        self.__chart_view.setChart(self.__chart_chart)
+        self.__chart_view.setRenderHint(QPainter.Antialiasing)
+
+        self.__chart_layout = QVBoxLayout(self.__chart_widget)
+        self.__chart_layout.addWidget(self.__chart_view)
+
+        # Constants and Data
+        if line_type:
+            for __line_type in line_type:
+                if __line_type in ['line', 'spline']:
+                    self.__line_list.append(__line_type)
+                else:
+                    self.__line_list.append('line')
+        else:
+            self.__line_list.append('line')
+        self.__y_len = len(self.__line_list)
+
+        # Chart
         self.__chart_chart.createDefaultAxes()
         self.__x_axis = QValueAxis()
         self.__y_axis = QValueAxis()
@@ -71,17 +101,6 @@ class PyQtPlot:
         self.__x_min = 0.0
         self.__y_max = 1.0
         self.__y_min = 0.0
-
-        self.__chart_layout.setRenderHint(QPainter.Antialiasing)
-        self.__chart_layout.setResizeAnchor(QGraphicsView.NoAnchor)
-        self.__chart_chart.legend().setVisible(self.__legend)
-        self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
-        self.__chart_chart.setTitle(self.__chart_name)
-        self.__chart_chart.setBackgroundVisible(True)
-        self.__chart_chart.setBackgroundRoundness(12)
-        self.__chart_chart.layout().setContentsMargins(0, 0, 0, 0)
-        self.__chart_chart.setBackgroundBrush(self.__bg)
-        self.__chart_chart.setTitleBrush(self.__fg)
 
         self.__x_axis.setLabelsBrush(self.__fg)
         self.__x_axis.setGridLineColor(self.__grid)
@@ -97,7 +116,7 @@ class PyQtPlot:
         self.__x_data = _np.array([], dtype='float')
         self.__y_data = _np.array([[]], dtype='float')
 
-    def plot(self, x_new, *y_new):
+    def append(self, x_new, *y_new):
         y_arr = _np.array([y_new], dtype='float')[:, :self.__y_len]
         if not (self.__x_data.size and self.__y_data.size):
             for __line_type in self.__line_list:
@@ -117,7 +136,6 @@ class PyQtPlot:
                 self.__chart_chart.addSeries(__chart)
                 __chart.attachAxis(self.__x_axis)
                 __chart.attachAxis(self.__y_axis)
-            self.__chart_layout.setChart(self.__chart_chart)
 
         self.__x_data = _np.append(self.__x_data, x_new)
         self.__y_data = _np.concatenate((self.__y_data, y_arr.T), axis=1)
@@ -125,11 +143,10 @@ class PyQtPlot:
         for __y, __chart in zip(y_arr[0], self.__chart_list):
             __chart.append(float(x_new), float(__y))
 
-        if x_new > self.__x_max:
-            self.__x_max = x_new
-        n_y_nax = _np.max(y_arr)
-        if n_y_nax > self.__y_max:
-            self.__y_max = n_y_nax
+        self.__x_min = _np.min(self.__x_data)
+        self.__y_min = _np.min(self.__y_data)
+        self.__x_max = _np.max(self.__x_data)
+        self.__y_max = _np.max(self.__y_data)
         self.updateMinMax()
 
         return
@@ -144,7 +161,11 @@ class PyQtPlot:
             __chart.clear()
         self.__x_data = _np.array([], dtype='float')
         self.__y_data = _np.array([[]], dtype='float')
-
+        self.__x_min = 0.0
+        self.__x_max = 1.0
+        self.__y_min = 0.0
+        self.__y_max = 1.0
+        self.updateMinMax()
         return
 
     def pop(self):
@@ -156,4 +177,70 @@ class PyQtPlot:
             self.__x_max = _np.max(self.__x_data)
             self.__y_max = _np.max(self.__y_data)
             self.updateMinMax()
+        return
+
+    def setTitle(self, value, unit: str):
+        self.__chart_chart.setTitle('{} ({})'.format(value, unit))
+
+class PyQtGraphData:
+    def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
+                 legend: bool = False):
+        """
+        PyQtGraph Data Object
+        """
+        self.__chart_widget = ChartWidget
+        self.__chart_view = _pg.PlotWidget()
+        self.__chart_layout = QVBoxLayout(self.__chart_widget)
+        self.__chart_layout.addWidget(self.__chart_view)
+
+
+    def append(self, x_new, *y_new):
+        return
+
+    def updateMinMax(self):
+        return
+
+    def clear(self):
+        return
+
+    def pop(self):
+        return
+
+    def setTitle(self, value, unit: str):
+        return
+
+class QTableData:
+    def __init__(self, table: QTableWidget):
+        """
+        A QTableWidget Object containing data.
+        """
+        self.table = table
+        self.data_count = 0
+
+    def appendVector(self, data_dict: dict):
+        self.table.setRowCount(len(data_dict))
+        for r, (k, v) in enumerate(data_dict.items()):
+            self.table.setItem(r, 0, QTableWidgetItem(str(k)))
+            self.table.setItem(r, 1, QTableWidgetItem(str(v)))
+        return
+
+    def appendTable(self, data_dict: dict):
+        self.table.setRowCount(self.data_count + 1)
+        self.table.setColumnCount(len(data_dict))
+        for c, (k, v) in enumerate(data_dict.items()):
+            self.table.setHorizontalHeaderItem(c, QTableWidgetItem(str(k)))
+            __v = str(v)
+            self.table.setItem(self.data_count, c, QTableWidgetItem(__v))
+        self.data_count += 1
+        QAbstractItemView.scrollToBottom(self.table)
+        return
+
+    def clear(self):
+        self.table.setRowCount(0)
+        self.data_count = 0
+        return
+
+    def pop(self):
+        self.data_count -= 1
+        self.table.setRowCount(self.data_count)
         return

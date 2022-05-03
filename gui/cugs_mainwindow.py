@@ -3,12 +3,11 @@
 ################################################################################
 ## Form generated from reading UI file 'cugs_mainwindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.4
+## Created by: Qt User Interface Compiler version 6.3.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCharts import QChartView
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -17,11 +16,11 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
-    QHBoxLayout, QHeaderView, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPlainTextEdit, QPushButton,
-    QSizePolicy, QStatusBar, QTabWidget, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
+    QFrame, QHBoxLayout, QHeaderView, QLabel,
+    QMainWindow, QMenu, QMenuBar, QPlainTextEdit,
+    QPushButton, QSizePolicy, QStatusBar, QTabWidget,
+    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -141,6 +140,7 @@ class Ui_MainWindow(object):
         self.btn_serial_connect.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_serial_connect.setCheckable(False)
         self.btn_serial_connect.setChecked(False)
+        self.btn_serial_connect.setAutoDefault(True)
 
         self.verticalLayout_13.addWidget(self.btn_serial_connect)
 
@@ -355,9 +355,19 @@ class Ui_MainWindow(object):
         self.fr_d_c_cmd.setFrameShape(QFrame.StyledPanel)
         self.fr_d_c_cmd.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.fr_d_c_cmd)
-        self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.horizontalLayout_5.setContentsMargins(20, 0, 20, 0)
+        self.btn_csv_live = QPushButton(self.fr_d_c_cmd)
+        self.btn_csv_live.setObjectName(u"btn_csv_live")
+        self.btn_csv_live.setMinimumSize(QSize(100, 90))
+        self.btn_csv_live.setMaximumSize(QSize(300, 90))
+        self.btn_csv_live.setFont(font)
+        self.btn_csv_live.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_csv_live.setCheckable(False)
+        self.btn_csv_live.setChecked(False)
+        self.btn_csv_live.setFlat(False)
+
+        self.horizontalLayout_5.addWidget(self.btn_csv_live)
+
         self.btn_start_pause_data = QPushButton(self.fr_d_c_cmd)
         self.btn_start_pause_data.setObjectName(u"btn_start_pause_data")
         self.btn_start_pause_data.setMinimumSize(QSize(100, 90))
@@ -435,6 +445,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setStretch(1, 2)
         self.horizontalLayout_2.setStretch(2, 2)
         self.tabWidget_Cmd.addTab(self.tab_data, "")
+        self.tab_state = QWidget()
+        self.tab_state.setObjectName(u"tab_state")
+        self.tabWidget_Cmd.addTab(self.tab_state, "")
         self.tab_uplink = QWidget()
         self.tab_uplink.setObjectName(u"tab_uplink")
         self.tabWidget_Cmd.addTab(self.tab_uplink, "")
@@ -531,6 +544,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_16.setSpacing(0)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c1 = QWidget(self.fr_main1)
+        self.mpl_c1.setObjectName(u"mpl_c1")
+
+        self.verticalLayout_16.addWidget(self.mpl_c1)
+
         self.lb_main1 = QLabel(self.fr_main1)
         self.lb_main1.setObjectName(u"lb_main1")
         self.lb_main1.setMinimumSize(QSize(0, 20))
@@ -538,11 +556,6 @@ class Ui_MainWindow(object):
         self.lb_main1.setFont(font1)
 
         self.verticalLayout_16.addWidget(self.lb_main1)
-
-        self.mpl_c1 = QChartView(self.fr_main1)
-        self.mpl_c1.setObjectName(u"mpl_c1")
-
-        self.verticalLayout_16.addWidget(self.mpl_c1)
 
 
         self.horizontalLayout_12.addWidget(self.fr_main1)
@@ -555,6 +568,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.setSpacing(0)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c2 = QWidget(self.fr_main2)
+        self.mpl_c2.setObjectName(u"mpl_c2")
+
+        self.verticalLayout_17.addWidget(self.mpl_c2)
+
         self.lb_main2 = QLabel(self.fr_main2)
         self.lb_main2.setObjectName(u"lb_main2")
         self.lb_main2.setMinimumSize(QSize(0, 20))
@@ -563,14 +581,11 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.lb_main2)
 
-        self.mpl_c2 = QChartView(self.fr_main2)
-        self.mpl_c2.setObjectName(u"mpl_c2")
-
-        self.verticalLayout_17.addWidget(self.mpl_c2)
-
 
         self.horizontalLayout_12.addWidget(self.fr_main2)
 
+        self.horizontalLayout_12.setStretch(0, 1)
+        self.horizontalLayout_12.setStretch(1, 1)
 
         self.verticalLayout_15.addWidget(self.fr_main_chart)
 
@@ -590,6 +605,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_18.setSpacing(0)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c3 = QWidget(self.fr_sub1)
+        self.mpl_c3.setObjectName(u"mpl_c3")
+
+        self.verticalLayout_18.addWidget(self.mpl_c3)
+
         self.lb_sub1 = QLabel(self.fr_sub1)
         self.lb_sub1.setObjectName(u"lb_sub1")
         self.lb_sub1.setMinimumSize(QSize(0, 20))
@@ -597,11 +617,6 @@ class Ui_MainWindow(object):
         self.lb_sub1.setFont(font1)
 
         self.verticalLayout_18.addWidget(self.lb_sub1)
-
-        self.mpl_c3 = QChartView(self.fr_sub1)
-        self.mpl_c3.setObjectName(u"mpl_c3")
-
-        self.verticalLayout_18.addWidget(self.mpl_c3)
 
 
         self.horizontalLayout_11.addWidget(self.fr_sub1)
@@ -614,6 +629,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_19.setSpacing(0)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c4 = QWidget(self.fr_sub2)
+        self.mpl_c4.setObjectName(u"mpl_c4")
+
+        self.verticalLayout_19.addWidget(self.mpl_c4)
+
         self.lb_sub2 = QLabel(self.fr_sub2)
         self.lb_sub2.setObjectName(u"lb_sub2")
         self.lb_sub2.setMinimumSize(QSize(0, 20))
@@ -621,11 +641,6 @@ class Ui_MainWindow(object):
         self.lb_sub2.setFont(font1)
 
         self.verticalLayout_19.addWidget(self.lb_sub2)
-
-        self.mpl_c4 = QChartView(self.fr_sub2)
-        self.mpl_c4.setObjectName(u"mpl_c4")
-
-        self.verticalLayout_19.addWidget(self.mpl_c4)
 
 
         self.horizontalLayout_11.addWidget(self.fr_sub2)
@@ -638,6 +653,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_20.setSpacing(0)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
         self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c5 = QWidget(self.fr_sub3)
+        self.mpl_c5.setObjectName(u"mpl_c5")
+
+        self.verticalLayout_20.addWidget(self.mpl_c5)
+
         self.lb_sub3 = QLabel(self.fr_sub3)
         self.lb_sub3.setObjectName(u"lb_sub3")
         self.lb_sub3.setMinimumSize(QSize(0, 20))
@@ -645,11 +665,6 @@ class Ui_MainWindow(object):
         self.lb_sub3.setFont(font1)
 
         self.verticalLayout_20.addWidget(self.lb_sub3)
-
-        self.mpl_c5 = QChartView(self.fr_sub3)
-        self.mpl_c5.setObjectName(u"mpl_c5")
-
-        self.verticalLayout_20.addWidget(self.mpl_c5)
 
 
         self.horizontalLayout_11.addWidget(self.fr_sub3)
@@ -665,7 +680,7 @@ class Ui_MainWindow(object):
         self.fr_sub_diagram.setFrameShape(QFrame.StyledPanel)
         self.fr_sub_diagram.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_10 = QHBoxLayout(self.fr_sub_diagram)
-        self.horizontalLayout_10.setSpacing(2)
+        self.horizontalLayout_10.setSpacing(0)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.fr_sub1_2 = QFrame(self.fr_sub_diagram)
@@ -673,8 +688,10 @@ class Ui_MainWindow(object):
         self.fr_sub1_2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub1_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_23 = QVBoxLayout(self.fr_sub1_2)
+        self.verticalLayout_23.setSpacing(0)
         self.verticalLayout_23.setObjectName(u"verticalLayout_23")
-        self.mpl_c6 = QChartView(self.fr_sub1_2)
+        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c6 = QWidget(self.fr_sub1_2)
         self.mpl_c6.setObjectName(u"mpl_c6")
 
         self.verticalLayout_23.addWidget(self.mpl_c6)
@@ -695,8 +712,10 @@ class Ui_MainWindow(object):
         self.fr_sub2_2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub2_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_25 = QVBoxLayout(self.fr_sub2_2)
+        self.verticalLayout_25.setSpacing(0)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
-        self.mpl_c7 = QChartView(self.fr_sub2_2)
+        self.verticalLayout_25.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c7 = QWidget(self.fr_sub2_2)
         self.mpl_c7.setObjectName(u"mpl_c7")
 
         self.verticalLayout_25.addWidget(self.mpl_c7)
@@ -717,8 +736,10 @@ class Ui_MainWindow(object):
         self.fr_sub3_2.setFrameShape(QFrame.StyledPanel)
         self.fr_sub3_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_26 = QVBoxLayout(self.fr_sub3_2)
+        self.verticalLayout_26.setSpacing(0)
         self.verticalLayout_26.setObjectName(u"verticalLayout_26")
-        self.mpl_c8 = QChartView(self.fr_sub3_2)
+        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c8 = QWidget(self.fr_sub3_2)
         self.mpl_c8.setObjectName(u"mpl_c8")
 
         self.verticalLayout_26.addWidget(self.mpl_c8)
@@ -739,8 +760,10 @@ class Ui_MainWindow(object):
         self.fr_sub3_3.setFrameShape(QFrame.StyledPanel)
         self.fr_sub3_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_24 = QVBoxLayout(self.fr_sub3_3)
+        self.verticalLayout_24.setSpacing(0)
         self.verticalLayout_24.setObjectName(u"verticalLayout_24")
-        self.mpl_c9 = QChartView(self.fr_sub3_3)
+        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.mpl_c9 = QWidget(self.fr_sub3_3)
         self.mpl_c9.setObjectName(u"mpl_c9")
 
         self.verticalLayout_24.addWidget(self.mpl_c9)
@@ -756,6 +779,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10.addWidget(self.fr_sub3_3)
 
+        self.horizontalLayout_10.setStretch(0, 1)
+        self.horizontalLayout_10.setStretch(1, 1)
+        self.horizontalLayout_10.setStretch(2, 1)
+        self.horizontalLayout_10.setStretch(3, 1)
 
         self.verticalLayout_15.addWidget(self.fr_sub_diagram)
 
@@ -770,6 +797,7 @@ class Ui_MainWindow(object):
         self.fr_cen_2_3.setFrameShape(QFrame.StyledPanel)
         self.fr_cen_2_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_14 = QVBoxLayout(self.fr_cen_2_3)
+        self.verticalLayout_14.setSpacing(4)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.verticalLayout_14.setContentsMargins(0, 0, 8, 0)
         self.lb_kv_table = QLabel(self.fr_cen_2_3)
@@ -801,6 +829,13 @@ class Ui_MainWindow(object):
         __qtablewidgetitem5 = QTableWidgetItem()
         self.table_kv_payload.setItem(1, 0, __qtablewidgetitem5)
         self.table_kv_payload.setObjectName(u"table_kv_payload")
+        self.table_kv_payload.setStyleSheet(u"font: 11pt \"Consolas\";")
+        self.table_kv_payload.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
+        self.table_kv_payload.setShowGrid(True)
+        self.table_kv_payload.setGridStyle(Qt.SolidLine)
+        self.table_kv_payload.horizontalHeader().setMinimumSectionSize(75)
+        self.table_kv_payload.horizontalHeader().setDefaultSectionSize(120)
+        self.table_kv_payload.horizontalHeader().setStretchLastSection(True)
 
         self.verticalLayout_14.addWidget(self.table_kv_payload)
 
@@ -814,6 +849,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
         self.text_serial_mon = QPlainTextEdit(self.tab_serial_mon)
         self.text_serial_mon.setObjectName(u"text_serial_mon")
+        self.text_serial_mon.setStyleSheet(u"font: 9pt \"Consolas\";")
 
         self.verticalLayout_21.addWidget(self.text_serial_mon)
 
@@ -826,6 +862,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_22.setContentsMargins(0, 0, 0, 0)
         self.text_sys_log = QPlainTextEdit(self.tab_sys_log)
         self.text_sys_log.setObjectName(u"text_sys_log")
+        self.text_sys_log.setStyleSheet(u"font: 9pt \"Consolas\";")
 
         self.verticalLayout_22.addWidget(self.text_sys_log)
 
@@ -834,7 +871,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.addWidget(self.tabWidget_Monitor)
 
         self.verticalLayout_14.setStretch(0, 1)
-        self.verticalLayout_14.setStretch(1, 1)
+        self.verticalLayout_14.setStretch(1, 2)
         self.verticalLayout_14.setStretch(2, 1)
 
         self.horizontalLayout_9.addWidget(self.fr_cen_2_3)
@@ -870,7 +907,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.tabWidget_Cmd.setCurrentIndex(0)
-        self.tabWidget_Monitor.setCurrentIndex(1)
+        self.btn_serial_connect.setDefault(True)
+        self.btn_csv_live.setDefault(False)
+        self.tabWidget_Monitor.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -900,10 +939,12 @@ class Ui_MainWindow(object):
         self.cb_write_kml.setText(QCoreApplication.translate("MainWindow", u"Write Google Earth KML", None))
         self.btn_start_mission.setText(QCoreApplication.translate("MainWindow", u"Start Mission", None))
         self.lb_fr_m_c.setText(QCoreApplication.translate("MainWindow", u"Mission Control", None))
-        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Incoming Data", None))
+        self.btn_csv_live.setText(QCoreApplication.translate("MainWindow", u"Live CSV", None))
+        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Data", None))
         self.lb_fr_d_c.setText(QCoreApplication.translate("MainWindow", u"Data Capture Control", None))
         self.lb_fr_i_d.setText(QCoreApplication.translate("MainWindow", u"Image Data (Coming soon!)", None))
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_data), QCoreApplication.translate("MainWindow", u"Data Acquisition", None))
+        self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_state), QCoreApplication.translate("MainWindow", u"State", None))
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_uplink), QCoreApplication.translate("MainWindow", u"Uplink Command", None))
         self.btn_chart_pop.setText(QCoreApplication.translate("MainWindow", u"Pop Chart (Does not affect data)", None))
         self.btn_chart_clear.setText(QCoreApplication.translate("MainWindow", u"Clear Chart", None))

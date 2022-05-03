@@ -1,3 +1,4 @@
+import serial
 import serial as _serial
 import serial.tools.list_ports as _serial_port
 from typing import Union as _Union
@@ -99,7 +100,7 @@ class ComPort:
                 self.logger.warn(self.port + ' has already been disconnected!')
             return True
         except AttributeError:
-            self.logger.exception('The port has not been initialized.')
+            self.logger.critical('The port has not been initialized.')
             return False
 
 
@@ -176,15 +177,24 @@ class LogSerial:
 
         :return:
         """
+        __stat_device = None
         try:
-            __s = self._pStrip(self.device.read().decode('utf-8')).strip()
-        except UnicodeDecodeError:
+            __stat_device = self.device.isOpen()
+        except AttributeError or TypeError:
+            pass
+        if __stat_device:
+            __sr_in = self.device.read()
+            if isinstance(__sr_in, bytes):
+                __s = self.__pStrip(__sr_in.decode('utf-8', errors='replace'))
+            else:
+                __s = ''
+        else:
             __s = ''
         return __s
 
     @staticmethod
-    def _pStrip(s) -> str:
-        return s.replace('\r', '').replace('\n', '')
+    def __pStrip(s) -> str:
+        return s.replace('\r', '').replace('\n', '').strip()
 
 
 if __name__ == '__main__':

@@ -1,4 +1,6 @@
 #define SERIAL_BAUD 115200
+#define DATA_RATE 800
+
 unsigned long int counter = 1;
 
 String team_id = "SPARK2";
@@ -56,5 +58,5 @@ void loop() {
     packet += "," + cmd_echo;
 
     Serial.println(packet);
-    delay(1000);
+    delay(DATA_RATE);
 }

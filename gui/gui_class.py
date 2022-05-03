@@ -40,12 +40,18 @@ class GuiLoader(_QMainWindow):
                 sys.exit(-1)
 
         elif __extension == 'py':
+            # CURRENTLY NOT WORKING!
             import platform
             from gui import cugs_mainwindow
+            from gui import cugs_csv_liveview
+
+            cls = None
 
             _QMainWindow.__init__(self)
             self.ui = cugs_mainwindow.Ui_MainWindow()
+            self.ui_ = cugs_csv_liveview.Ui_Form()
             self.ui.setupUi(self)
+            self.ui_.setupUi(cls)
             self.setWindowTitle('CUGS V1')
             if platform.system() == 'Windows':
                 self.ui.tabWidget_Cmd.setDocumentMode(True)
@@ -53,17 +59,4 @@ class GuiLoader(_QMainWindow):
                 self.ui.tabWidget_Cmd.setDocumentMode(False)
             pass
 
-
-# class GuiPy(_QMainWindow):
-#     def __init__(self):
-#         import platform
-#
-#         _QMainWindow.__init__(self)
-#         self.ui = Ui_MainWindow()
-#         self.ui.setupUi(self)
-#         self.setWindowTitle('CUGS V1')
-#         if platform.system() == 'Windows':
-#             self.ui.tabWidget_Cmd.setDocumentMode(True)
-#         else:
-#             self.ui.tabWidget_Cmd.setDocumentMode(False)
 
