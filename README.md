@@ -32,8 +32,6 @@ In `data_handler`:
 
 9. `lib_time` create a current-time and delta-time objects.
 
----
-
 ## Preferences
 In preferences file (your preferable formats listed above), there are serveral configurations you can edit.
 
