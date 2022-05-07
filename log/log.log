@@ -15672,3 +15672,12 @@ serial.serialutil.SerialException: read failed: [Errno 9] Bad file descriptor
 [CRITICAL] In root - 07-May-22 18:28:21 - [LOG_SERIAL] The port has not been initialized.
 [INFO] In root - 07-May-22 18:28:21 - [GUI_PROG] Program exited with code 0
 [INFO] In root - 07-May-22 18:28:21 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 07-May-22 18:56:47 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 07-May-22 18:56:58 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:56:58 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:57:32 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 07-May-22 18:57:39 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:57:39 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:57:43 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 07-May-22 18:57:47 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:57:47 - [GUI_PROG] Program exited with code 0
