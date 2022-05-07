@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
     <property name="spacing">
@@ -213,7 +216,6 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -242,7 +244,6 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -346,7 +347,6 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
                         <bold>true</bold>
                        </font>
                       </property>
@@ -444,7 +444,6 @@
                          <property name="font">
                           <font>
                            <pointsize>10</pointsize>
-                           <weight>75</weight>
                            <bold>true</bold>
                           </font>
                          </property>
@@ -754,7 +753,6 @@
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
-                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -876,7 +874,6 @@
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
-                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -917,7 +914,6 @@
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
-                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -1156,7 +1152,6 @@
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
-                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -1191,7 +1186,6 @@
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
-                     <weight>75</weight>
                      <bold>true</bold>
                     </font>
                    </property>
@@ -1314,7 +1308,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c1"/>
+                 <widget class="QWidget" name="mpl_c1" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_main1">
@@ -1368,7 +1362,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c2"/>
+                 <widget class="QWidget" name="mpl_c2" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_main2">
@@ -1449,7 +1443,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c3"/>
+                 <widget class="QWidget" name="mpl_c3" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub1">
@@ -1503,7 +1497,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c4"/>
+                 <widget class="QWidget" name="mpl_c4" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub2">
@@ -1557,7 +1551,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c5"/>
+                 <widget class="QWidget" name="mpl_c5" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub3">
@@ -1638,7 +1632,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c6"/>
+                 <widget class="QWidget" name="mpl_c6" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub4">
@@ -1692,7 +1686,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c7"/>
+                 <widget class="QWidget" name="mpl_c7" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub6">
@@ -1746,7 +1740,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c8"/>
+                 <widget class="QWidget" name="mpl_c8" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub7">
@@ -1800,7 +1794,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="mpl_c9"/>
+                 <widget class="QWidget" name="mpl_c9" native="true"/>
                 </item>
                 <item>
                  <widget class="QLabel" name="lb_sub5">
@@ -1876,7 +1870,6 @@
             <property name="font">
              <font>
               <pointsize>10</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -1899,11 +1892,11 @@
             <property name="gridStyle">
              <enum>Qt::SolidLine</enum>
             </property>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>120</number>
-            </attribute>
             <attribute name="horizontalHeaderMinimumSectionSize">
              <number>75</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>120</number>
             </attribute>
             <attribute name="horizontalHeaderStretchLastSection">
              <bool>true</bool>
@@ -2025,7 +2018,7 @@
      <x>0</x>
      <y>0</y>
      <width>960</width>
-     <height>21</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

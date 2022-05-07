@@ -15561,3 +15561,114 @@ Traceback (most recent call last):
   File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 290, in read
     ctypes.byref(self._overlapped_read),
 TypeError: byref() argument must be a ctypes instance, not 'NoneType'
+[INFO] In root - 07-May-22 18:16:38 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 07-May-22 18:17:42 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:17:42 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:18:31 - [GUI_PROG] Start of Program
+[ERROR] In root - 07-May-22 18:18:35 - [LOG_SERIAL] Unexpected Error. Can't connect to port or the port is already connected!
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 322, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+OSError: [Errno 16] Resource busy: '/dev/cu.wlan-debug'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 58, in connect
+    self.device = _serial.Serial(self.port, baudrate=int(baud), timeout=60)
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialutil.py", line 244, in __init__
+    self.open()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 325, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 16] could not open port /dev/cu.wlan-debug: [Errno 16] Resource busy: '/dev/cu.wlan-debug'
+[CRITICAL] In root - 07-May-22 18:18:35 - [LOG_SERIAL] PORT ID: /dev/cu.wlan-debug
+[CRITICAL] In root - 07-May-22 18:18:40 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:18:40 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:22:48 - [GUI_PROG] Start of Program
+[ERROR] In root - 07-May-22 18:22:49 - [LOG_SERIAL] Unexpected Error. Can't connect to port or the port is already connected!
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 322, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+OSError: [Errno 16] Resource busy: '/dev/cu.wlan-debug'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 58, in connect
+    self.device = _serial.Serial(self.port, baudrate=int(baud), timeout=60)
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialutil.py", line 244, in __init__
+    self.open()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 325, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 16] could not open port /dev/cu.wlan-debug: [Errno 16] Resource busy: '/dev/cu.wlan-debug'
+[CRITICAL] In root - 07-May-22 18:22:49 - [LOG_SERIAL] PORT ID: /dev/cu.wlan-debug
+[INFO] In root - 07-May-22 18:22:52 - [LOG_SERIAL] Device /dev/cu.NeilsAONIC50 is successfully connected!
+[INFO] In root - 07-May-22 18:22:52 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 07-May-22 18:22:52 - [LOG_THREAD] Starting the serial thread.
+[ERROR] In root - 07-May-22 18:23:01 - [MAIN] Unknown Serial Exception
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 565, in read
+    ready, _, _ = select.select([self.fd, self.pipe_abort_read_r], [], [], timeout.time_left())
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 137, in readAll
+    self.raw += self.__read()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 188, in __read
+    __sr_in = self.device.read()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 581, in read
+    raise SerialException('read failed: {}'.format(e))
+serial.serialutil.SerialException: read failed: [Errno 9] Bad file descriptor
+[INFO] In root - 07-May-22 18:23:01 - [LOG_SERIAL] /dev/cu.NeilsAONIC50 has been successfully closed!
+[INFO] In root - 07-May-22 18:23:01 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:23:01 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 07-May-22 18:27:21 - [GUI_PROG] Start of Program
+[INFO] In root - 07-May-22 18:27:28 - [LOG_SERIAL] Device /dev/cu.NeilsAONIC50 is successfully connected!
+[INFO] In root - 07-May-22 18:27:28 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 07-May-22 18:27:28 - [LOG_THREAD] Starting the serial thread.
+[ERROR] In root - 07-May-22 18:27:31 - [MAIN] Unknown Serial Exception
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 565, in read
+    ready, _, _ = select.select([self.fd, self.pipe_abort_read_r], [], [], timeout.time_left())
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 145, in readAll
+    self.raw += self.__read()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 196, in __read
+    __sr_in = self.device.read()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 581, in read
+    raise SerialException('read failed: {}'.format(e))
+serial.serialutil.SerialException: read failed: [Errno 9] Bad file descriptor
+[INFO] In root - 07-May-22 18:27:31 - [LOG_SERIAL] /dev/cu.NeilsAONIC50 has been successfully closed!
+[CRITICAL] In root - 07-May-22 18:27:32 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:27:32 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:27:32 - [LOG_THREAD] Serial thread stopped and deleted successfully.
+[INFO] In root - 07-May-22 18:28:14 - [GUI_PROG] Start of Program
+[INFO] In root - 07-May-22 18:28:17 - [LOG_SERIAL] Device /dev/cu.NeilsAONIC50 is successfully connected!
+[INFO] In root - 07-May-22 18:28:17 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 07-May-22 18:28:17 - [LOG_THREAD] Starting the serial thread.
+[ERROR] In root - 07-May-22 18:28:20 - [MAIN] Unknown Serial Exception
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 565, in read
+    ready, _, _ = select.select([self.fd, self.pipe_abort_read_r], [], [], timeout.time_left())
+OSError: [Errno 9] Bad file descriptor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 144, in readAll
+    self.raw += self.__read()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/lib/lib_serial_tools.py", line 195, in __read
+    __sr_in = self.device.read()
+  File "/Users/neil4884/Desktop/git_target/cugs-v1/venv/lib/python3.10/site-packages/serial/serialposix.py", line 581, in read
+    raise SerialException('read failed: {}'.format(e))
+serial.serialutil.SerialException: read failed: [Errno 9] Bad file descriptor
+[INFO] In root - 07-May-22 18:28:20 - [LOG_SERIAL] /dev/cu.NeilsAONIC50 has been successfully closed!
+[CRITICAL] In root - 07-May-22 18:28:21 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 07-May-22 18:28:21 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 07-May-22 18:28:21 - [LOG_THREAD] Serial thread stopped and deleted successfully.

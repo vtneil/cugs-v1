@@ -1,4 +1,3 @@
-import serial
 import serial as _serial
 import serial.tools.list_ports as _serial_port
 from typing import Union as _Union
@@ -105,7 +104,7 @@ class ComPort:
 
 
 class LogSerial:
-    def __init__(self, device: _serial.serialwin32.Serial, /, *, header='PSG') -> None:
+    def __init__(self, device: _serial.Serial, /, *, header='PSG') -> None:
         """
         Serial Logger object class
 
