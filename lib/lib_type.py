@@ -29,7 +29,7 @@ class HexFloat:
         else:
             self.__number = self.__hex_string
 
-    def hexFloat(self):
+    def toHexString(self):
         if isinstance(self.__hex_string, str):
             return self.__hex_string
         else:
@@ -135,5 +135,5 @@ if __name__ == '__main__':
     a = HexFloat('A.fff8')
     b = HexFloat('A')
     b1 = '37.51'
-    c = HexFloat(55.5).hexFloat()
+    c = HexFloat(55.5).toHexString()
     print(a, b, c, HexFloat(c), HexFloat(b1))
