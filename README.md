@@ -1,4 +1,4 @@
-# cugs_v1
+# CUGS Ground Control Station (V1)
 
 A python-based ground station CLI and GUI software for receiving data via Serial Interface.
 This repo includes example CLI and GUI main files and included specifically made library for this type of usages.

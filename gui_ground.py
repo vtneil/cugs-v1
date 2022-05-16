@@ -13,8 +13,8 @@ class ProgFullStackGUI:
     def __init__(self, pref_dict: dict) -> None:
         # Back end Initialization
         self.exit_code = 0
-        self.data_format = pref_dict['data_format']
-        self.header = pref_dict['header'] if pref_dict['header'] else 'SPARK2'
+        self.data_format = pref_dict['data_format'] if 'data_format' in pref_dict else []
+        self.header = pref_dict['header'] if 'header' in pref_dict else ''
         self.save_name = pref_dict['file_name'] if pref_dict['file_name'] else 'test_file'
         self.extension = pref_dict['file_ext'] if pref_dict['file_ext'] else 'csv'
         self.main_ui_file = pref_dict['main_ui'] if pref_dict['main_ui'] else 'gui/cugs_mainwindow.ui'
