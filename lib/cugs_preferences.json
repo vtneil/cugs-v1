@@ -37,7 +37,13 @@
             [
               "bar_alt",
               "temp1",
-              "gps_alt"
+              "gps_alt",
+              "acc_x",
+              "batt_volt",
+              "temp2",
+              "imu_alt",
+              "gps_lat",
+              "gps_lon"
             ]
   },
   "state": "state",

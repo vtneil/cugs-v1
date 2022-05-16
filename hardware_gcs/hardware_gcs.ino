@@ -1,5 +1,5 @@
 #define SERIAL_BAUD 115200
-#define DATA_RATE 800
+#define DATA_RATE 75
 
 unsigned long int counter = 1;
 
@@ -30,6 +30,7 @@ String packet = "";
 
 void setup() {
     Serial.begin(SERIAL_BAUD);
+    randomSeed(analogRead(0));
 }
 
 void loop() {
@@ -39,24 +40,23 @@ void loop() {
     packet += "," + device_id;
     packet += "," + mode;
     packet += "," + String(state);
-    packet += "," + String(gps_alt += 0.01, 2);
-    packet += "," + String(bar_alt += 0.01, 2);
-    packet += "," + String(imu_alt += 0.01, 2);
+    packet += "," + String(gps_alt += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(bar_alt += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(imu_alt += 0.01 + (float)random(-100, 100) / 100.0, 2);
     packet += "," + gps_time;
-    packet += "," + String(gps_lat += 0.00001, 6);
-    packet += "," + String(gps_lon += 0.00001, 6);
+    packet += "," + String(gps_lat += 0.0001 + (float)random(-100, 100) / 1000.0, 6);
+    packet += "," + String(gps_lon += 0.0001 + (float)random(-100, 100) / 1000.0, 6);
     packet += "," + String(gps_sats);
-    packet += "," + String(temp1 += 0.01, 2);
-    packet += "," + String(temp2 += 0.01, 2);
-    packet += "," + String(acc_x += 0.01, 2);
-    packet += "," + String(acc_x += 0.01, 2);
-    packet += "," + String(acc_x += 0.01, 2);
-    packet += "," + String(ang_x += 0.1, 2);
-    packet += "," + String(ang_x += 0.1, 2);
-    packet += "," + String(ang_x += 0.1, 2);
-    packet += "," + String(batt_volt += 0.1, 2);
+    packet += "," + String(temp1 += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(temp2 += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(acc_x += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(acc_x += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(acc_x += 0.01 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(ang_x += 0.1 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(ang_x += 0.1 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(ang_x += 0.1 + (float)random(-100, 100) / 100.0, 2);
+    packet += "," + String(batt_volt += 0.1 + (float)random(-100, 100) / 100.0, 2);
     packet += "," + cmd_echo;
-
     Serial.println(packet);
     delay(DATA_RATE);
 }

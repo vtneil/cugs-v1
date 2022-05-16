@@ -17,7 +17,8 @@ class QChartData:
     global color_b
 
     def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
-                 Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None):
+                 Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None,
+                 animation=None):
         """
         QGraphicsView Data Object
 
@@ -65,13 +66,16 @@ class QChartData:
         # Chart Layout
         self.__chart_chart = QChart()
         self.__chart_chart.legend().setVisible(self.__legend)
-        self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
         self.__chart_chart.setTitle(self.__chart_name)
         self.__chart_chart.setBackgroundVisible(True)
         self.__chart_chart.setBackgroundRoundness(4)
         self.__chart_chart.layout().setContentsMargins(0, 0, 0, 0)
         self.__chart_chart.setBackgroundBrush(self.__bg)
         self.__chart_chart.setTitleBrush(self.__fg)
+        if animation == 'series':
+            self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
+        elif animation == 'all':
+            self.__chart_chart.setAnimationOptions(QChart.AllAnimations)
 
         # self.__chart_view = QChartView(self.__chart_chart)
         self.__chart_view = QChartView()
