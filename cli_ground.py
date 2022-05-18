@@ -136,9 +136,7 @@ def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     print('[ CLI_PROG ] ' + 'Start of Program')
     print()
     prog_preferences = ilib.PreferencesData('lib/' + pref_file_name).getPreferences()
-    data_format = prog_preferences['data_format']
-    leading_header = prog_preferences['header']
-    prog = ProgFullStackCLI(data_format, header=leading_header, use_np=True)
+    prog = ProgFullStackCLI(prog_preferences)
     prog.start()
 
     try:

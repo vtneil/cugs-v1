@@ -1,0 +1,6 @@
+[INFO] In root - 18-May-22 17:34:36 - [LOG_SERIAL] Device COM3 is successfully connected!
+[INFO] In root - 18-May-22 17:34:36 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 18-May-22 17:34:43 - [LOG_SERIAL] COM3 has been successfully closed!
+[INFO] In root - 18-May-22 17:36:24 - [LOG_SERIAL] Device COM3 is successfully connected!
+[INFO] In root - 18-May-22 17:36:24 - [LOG_SERIAL] with baud rate=9600.
+[INFO] In root - 18-May-22 17:36:33 - [LOG_SERIAL] COM3 has been successfully closed!
