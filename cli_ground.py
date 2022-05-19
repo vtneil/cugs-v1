@@ -34,7 +34,7 @@ class ProgFullStackCLI:
         return
 
     def backEnd(self) -> None:
-        self.serial_logger.readAll(*self.func_list)
+        self.serial_logger.readPayload(*self.func_list)
         return
 
     def backgroundTasks(self, _get_data_from_serial) -> None:
@@ -129,6 +129,7 @@ class ProgFullStackCLI:
         return
 
     def stop(self) -> None:
+        self.com.disconnect()
         return
 
 
@@ -144,7 +145,7 @@ def run_prog(pref_file_name: str = 'cugs_preferences.json'):
         print('[ CLI_PROG ] ' + 'Threads stopped successfully.')
     except AttributeError:
         print('[ CLI_PROG ] ' + 'Tried to stop threads but the threads does not exist.')
-    prog.com.disconnect()
+    prog.stop()
     print()
     print('[ CLI_PROG ] ' + 'Program exited with code ' + str(prog.exit_code))
 

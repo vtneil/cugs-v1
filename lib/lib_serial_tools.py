@@ -104,7 +104,7 @@ class ComPort:
 
 
 class LogSerial:
-    def __init__(self, device: _serial.Serial, /, *, header='PSG') -> None:
+    def __init__(self, device: _serial.Serial, /, *, header) -> None:
         """
         Serial Logger object class
 
@@ -120,56 +120,68 @@ class LogSerial:
         self._find1 = 0
         self._find2 = 0
         self.logger = Log()
+        self.read_result = True
 
-    def readAll(self, *func) -> None:
+    def readPayload(self, *func) -> None:
         """
         Read all in forever loop
 
         :return:
         """
-        result = True
         try:
             if self.header:
-                while result:
-                    try:
-                        self.raw += self.__read()
-                        self._find1 = self.raw.find(self.header)
-                        self._find2 = self.raw.rfind(self.header)
-
-                        if self._find2 > self._find1 >= 0:
-                            self.payload = self.raw[self._find1:self._find2]
-                            self.raw = self.raw.replace(self.payload, '', 1)
-                            self._is_updated = True
-
-                            if func:
-                                for __f, __args, __kwargs in func:
-                                    __f(self.payload, *__args, **__kwargs)
-
-                    except _serial.serialutil.SerialException:
-                        self.logger.exception('Unknown Serial Exception')
-                        result = False
-                    except TypeError:
-                        self.logger.exception('Serial port disconnected.')
-                        result = False
+                self.readFromUntil(self.header, *func)
             else:
-                while result:
-                    try:
-                        self.payload = self.device.readline().decode('utf-8', errors='replace')
-                        self.payload = self.payload.replace('\r', '').replace('\n', '')
-                        self._is_updated = True
-
-                        if func:
-                            for __f, __args, __kwargs in func:
-                                __f(self.payload, *__args, **__kwargs)
-                                
-                    except _serial.serialutil.SerialException:
-                        self.logger.exception('Unknown Serial Exception')
-                        result = False
-                    except TypeError:
-                        self.logger.exception('Serial port disconnected.')
-                        result = False
-        except KeyboardInterrupt:
+                self.readLine(*func)
+        except Exception:
             pass
+
+    def readFromUntil(self, header, *func):
+        while self.read_result:
+            try:
+                self.raw += self.__read()
+                self._find1 = self.raw.find(header)
+                self._find2 = self.raw.find(header, self._find1 + 1)
+
+                if self._find2 > self._find1 >= 0:
+                    self.payload = self.raw[self._find1:self._find2]
+                    self.raw = self.raw[self._find2:]
+                    self._is_updated = True
+
+                    if func:
+                        for __f, __args, __kwargs in func:
+                            __f(self.payload, *__args, **__kwargs)
+
+            except _serial.serialutil.SerialException:
+                self.logger.exception('Unknown Serial Exception')
+                break
+            except TypeError:
+                self.logger.exception('Serial port disconnected.')
+                break
+            except Exception:
+                self.logger.exception('Unknown Other Exceptions')
+                break
+
+    def readLine(self, *func):
+        while self.read_result:
+            try:
+                self.payload = self.device.readline().decode('utf-8', errors='replace')
+                self.payload = self.payload.replace('\r', '').replace('\n', '')
+                self._is_updated = True
+
+                if func:
+                    for __f, __args, __kwargs in func:
+                        __f(self.payload, *__args, **__kwargs)
+
+            except _serial.serialutil.SerialException:
+                self.logger.exception('Unknown Serial Exception')
+                break
+            except TypeError:
+                self.logger.exception('Serial port disconnected.')
+                break
+            except Exception:
+                self.logger.exception('Unknown Other Exceptions')
+                break
 
     def isUpdated(self) -> bool:
         """
@@ -194,19 +206,19 @@ class LogSerial:
 
         :return:
         """
-        __stat_device = None
+        __stat_device = True
+        __s = ''
         try:
             __stat_device = self.device.isOpen()
-        except AttributeError or TypeError:
-            pass
+        except Exception:
+            __stat_device = False
         if __stat_device:
-            __sr_in = self.device.read()
+            try:
+                __sr_in = self.device.read()
+            except Exception:
+                return __s
             if isinstance(__sr_in, bytes):
                 __s = self.__pStrip(__sr_in.decode('utf-8', errors='replace'))
-            else:
-                __s = ''
-        else:
-            __s = ''
         return __s
 
     @staticmethod

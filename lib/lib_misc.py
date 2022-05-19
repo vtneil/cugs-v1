@@ -1,6 +1,8 @@
 import numpy as _np
 from typing import Union as _Union
 
+import numpy as np
+
 __color_lib_dict_fg = {
     'none': '0',
     'black': '30',
@@ -95,7 +97,38 @@ def wrapper(func, /, *args, **kwargs):
     return func, __return_args, __return_kwargs
 
 
-def reduceToN(data_list: _Union[tuple, list, dict, _np.ndarray], N: int = 50, *,
+def reduceToN(data_list: _Union[list, _np.ndarray], N: int = 50):
+    if isinstance(data_list, list):
+        __data_list = _np.array(data_list)
+    else:
+        __data_list = data_list
+    __dim = __data_list.ndim
+    if __dim == 1:
+        __data_len, = __data_list.shape
+        if __data_len < N:
+            return __data_list
+        __step = __data_len // N
+        __o = __data_list[::__step]
+        __o[-1-(__o.shape[0] - N):] = __data_list[-1]
+        if __o.shape[0] > N:
+            return __o[:-1]
+        return __o
+    elif __dim == 2:
+        __r, __c = __data_list.shape
+        if __c < N:
+            return __data_list
+        __step = __c // N
+        __o = __data_list[:, ::__step]
+        __o[:, -1-(__o.shape[1] - N)] = __data_list[:, -1]
+        if __o.shape[1] > N:
+            return __o[:, :-(__o.shape[1] - N)]
+        return __o
+
+    else:
+        raise ValueError('Only supports 1-D and 2-D numpy array!')
+
+
+def reduceListToN(data_list: _Union[tuple, list, dict, _np.ndarray], N: int = 50, *,
               weight: float = 2, mode: str, avg: str = 'avg') -> _Union[list, _np.ndarray]:
     """
     This function reduces input list length of len(list) to N (default: 50) with weight to reduce (default: 2).
@@ -185,6 +218,10 @@ def reduceToN(data_list: _Union[tuple, list, dict, _np.ndarray], N: int = 50, *,
 
 
 if __name__ == '__main__':
-    printStyled('hello world', fg='red', bg='green')
-    print('----')
-    wrapper(scrollConsole, 1, 2)
+    # printStyled('hello world', fg='red', bg='green')
+    # print('----')
+    # wrapper(scrollConsole, 1, 2)
+    a1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    a2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,19]
+    b = reduceToN(_np.array([a1]), 6)
+    print(b)

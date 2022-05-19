@@ -42,6 +42,34 @@ class LoadDirectory:
         self.path_earth_coord = self.__makeAbsolutePath(self.name_earth_coord)
         self.path_earth_live = self.__makeAbsolutePath(self.name_earth_live)
 
+        self.earth_coord_0 = '<kml xmlns="http://www.opengis.net/kml/2.2" ' \
+                             'xmlns:gx="http://www.google.com/kml/ext/2.2">\n' + \
+                             '<Folder>\n' + \
+                             '\t<name>Log</name>\n' + \
+                             '\t<Placemark>\n' + \
+                             '\t\t<name>Device Path Plotting</name>\n' + \
+                             '\t\t<Style>\n' + \
+                             '\t\t\t<LineStyle>\n\t\t\t\t<color>'
+        self.earth_coord_1 = '</color>\n\t\t\t\t<colorMode>normal</colorMode>\n' + \
+                             '\t\t\t\t<width>3</width>\n' + \
+                             '\t\t\t</LineStyle>\n' + \
+                             '\t\t\t<PolyStyle>\n' + \
+                             '\t\t\t\t<color>99000000</color>\n' + \
+                             '\t\t\t\t<fill>1</fill>\n' + \
+                             '\t\t\t</PolyStyle>\n' + \
+                             '\t\t</Style>\n' + \
+                             '\t\t<LineString>\n' + \
+                             '\t\t\t<extrude>1</extrude>\n' + \
+                             '\t\t\t<altitudeMode>absolute</altitudeMode>\n' + \
+                             '\t\t\t<coordinates>\n'
+        self.earth_coord_2 = '\n\t\t\t</coordinates>\n' + \
+                             '\t\t</LineString>\n' + \
+                             '\t</Placemark>\n' + \
+                             '</Folder>\n' + \
+                             '</kml>'
+
+        self.all_coord = []
+
         self.__checkFolder()
         self.__checkPath()
         self.__renewPath()
@@ -109,7 +137,7 @@ class LoadDirectory:
         return
 
     def appendEarthCoord(self, coords: _Coordinate, /, *,
-                         color: _Union[str, tuple] = 'ff00ffff') -> str:
+                         color: _Union[str, tuple] = 'ff00ffff', echo=False) -> str:
         """
         Append new coordinates to Google Earth KML coordinates file.
 
@@ -117,31 +145,7 @@ class LoadDirectory:
         :param color: Color code ARGB in tuple or ABGR in hexadecimal string
         :return: String of Google Earth KML coordinates file
         """
-        earth_coord_0 = '<kml xmlns="http://www.opengis.net/kml/2.2" ' \
-                        'xmlns:gx="http://www.google.com/kml/ext/2.2">\n' + \
-                        '<Folder>\n' + \
-                        '\t<name>Log</name>\n' + \
-                        '\t<Placemark>\n' + \
-                        '\t\t<name>Device Path Plotting</name>\n' + \
-                        '\t\t<Style>\n' + \
-                        '\t\t\t<LineStyle>\n\t\t\t\t<color>'
-        earth_coord_1 = '</color>\n\t\t\t\t<colorMode>normal</colorMode>\n' + \
-                        '\t\t\t\t<width>3</width>\n' + \
-                        '\t\t\t</LineStyle>\n' + \
-                        '\t\t\t<PolyStyle>\n' + \
-                        '\t\t\t\t<color>99000000</color>\n' + \
-                        '\t\t\t\t<fill>1</fill>\n' + \
-                        '\t\t\t</PolyStyle>\n' + \
-                        '\t\t</Style>\n' + \
-                        '\t\t<LineString>\n' + \
-                        '\t\t\t<extrude>1</extrude>\n' + \
-                        '\t\t\t<altitudeMode>absolute</altitudeMode>\n' + \
-                        '\t\t\t<coordinates>\n'
-        earth_coord_2 = '\t\t\t</coordinates>\n' + \
-                        '\t\t</LineString>\n' + \
-                        '\t</Placemark>\n' + \
-                        '</Folder>\n' + \
-                        '</kml>'
+
         __color = ''
         if isinstance(color, tuple) and len(color) == 4:
             for code in reversed(color):
@@ -162,21 +166,27 @@ class LoadDirectory:
             raise KeyError('Key error raised! Check for altitude key spelling.')
 
         __coord = ','.join([__longitude, __latitude, __altitude]) + '\n'
-        with open(self.path_temp_coord, mode='a+', encoding='utf-8') as f_temp, \
-                open(self.path_earth_coord, mode='w', encoding='utf-8') as f_gearth, \
-                open(self.path_save_coord, mode='w', encoding='utf-8') as f_save:
-            f_temp.writelines(__coord)
-            str_coord = [earth_coord_0]
-            f_temp.seek(0)
-            all_coord = f_temp.readlines()
-            str_coord.append(__color)
-            str_coord.append(earth_coord_1)
-            str_coord.extend(all_coord)
-            str_coord.append(earth_coord_2)
-            f_gearth.writelines(str_coord)
-            f_save.writelines(str_coord)
+
+        with open(self.path_temp_coord, mode='a+', encoding='utf-8') as f_temp:
+            f_temp.write(__coord)
+            self.all_coord.append(__coord)
+        with open(self.path_earth_coord, mode='w', encoding='utf-8') as f_gearth:
+            f_gearth.write(self.earth_coord_0)
+            f_gearth.write(__color)
+            f_gearth.write(self.earth_coord_1)
+            f_gearth.writelines(self.all_coord)
+            f_gearth.write(self.earth_coord_2)
+        with open(self.path_save_coord, mode='w', encoding='utf-8') as f_save:
+            f_save.write(self.earth_coord_0)
+            f_save.write(__color)
+            f_save.write(self.earth_coord_1)
+            f_save.writelines(self.all_coord)
+            f_save.write(self.earth_coord_2)
         self.logger.debug('Earth Coord File appended successfully!')
-        return earth_coord_0 + color + earth_coord_1 + '\n'.join(__coord) + earth_coord_2
+        if echo:
+            return self.earth_coord_0 + color + self.earth_coord_1 + '\n'.join(__coord) + self.earth_coord_2
+        return ''
+
 
     def appendDelimitedFile(self, *args: _Union[_np.ndarray, list, str], delimiter: str = ',') -> list:
         """

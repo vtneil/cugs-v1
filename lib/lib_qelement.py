@@ -38,6 +38,7 @@ class QChartData:
         self.__bool_scatter = scatter
         self.__line_list = list()
         self.__chart_list = list()
+        self.__is_first = True
 
         self.color_r = color_r
         self.color_g = color_g
@@ -76,8 +77,9 @@ class QChartData:
             self.__chart_chart.setAnimationOptions(QChart.SeriesAnimations)
         elif animation == 'all':
             self.__chart_chart.setAnimationOptions(QChart.AllAnimations)
+        else:
+            self.__chart_chart.setAnimationOptions(QChart.NoAnimation)
 
-        # self.__chart_view = QChartView(self.__chart_chart)
         self.__chart_view = QChartView()
         self.__chart_view.setChart(self.__chart_chart)
         self.__chart_view.setRenderHint(QPainter.Antialiasing)
@@ -117,12 +119,12 @@ class QChartData:
         self.__chart_chart.setAxisX(self.__x_axis)
         self.__chart_chart.setAxisY(self.__y_axis)
 
-        self.__x_data = _np.array([], dtype='float')
-        self.__y_data = _np.array([[]], dtype='float')
+        self.__x_data = None
+        self.__y_data = _np.array([], dtype='float')
 
     def append(self, x_new, *y_new):
-        y_arr = _np.array([y_new], dtype='float')[:, :self.__y_len]
-        if not (self.__x_data.size and self.__y_data.size):
+        y_arr = _np.array(y_new, dtype='float')[:self.__y_len]
+        if not (self.__x_data is not None and self.__y_data.size):
             for __line_type in self.__line_list:
                 if __line_type == 'line':
                     self.__chart_list.append(QLineSeries())
@@ -141,16 +143,24 @@ class QChartData:
                 __chart.attachAxis(self.__x_axis)
                 __chart.attachAxis(self.__y_axis)
 
-        self.__x_data = _np.append(self.__x_data, x_new)
-        self.__y_data = _np.concatenate((self.__y_data, y_arr.T), axis=1)
+        self.__x_data = x_new
+        self.__y_data = y_arr
 
-        for __y, __chart in zip(y_arr[0], self.__chart_list):
-            __chart.append(float(x_new), float(__y))
+        # Plot only first data in y vector
+        for __y, __chart in zip(y_arr, self.__chart_list):
+            __chart.append(float(self.__x_data), float(__y))
 
-        self.__x_min = _np.min(self.__x_data)
-        self.__y_min = _np.min(self.__y_data)
-        self.__x_max = _np.max(self.__x_data)
-        self.__y_max = _np.max(self.__y_data)
+        if self.__is_first:
+            self.__x_min = self.__x_data
+            self.__y_min = self.__y_data
+            self.__x_max = self.__x_data
+            self.__y_max = self.__y_data
+            self.__is_first = False
+        else:
+            self.__x_min = self.selMin(self.__x_min, self.__x_data)
+            self.__y_min = self.selMin(self.__y_min, self.__y_data)
+            self.__x_max = self.selMax(self.__x_max, self.__x_data)
+            self.__y_max = self.selMax(self.__y_max, self.__y_data)
         self.updateMinMax()
 
         return
@@ -163,8 +173,8 @@ class QChartData:
     def clear(self):
         for __chart in self.__chart_list:
             __chart.clear()
-        self.__x_data = _np.array([], dtype='float')
-        self.__y_data = _np.array([[]], dtype='float')
+        self.__x_data = 0.0
+        self.__y_data = _np.array([], dtype='float')
         self.__x_min = 0.0
         self.__x_max = 1.0
         self.__y_min = 0.0
@@ -175,16 +185,31 @@ class QChartData:
     def pop(self):
         if self.__x_data.size > 0:
             for __y, __chart in zip(self.__y_data, self.__chart_list):
-                __chart.remove(self.__x_data[-1], __y[-1])
-            self.__x_data = _np.delete(self.__x_data, -1)
-            self.__y_data = _np.delete(self.__y_data, -1, axis=1)
-            self.__x_max = _np.max(self.__x_data)
-            self.__y_max = _np.max(self.__y_data)
+                __chart.remove(self.__x_data, __y)
+
+            self.__x_min = self.selMin(self.__x_min, self.__x_data)
+            self.__y_min = self.selMin(self.__y_min, self.__y_data)
+            self.__x_max = self.selMax(self.__x_max, self.__x_data)
+            self.__y_max = self.selMax(self.__y_max, self.__y_data)
             self.updateMinMax()
         return
 
     def setTitle(self, value, unit: str):
         self.__chart_chart.setTitle('{} ({})'.format(value, unit))
+
+    @staticmethod
+    def selMin(a, b):
+        if a < b:
+            return a
+        else:
+            return b
+
+    @staticmethod
+    def selMax(a, b):
+        if a > b:
+            return a
+        else:
+            return b
 
 class PyQtGraphData:
     def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
@@ -221,7 +246,7 @@ class QTableData:
         self.table = table
         self.data_count = 0
 
-    def appendVector(self, data_dict: dict):
+    def replaceVector(self, data_dict: dict):
         self.table.setRowCount(len(data_dict))
         for r, (k, v) in enumerate(data_dict.items()):
             self.table.setItem(r, 0, QTableWidgetItem(str(k)))
@@ -229,6 +254,8 @@ class QTableData:
         return
 
     def appendTable(self, data_dict: dict):
+        if self.data_count >= 1000:
+            self.clear()
         self.table.setRowCount(self.data_count + 1)
         self.table.setColumnCount(len(data_dict))
         for c, (k, v) in enumerate(data_dict.items()):

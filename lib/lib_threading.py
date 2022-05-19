@@ -17,21 +17,25 @@ class ThreadSerial(QThread):
     def __del__(self) -> None:
         try:
             self.wait()
-            self.logger.info('Serial thread stopped and deleted successfully.')
+            self.logger.info('Serial thread deleted successfully.')
         except RuntimeError:
-            self.logger.exception('Unable to delete the  serial thread.')
+            self.logger.exception('Unable to delete the serial thread.')
             pass
         return
 
     def run(self) -> None:
         self.logger.info('Starting the serial thread.')
-        self.serial_logger.readAll(_ilib.wrapper(self.update_msg))
+        try:
+            self.serial_logger.readPayload(_ilib.wrapper(self.update_msg))
+        except Exception:
+            return
         return
 
     def stop(self) -> None:
         self.logger.info('Try stopping the serial thread.')
         self._isRunning = False
         self.terminate()
+        self.logger.info('Stopped the serial thread.')
         return
 
     def update_msg(self, str_out) -> None:
