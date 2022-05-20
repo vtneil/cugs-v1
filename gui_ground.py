@@ -4,7 +4,7 @@ import gui as guilib
 # import numpy as np
 from lib import Log
 # from typing import Union as _Union
-from PySide6.QtWidgets import QApplication, QTableWidgetItem
+from PySide6.QtWidgets import QApplication, QTableWidgetItem, QMainWindow
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QTextCursor
 
@@ -21,6 +21,7 @@ class ProgFullStackGUI:
         self.plot_engine = pref_dict['plot_engine'] if pref_dict['plot_engine'] else 'qchart'
         self.to_plot_y = pref_dict['use_plot']['y']
         self.to_plot_x = pref_dict['use_plot']['x']
+        self.is_save = (pref_dict['is_save'].lower() == 'true')
 
         # Plot_X Broadcasting
         if isinstance(self.to_plot_x, str):
@@ -123,7 +124,7 @@ class ProgFullStackGUI:
         return
 
     def stop(self) -> int:
-        self.com.disconnect()
+        self.serialDisconnect()
         return self.exit_code
 
     def connectButons(self) -> None:
@@ -134,6 +135,8 @@ class ProgFullStackGUI:
         self.ui_main.btn_start_mission.clicked.connect(self.updateButtonsLogic)
         self.ui_main.btn_start_pause_data.clicked.connect(self.updateButtonsLogic)
         self.ui_main.btn_csv_live.clicked.connect(self.startCsvLiveView)
+
+        self.ui_main.btn_serial_mon_clear.clicked.connect(lambda: self.ui_main.text_serial_mon.clear())
 
         self.ui_main.btn_chart_pop.clicked.connect(self.popPlot)
         self.ui_main.btn_chart_clear.clicked.connect(self.clearPlot)
@@ -216,16 +219,23 @@ class ProgFullStackGUI:
         self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
         self.ui_main.text_serial_mon.moveCursor(QTextCursor.End)
 
+        # Exit Code
+        if not self.exit_code % 100:
+            self.ui_main.text_serial_mon.clear()
+        self.ui_main.lb_exit_id.setText(str(self.exit_code))
+
         # File Appending
-        self.directory.appendEarthCoord(__coord)
-        self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_dict, self.data_format),
-                                           self.serial_plain_text)
+        if self.is_save:
+            self.directory.appendEarthCoord(__coord)
+            self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_dict, self.data_format),
+                                               self.serial_plain_text)
 
         # Key-Value Table
         self.table_main.replaceVector(self.serial_parsed_dict)
 
         # CSV Liveview Table
-        self.table_csv.appendTable(self.serial_parsed_dict)
+        if not self.ui_csv.isHidden():
+            self.table_csv.appendTable(self.serial_parsed_dict)
 
         # Update plot data
         self.updatePlot()
@@ -265,12 +275,16 @@ def run_prog(pref_file_name: str = 'cugs_preferences.json'):
     prog_preferences = ilib.PreferencesData('lib/' + pref_file_name).getPreferences()
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
+
     app = QApplication(sys.argv)
-
     prog = ProgFullStackGUI(prog_preferences)
-    prog.start()
 
-    app.exec()
+    prog.start()
+    try:
+        app.exec()
+    except KeyboardInterrupt:
+        pass
+
     prog.stop()
     log.info('Program exited with code ' + str(prog.exit_code))
 

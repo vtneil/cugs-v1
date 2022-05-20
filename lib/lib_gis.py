@@ -131,7 +131,6 @@ class Gis:
         :return: Heading angle in degrees
         """
         ht = self.getAzimuth() - self.gz
-        ht = ht % 360
         return round(ht)
 
     def getElevationApprox(self, delta: bool = False) -> float:
@@ -178,6 +177,7 @@ if __name__ == '__main__':
     c1 = Coordinate(latitude='16.0', longitude='100.00', altitude='20.1')
     c2 = Coordinate(latitude='10.0', longitude='100.00', altitude='25600.2')
     c3 = Coordinate(latitude='0', longitude='0', altitude='0')
+
     test = Gis(c2, c1, gx='1.0', gy='-3.0', gz='8.0')
     print(test.getArcLength())
     print(test.getLineOfSight())

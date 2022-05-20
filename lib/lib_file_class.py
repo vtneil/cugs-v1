@@ -42,29 +42,40 @@ class LoadDirectory:
         self.path_earth_coord = self.__makeAbsolutePath(self.name_earth_coord)
         self.path_earth_live = self.__makeAbsolutePath(self.name_earth_live)
 
+        self.earth_live_pre = '<?xml version="1.0" encoding="UTF-8"?>\n' + \
+                              '<kml xmlns="http://www.opengis.net/kml/2.2" ' \
+                              'xmlns:gx="http://www.google.com/kml/ext/2.2">\n' + \
+                              '<NetworkLink>\n' + \
+                              '<Link>\n<href>'
+        self.earth_live_post = '</href>\n<refreshMode>onInterval</refreshMode>\n' + \
+                               '<refreshInterval>0.1</refreshInterval>\n' + \
+                               '</Link>\n' + \
+                               '</NetworkLink>\n' + \
+                               '</kml>\n'
+
         self.earth_coord_0 = '<kml xmlns="http://www.opengis.net/kml/2.2" ' \
                              'xmlns:gx="http://www.google.com/kml/ext/2.2">\n' + \
                              '<Folder>\n' + \
-                             '\t<name>Log</name>\n' + \
-                             '\t<Placemark>\n' + \
-                             '\t\t<name>Device Path Plotting</name>\n' + \
-                             '\t\t<Style>\n' + \
-                             '\t\t\t<LineStyle>\n\t\t\t\t<color>'
-        self.earth_coord_1 = '</color>\n\t\t\t\t<colorMode>normal</colorMode>\n' + \
-                             '\t\t\t\t<width>3</width>\n' + \
-                             '\t\t\t</LineStyle>\n' + \
-                             '\t\t\t<PolyStyle>\n' + \
-                             '\t\t\t\t<color>99000000</color>\n' + \
-                             '\t\t\t\t<fill>1</fill>\n' + \
-                             '\t\t\t</PolyStyle>\n' + \
-                             '\t\t</Style>\n' + \
-                             '\t\t<LineString>\n' + \
-                             '\t\t\t<extrude>1</extrude>\n' + \
-                             '\t\t\t<altitudeMode>absolute</altitudeMode>\n' + \
-                             '\t\t\t<coordinates>\n'
-        self.earth_coord_2 = '\n\t\t\t</coordinates>\n' + \
-                             '\t\t</LineString>\n' + \
-                             '\t</Placemark>\n' + \
+                             '<name>Log</name>\n' + \
+                             '<Placemark>\n' + \
+                             '<name>Device Path Plotting</name>\n' + \
+                             '<Style>\n' + \
+                             '<LineStyle>\n<color>'
+        self.earth_coord_1 = '</color>\n<colorMode>normal</colorMode>\n' + \
+                             '<width>3</width>\n' + \
+                             '</LineStyle>\n' + \
+                             '<PolyStyle>\n' + \
+                             '<color>99000000</color>\n' + \
+                             '<fill>1</fill>\n' + \
+                             '</PolyStyle>\n' + \
+                             '</Style>\n' + \
+                             '<LineString>\n' + \
+                             '<extrude>1</extrude>\n' + \
+                             '<gx:altitudeMode>absolute</gx:altitudeMode>\n' + \
+                             '<coordinates>\n'
+        self.earth_coord_2 = '\n</coordinates>\n' + \
+                             '</LineString>\n' + \
+                             '</Placemark>\n' + \
                              '</Folder>\n' + \
                              '</kml>'
 
@@ -165,28 +176,31 @@ class LoadDirectory:
         except KeyError:
             raise KeyError('Key error raised! Check for altitude key spelling.')
 
-        __coord = ','.join([__longitude, __latitude, __altitude]) + '\n'
+        __coord = ','.join([__longitude, __latitude, __altitude])
+        self.all_coord.append(__coord)
 
-        with open(self.path_temp_coord, mode='a+', encoding='utf-8') as f_temp:
-            f_temp.write(__coord)
-            self.all_coord.append(__coord)
-        with open(self.path_earth_coord, mode='w', encoding='utf-8') as f_gearth:
-            f_gearth.write(self.earth_coord_0)
-            f_gearth.write(__color)
-            f_gearth.write(self.earth_coord_1)
-            f_gearth.writelines(self.all_coord)
-            f_gearth.write(self.earth_coord_2)
-        with open(self.path_save_coord, mode='w', encoding='utf-8') as f_save:
-            f_save.write(self.earth_coord_0)
-            f_save.write(__color)
-            f_save.write(self.earth_coord_1)
-            f_save.writelines(self.all_coord)
-            f_save.write(self.earth_coord_2)
+        # with open(self.path_temp_coord, mode='a+', encoding='utf-8') as f_temp:
+        #     f_temp.write(__coord)
+        if len(self.all_coord) == 1:
+            with open(self.path_earth_coord, mode='w', encoding='utf-8') as f_gearth:
+                f_gearth.write(self.earth_coord_0)
+                f_gearth.write(__color)
+                f_gearth.write(self.earth_coord_1)
+                f_gearth.writelines(self.all_coord)
+                f_gearth.write(self.earth_coord_2)
+            with open(self.path_save_coord, mode='w', encoding='utf-8') as f_save:
+                f_save.write(self.earth_coord_0)
+                f_save.write(__color)
+                f_save.write(self.earth_coord_1)
+                f_save.writelines(self.all_coord)
+                f_save.write(self.earth_coord_2)
+        else:
+            self.insertLine(self.path_earth_coord, -5, __coord)
+            self.insertLine(self.path_save_coord, -5, __coord)
         self.logger.debug('Earth Coord File appended successfully!')
         if echo:
             return self.earth_coord_0 + color + self.earth_coord_1 + '\n'.join(__coord) + self.earth_coord_2
         return ''
-
 
     def appendDelimitedFile(self, *args: _Union[_np.ndarray, list, str], delimiter: str = ',') -> list:
         """
@@ -236,24 +250,14 @@ class LoadDirectory:
         :param coord_filename: Google Earth Coordinates KML File path or name
         :return:
         """
-        earth_live_pre = '<?xml version="1.0" encoding="UTF-8"?>\n' + \
-                         '<kml xmlns="http://www.opengis.net/kml/2.2" ' \
-                         'xmlns:gx="http://www.google.com/kml/ext/2.2">\n' + \
-                         '\t<NetworkLink>\n' + \
-                         '\t\t<Link>\n\t\t\t<href>'
-        earth_live_post = '</href>\n\t\t\t<refreshMode>onInterval</refreshMode>\n' + \
-                          '\t\t\t<refreshInterval>0.1</refreshInterval>\n' + \
-                          '\t\t</Link>\n' + \
-                          '\t</NetworkLink>\n' + \
-                          '</kml>\n'
         with open(filename, mode='w', encoding='utf-8') as f:
-            f.writelines(earth_live_pre)
+            f.writelines(self.earth_live_pre)
             f.writelines(coord_filename)
-            f.writelines(earth_live_post)
+            f.writelines(self.earth_live_post)
 
         self.logger.debug('Earth Live File created successfully!')
 
-        return earth_live_pre + coord_filename + earth_live_post
+        return ''
 
     @staticmethod
     def dictToList(raw_dict: _Union[_Dict, dict], tuple_data: _Union[list, tuple, set, dict]) -> list:
@@ -269,6 +273,40 @@ class LoadDirectory:
         """
         if not _op.exists(folder_name):
             os.makedirs(folder_name)
+        return
+
+    @staticmethod
+    def insertLine(filename: str, lineno: int, text):
+        """
+        This static method inserts a line into mth line (m >= 0) which
+        is an optimized alternative of rewriting the whole file.
+
+        :param filename: File name or file path (str)
+        :param lineno: Line number, can be absolute (>= 0) or relative to last element (< 0)
+        :param text: Object which str() is callable to insert
+        :return: None
+        """
+        last_end = []
+        with open(filename, "r+", encoding='utf-8') as fro:
+            _p_file = 0
+            _max_line = len(fro.readlines())
+            fro.seek(0)
+            if lineno < 0:
+                _lineno = _max_line + lineno
+            else:
+                _lineno = lineno
+            if _lineno < 0:
+                _lineno = 0
+            _pos = 0
+            while _pos < _max_line:
+                _line = fro.readline()
+                if _pos == _lineno - 1:
+                    _p_file = fro.tell()
+                if _pos >= _lineno:
+                    last_end.append(_line)
+                _pos += 1
+            fro.seek(_p_file)
+            fro.writelines([str(text) + '\n', *last_end])
         return
 
 

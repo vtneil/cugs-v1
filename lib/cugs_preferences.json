@@ -1,6 +1,7 @@
 {
   "header": "SPARK2",
   "delimiter": ",",
+  "is_save": "true",
   "file_name": "test",
   "file_ext": "csv",
   "data_format":

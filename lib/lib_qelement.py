@@ -18,7 +18,7 @@ class QChartData:
 
     def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
                  Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None,
-                 animation=None):
+                 animation=None, processer=None):
         """
         QGraphicsView Data Object
 
@@ -180,6 +180,7 @@ class QChartData:
         self.__y_min = 0.0
         self.__y_max = 1.0
         self.updateMinMax()
+        self.__is_first = True
         return
 
     def pop(self):

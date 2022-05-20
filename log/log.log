@@ -659,3 +659,331 @@ serial.serialutil.SerialException: could not open port 'COM4': PermissionError(1
 [INFO] In root - 19-May-22 19:01:51 - [LOG_THREAD] Starting the serial thread.
 [INFO] In root - 19-May-22 19:03:12 - [LOG_SERIAL] COM4 has been successfully closed!
 [INFO] In root - 19-May-22 19:03:12 - [GUI_PROG] Program exited with code 1203
+[INFO] In root - 20-May-22 10:10:26 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:11:18 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:11:18 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:11:18 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:11:47 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 10:11:47 - [GUI_PROG] Program exited with code 379
+[INFO] In root - 20-May-22 10:13:44 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:13:45 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:13:45 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:13:45 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:14:39 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 10:14:39 - [GUI_PROG] Program exited with code 708
+[INFO] In root - 20-May-22 10:19:07 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 10:19:10 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:19:10 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 10:22:05 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:24:33 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:24:33 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:24:33 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:26:54 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 10:26:54 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 10:26:54 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 10:26:57 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:26:57 - [GUI_PROG] Program exited with code 1887
+[INFO] In root - 20-May-22 10:37:15 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:37:42 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:37:42 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:37:42 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:39:14 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:39:19 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:39:19 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:39:19 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:39:45 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:39:47 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:39:47 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:39:47 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:39:59 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 10:39:59 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 10:39:59 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 10:40:00 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:40:00 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:40:00 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:44:08 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 10:44:08 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 10:44:08 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 10:44:09 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:44:09 - [GUI_PROG] Program exited with code 3464
+[INFO] In root - 20-May-22 10:48:28 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 10:48:31 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:48:31 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 10:49:22 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:49:35 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 10:49:35 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:49:35 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 10:49:38 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:49:38 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:49:38 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:50:25 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 10:50:25 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:50:25 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 10:50:26 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:50:26 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:50:26 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:50:47 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 10:50:47 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:50:47 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 10:50:48 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:50:48 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:50:48 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:50:50 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 10:50:50 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 10:50:50 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 10:52:22 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:52:26 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:52:26 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:52:26 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:52:29 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 10:52:29 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 10:52:29 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 10:52:31 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 10:52:31 - [GUI_PROG] Program exited with code 41
+[INFO] In root - 20-May-22 10:52:39 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:52:40 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:52:40 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:52:40 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:52:47 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 10:52:47 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 10:52:47 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 10:52:47 - [GUI_PROG] Program exited with code 93
+[INFO] In root - 20-May-22 10:53:47 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:53:48 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:53:48 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:53:48 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 10:57:14 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 10:57:15 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 10:57:15 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 10:57:15 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:02:47 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:02:47 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:02:47 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 11:02:49 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:02:49 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:02:49 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:02:56 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:02:56 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:02:56 - [LOG_THREAD] Starting the serial thread.
+[ERROR] In root - 20-May-22 11:03:08 - [LOG_SERIAL] Unexpected Error. Can't connect to port or the port is already connected!
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 57, in connect
+    self.device = _serial.Serial(self.port, baudrate=int(baud), timeout=60)
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[CRITICAL] In root - 20-May-22 11:03:11 - [LOG_SERIAL] PORT ID: COM4
+[ERROR] In root - 20-May-22 11:03:11 - [LOG_SERIAL] Unexpected Error. Can't connect to port or the port is already connected!
+Traceback (most recent call last):
+  File "G:\My Drive\python_projects\cugs_v1\lib\lib_serial_tools.py", line 57, in connect
+    self.device = _serial.Serial(self.port, baudrate=int(baud), timeout=60)
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "G:\My Drive\python_projects\cugs_v1\venv\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM4': FileNotFoundError(2, 'The system cannot find the file specified.', None, 2)
+[CRITICAL] In root - 20-May-22 11:03:11 - [LOG_SERIAL] PORT ID: COM4
+[INFO] In root - 20-May-22 11:03:11 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:03:11 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:03:11 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 11:03:13 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:03:13 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:03:13 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:03:18 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:03:18 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:03:18 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 11:03:20 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:03:20 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:03:20 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:03:29 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:03:29 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:03:29 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 11:03:41 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 11:03:41 - [GUI_PROG] Program exited with code 4767
+[INFO] In root - 20-May-22 11:11:20 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 11:11:22 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:11:22 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:11:22 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:11:23 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:11:23 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:11:23 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 11:11:24 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 11:11:24 - [GUI_PROG] Program exited with code 18
+[INFO] In root - 20-May-22 11:20:09 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 11:20:11 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:20:11 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:20:11 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:20:15 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:20:15 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:20:15 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 11:20:32 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 11:20:32 - [GUI_PROG] Program exited with code 47
+[INFO] In root - 20-May-22 11:22:58 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 11:23:26 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:23:26 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:23:26 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:23:35 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:23:35 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:23:35 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 11:23:36 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 11:23:36 - [GUI_PROG] Program exited with code 116
+[INFO] In root - 20-May-22 11:25:22 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 11:25:23 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:25:23 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:25:23 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:26:19 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:26:19 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:26:19 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 11:26:20 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 11:26:20 - [GUI_PROG] Program exited with code 740
+[INFO] In root - 20-May-22 11:34:09 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 11:34:11 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:34:11 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:34:11 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:34:34 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 11:34:34 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 11:34:34 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 11:34:34 - [GUI_PROG] Program exited with code 296
+[INFO] In root - 20-May-22 11:34:59 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 11:35:07 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 11:35:07 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 11:35:07 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 11:36:22 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 11:36:35 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 11:36:35 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 12:44:15 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 12:44:19 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 12:44:19 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 12:44:19 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 12:44:51 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 12:44:51 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 12:44:51 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 12:44:51 - [GUI_PROG] Program exited with code 417
+[INFO] In root - 20-May-22 12:45:10 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 12:45:32 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 12:45:32 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 12:45:32 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 12:45:49 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 12:45:49 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 12:45:49 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 12:45:49 - [GUI_PROG] Program exited with code 235
+[INFO] In root - 20-May-22 12:47:34 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 12:47:41 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 12:47:41 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 12:47:41 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 12:48:02 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 12:48:02 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 12:48:02 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 12:48:03 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 12:48:03 - [GUI_PROG] Program exited with code 277
+[INFO] In root - 20-May-22 13:09:53 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 13:09:55 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:09:55 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:09:55 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:10:23 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:10:23 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:10:23 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 13:10:27 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:10:27 - [GUI_PROG] Program exited with code 379
+[INFO] In root - 20-May-22 13:14:08 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 13:14:10 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:14:10 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:14:10 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:15:13 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:15:13 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:15:13 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 13:17:46 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:17:46 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:17:46 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:17:49 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:17:49 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:17:49 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 13:17:51 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:17:51 - [GUI_PROG] Program exited with code 882
+[INFO] In root - 20-May-22 13:18:25 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 13:18:28 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:18:28 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:18:28 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:19:07 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:19:07 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:19:07 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 13:21:28 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:21:28 - [GUI_PROG] Program exited with code 527
+[INFO] In root - 20-May-22 13:21:32 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 13:21:34 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:21:34 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:21:34 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:23:31 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:23:31 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:23:31 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 13:23:39 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:23:39 - [GUI_PROG] Program exited with code 1559
+[INFO] In root - 20-May-22 13:52:09 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 13:52:10 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:52:10 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:52:10 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:52:17 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:52:17 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:52:17 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 13:52:18 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:52:18 - [GUI_PROG] Program exited with code 85
+[INFO] In root - 20-May-22 13:54:41 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 13:54:43 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 13:54:43 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 13:54:43 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 13:54:50 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 13:54:50 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 13:54:50 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 13:54:51 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:54:51 - [GUI_PROG] Program exited with code 90
+[INFO] In root - 20-May-22 13:56:24 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 20-May-22 13:56:35 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 13:56:35 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 15:57:19 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 15:57:22 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 15:57:22 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 15:57:22 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 15:57:51 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 15:57:51 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 15:57:51 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 15:57:51 - [GUI_PROG] Program exited with code 376
+[INFO] In root - 20-May-22 15:57:59 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 15:58:00 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 15:58:00 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 15:58:00 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 15:58:31 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 15:58:31 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 15:58:31 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 15:58:32 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 15:58:32 - [GUI_PROG] Program exited with code 403
+[INFO] In root - 20-May-22 15:58:49 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 15:58:51 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 15:58:51 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 15:58:51 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 15:58:53 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 15:58:53 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 15:58:53 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 15:58:53 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 20-May-22 15:59:06 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 15:59:07 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 15:59:07 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 15:59:07 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 15:59:17 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 15:59:17 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 15:59:17 - [LOG_SERIAL] COM4 has been successfully closed!
+[CRITICAL] In root - 20-May-22 15:59:18 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 20-May-22 15:59:18 - [GUI_PROG] Program exited with code 128
+[INFO] In root - 20-May-22 15:59:37 - [GUI_PROG] Start of Program
+[INFO] In root - 20-May-22 15:59:39 - [LOG_SERIAL] Device COM4 is successfully connected!
+[INFO] In root - 20-May-22 15:59:39 - [LOG_SERIAL] with baud rate=115200.
+[INFO] In root - 20-May-22 15:59:39 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 20-May-22 15:59:44 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 20-May-22 15:59:44 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 20-May-22 15:59:44 - [LOG_SERIAL] COM4 has been successfully closed!
+[INFO] In root - 20-May-22 15:59:44 - [GUI_PROG] Program exited with code 62

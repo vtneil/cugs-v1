@@ -4,11 +4,14 @@ def factorial1(N):
         prod *= i
     return prod
 
-def factorial2(N):
-    if N == 0:
-        return 1
-    return N * factorial2(N-1)
+def pow2(N):
+    return N ** 2
+
+pow3 = lambda x: x ** 3
+
+def mirror(f, x):
+    return f(x)
 
 
 if __name__ == '__main__':
-    print(factorial2(5))
+    print(pow3(4))
