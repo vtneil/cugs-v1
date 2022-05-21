@@ -6,7 +6,7 @@ This repo includes example CLI and GUI main files and included specifically made
 ## Preferences
 In preferences file (your preferable formats listed above), there are serveral configurations you can edit.
 
-1. `header` (string) specifies packet header which is consistent (identical) in all received data. It is used to cut packet strings. Supported type: string. Supported inputs: Any.
+1. `header` (string) specifies packet header which is consistent (identical) in all received data. It is used to cut packet strings. Supported type: string. Supported inputs: Any. *Can be empty*: if empty the parser will split payloads with `\n` (new line) character instead.
 2. `delimiter` (string) specifies delimiter that separates each block of data. Supported type: string.
 3. `is_save` (string) specifies whether you want to save file or not. Supported type: string. Supported arguments: `true` and `false`.
 4. `file_name` (string) specifies file name which delimited file and raw file will be saved. Supported type: string.
