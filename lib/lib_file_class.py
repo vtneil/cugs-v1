@@ -41,6 +41,8 @@ class LoadDirectory:
         self.path_temp_coord = self.__makeAbsolutePath(self.name_temp_coord)
         self.path_earth_coord = self.__makeAbsolutePath(self.name_earth_coord)
         self.path_earth_live = self.__makeAbsolutePath(self.name_earth_live)
+        self.pos_save = 0
+        self.pos_earth = 0
 
         self.earth_live_pre = '<?xml version="1.0" encoding="UTF-8"?>\n' + \
                               '<kml xmlns="http://www.opengis.net/kml/2.2" ' \
@@ -177,7 +179,8 @@ class LoadDirectory:
             raise KeyError('Key error raised! Check for altitude key spelling.')
 
         __coord = ','.join([__longitude, __latitude, __altitude])
-        self.all_coord.append(__coord)
+        if len(self.all_coord) <= 2:
+            self.all_coord.append(__coord)
 
         # with open(self.path_temp_coord, mode='a+', encoding='utf-8') as f_temp:
         #     f_temp.write(__coord)
@@ -195,8 +198,8 @@ class LoadDirectory:
                 f_save.writelines(self.all_coord)
                 f_save.write(self.earth_coord_2)
         else:
-            self.insertLine(self.path_earth_coord, -5, __coord)
-            self.insertLine(self.path_save_coord, -5, __coord)
+            self.pos_earth = self.insertLine(self.path_earth_coord, -5, __coord, self.pos_earth)
+            self.pos_save = self.insertLine(self.path_save_coord, -5, __coord, self.pos_save)
         self.logger.debug('Earth Coord File appended successfully!')
         if echo:
             return self.earth_coord_0 + color + self.earth_coord_1 + '\n'.join(__coord) + self.earth_coord_2
@@ -276,7 +279,7 @@ class LoadDirectory:
         return
 
     @staticmethod
-    def insertLine(filename: str, lineno: int, text):
+    def insertLine(filename: str, lineno: int, text, latest_pos=0):
         """
         This static method inserts a line into mth line (m >= 0) which
         is an optimized alternative of rewriting the whole file.
@@ -287,27 +290,49 @@ class LoadDirectory:
         :return: None
         """
         last_end = []
+        _p_file = 0
         with open(filename, "r+", encoding='utf-8') as fro:
-            _p_file = 0
-            _max_line = len(fro.readlines())
-            fro.seek(0)
-            if lineno < 0:
-                _lineno = _max_line + lineno
-            else:
-                _lineno = lineno
-            if _lineno < 0:
-                _lineno = 0
-            _pos = 0
-            while _pos < _max_line:
+            if latest_pos == 0:
+                if lineno < 0:
+                    _max_line = LoadDirectory.getLineCount(fro)
+                    _lineno = _max_line + lineno
+                else:
+                    _lineno = lineno
+                fro.seek(0)
+                if _lineno < 0:
+                    _lineno = 0
+                _pos = 0
                 _line = fro.readline()
-                if _pos == _lineno - 1:
-                    _p_file = fro.tell()
-                if _pos >= _lineno:
+                while _line:
+                    if _pos == _lineno - 1:
+                        _p_file = fro.tell()
+                    if _pos >= _lineno:
+                        last_end.append(_line)
+                    _line = fro.readline()
+                    _pos += 1
+                fro.seek(_p_file)
+            else:
+                fro.seek(latest_pos)
+                _line = fro.readline()
+                while _line:
                     last_end.append(_line)
-                _pos += 1
-            fro.seek(_p_file)
-            fro.writelines([str(text) + '\n', *last_end])
-        return
+                    _line = fro.readline()
+                fro.seek(latest_pos)
+            fro.write(str(text) + '\n')
+            new_latest_pos = fro.tell()
+            fro.writelines(last_end)
+        return new_latest_pos
+
+    @staticmethod
+    def blocks(file_object, size=2 ** 16):
+        while True:
+            b = file_object.read(size)
+            if not b: break
+            yield b
+
+    @staticmethod
+    def getLineCount(file_object):
+        return sum(bl.count("\n") for bl in LoadDirectory.blocks(file_object))
 
 
 if __name__ == '__main__':

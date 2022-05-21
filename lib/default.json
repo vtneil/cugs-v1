@@ -1,6 +1,7 @@
 {
   "header": "SPARK2",
   "delimiter": ",",
+  "is_save": "true",
   "file_name": "test",
   "file_ext": "csv",
   "data_format":
@@ -29,6 +30,8 @@
             "batt_volt",
             "cmd_echo"
           ],
+  "map_engine": "earth",
+  "plot_engine": "qchart",
   "use_plot":
   {
     "x": "packet_count",
@@ -36,7 +39,13 @@
             [
               "bar_alt",
               "temp1",
-              "gps_alt"
+              "gps_alt",
+              "acc_x",
+              "batt_volt",
+              "temp2",
+              "imu_alt",
+              "gps_lat",
+              "gps_lon"
             ]
   },
   "state": "state",

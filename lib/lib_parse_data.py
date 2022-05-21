@@ -10,7 +10,7 @@ class Parser:
         A parser object
 
         :param data_format: Any Iterable of data key/identifier/name
-        :param header: A header of a packet to parse
+        :param header: (A) header(s) of a packet to parse
         :param delimiter: A delimiter in the data to be parsed
         """
         self.__data_format = data_format

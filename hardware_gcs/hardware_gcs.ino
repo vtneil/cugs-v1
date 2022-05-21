@@ -1,5 +1,5 @@
 #define SERIAL_BAUD 115200
-#define DATA_RATE 75
+#define DATA_RATE 200
 
 unsigned long int counter = 1;
 
@@ -37,6 +37,7 @@ void loop() {
     packet = team_id;
     packet += "," + mission_time;
     packet += "," + String(counter++);
+    
     packet += "," + device_id;
     packet += "," + mode;
     packet += "," + String(state);
@@ -44,8 +45,8 @@ void loop() {
     packet += "," + String(bar_alt += 0.01 + (float)random(-100, 100) / 100.0, 2);
     packet += "," + String(imu_alt += 0.01 + (float)random(-100, 100) / 100.0, 2);
     packet += "," + gps_time;
-    packet += "," + String(gps_lat += 0.0001 + (float)random(-100, 100) / 1000.0, 6);
-    packet += "," + String(gps_lon += 0.0001 + (float)random(-100, 100) / 1000.0, 6);
+    packet += "," + String(gps_lat += 0.00001 + (float)random(-10, 10) / 1000.0, 6);
+    packet += "," + String(gps_lon += 0.00001 + (float)random(-10, 10) / 1000.0, 6);
     packet += "," + String(gps_sats);
     packet += "," + String(temp1 += 0.01 + (float)random(-100, 100) / 100.0, 2);
     packet += "," + String(temp2 += 0.01 + (float)random(-100, 100) / 100.0, 2);

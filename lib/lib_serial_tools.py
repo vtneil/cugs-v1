@@ -139,9 +139,10 @@ class LogSerial:
     def readFromUntil(self, header, *func):
         while self.read_result:
             try:
-                self.raw += self.__read()
-                self._find1 = self.raw.find(header)
-                self._find2 = self.raw.find(header, self._find1 + 1)
+                for __header in header:
+                    self.raw += self.__read()
+                    self._find1 = self.raw.find(__header)
+                    self._find2 = self.raw.find(__header, self._find1 + 1)
 
                 if self._find2 > self._find1 >= 0:
                     self.payload = self.raw[self._find1:self._find2]

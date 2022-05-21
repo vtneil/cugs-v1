@@ -30,8 +30,10 @@ class Ui_MainWindow(object):
         MainWindow.resize(960, 800)
         MainWindow.setMinimumSize(QSize(960, 800))
         MainWindow.setStyleSheet(u"")
-        self.actionAbout_CUGS = QAction(MainWindow)
-        self.actionAbout_CUGS.setObjectName(u"actionAbout_CUGS")
+        self.actionAbout = QAction(MainWindow)
+        self.actionAbout.setObjectName(u"actionAbout")
+        self.actionPreferences = QAction(MainWindow)
+        self.actionPreferences.setObjectName(u"actionPreferences")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -950,6 +952,8 @@ class Ui_MainWindow(object):
         self.menuView.setObjectName(u"menuView")
         self.menuHelp = QMenu(self.menubar)
         self.menuHelp.setObjectName(u"menuHelp")
+        self.menuSettings = QMenu(self.menubar)
+        self.menuSettings.setObjectName(u"menuSettings")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -958,8 +962,10 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuEdit.menuAction())
         self.menubar.addAction(self.menuView.menuAction())
+        self.menubar.addAction(self.menuSettings.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
-        self.menuHelp.addAction(self.actionAbout_CUGS)
+        self.menuHelp.addAction(self.actionAbout)
+        self.menuSettings.addAction(self.actionPreferences)
 
         self.retranslateUi(MainWindow)
 
@@ -974,7 +980,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionAbout_CUGS.setText(QCoreApplication.translate("MainWindow", u"About CUGS", None))
+        self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About CUGS", None))
+        self.actionPreferences.setText(QCoreApplication.translate("MainWindow", u"Preferences...", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Device Serial Port", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Baud Rate", None))
         self.combo_baud.setItemText(0, QCoreApplication.translate("MainWindow", u"115200", None))
@@ -1047,5 +1054,6 @@ class Ui_MainWindow(object):
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
+        self.menuSettings.setTitle(QCoreApplication.translate("MainWindow", u"Settings", None))
     # retranslateUi
 

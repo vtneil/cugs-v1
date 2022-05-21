@@ -30,6 +30,7 @@
             "batt_volt",
             "cmd_echo"
           ],
+  "map_engine": "earth",
   "plot_engine": "qchart",
   "use_plot":
   {

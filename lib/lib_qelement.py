@@ -3,7 +3,7 @@ import pyqtgraph as _pg
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem, QAbstractItemView
 from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSplineSeries, QLineSeries
 from PySide6.QtGui import QColor, QPen, QPainter
-# from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt
 
 
 color_r = QColor(255, 0, 0)
@@ -38,7 +38,11 @@ class QChartData:
         self.__bool_scatter = scatter
         self.__line_list = list()
         self.__chart_list = list()
-        self.__is_first = True
+        self.__is_init = True
+        self.__is_first = False
+        self.__counter = 0
+        self.__x0 = None
+        self.__y0 = None
 
         self.color_r = color_r
         self.color_g = color_g
@@ -124,7 +128,8 @@ class QChartData:
 
     def append(self, x_new, *y_new):
         y_arr = _np.array(y_new, dtype='float')[:self.__y_len]
-        if not (self.__x_data is not None and self.__y_data.size):
+        if self.__is_init:
+            self.__is_init = False
             for __line_type in self.__line_list:
                 if __line_type == 'line':
                     self.__chart_list.append(QLineSeries())
@@ -142,13 +147,17 @@ class QChartData:
                 self.__chart_chart.addSeries(__chart)
                 __chart.attachAxis(self.__x_axis)
                 __chart.attachAxis(self.__y_axis)
+            self.__is_first = True
 
         self.__x_data = x_new
         self.__y_data = y_arr
+        self.__counter += 1
 
         # Plot only first data in y vector
         for __y, __chart in zip(y_arr, self.__chart_list):
             __chart.append(float(self.__x_data), float(__y))
+        if self.__counter > 80:
+            self.popFirstN()
 
         if self.__is_first:
             self.__x_min = self.__x_data
@@ -179,19 +188,41 @@ class QChartData:
         self.__x_max = 1.0
         self.__y_min = 0.0
         self.__y_max = 1.0
+        self.__counter = 0
         self.updateMinMax()
         self.__is_first = True
         return
 
-    def pop(self):
-        if self.__x_data.size > 0:
+    def pop(self, N=1):
+        if self.__counter > N:
             for __y, __chart in zip(self.__y_data, self.__chart_list):
-                __chart.remove(self.__x_data, __y)
+                if N > 1:
+                    for _ in range(N):
+                        __chart.remove(__chart.points()[-1])
+                else:
+                    __chart.remove(__chart.points()[-1])
+                __p_x = [e.x() for e in __chart.points()]
+                __p_y = [e.y() for e in __chart.points()]
+                self.__x_min = min(__p_x)
+                self.__y_min = min(__p_y)
+                self.__x_max = max(__p_x)
+                self.__y_max = max(__p_y)
+            self.__counter -= N
+            self.updateMinMax()
 
-            self.__x_min = self.selMin(self.__x_min, self.__x_data)
-            self.__y_min = self.selMin(self.__y_min, self.__y_data)
-            self.__x_max = self.selMax(self.__x_max, self.__x_data)
-            self.__y_max = self.selMax(self.__y_max, self.__y_data)
+        return
+
+    def popFirstN(self, N=1):
+        if self.__counter > N:
+            for __chart in self.__chart_list:
+                __chart.removePoints(0, N)
+                __p_x = [e.x() for e in __chart.points()]
+                __p_y = [e.y() for e in __chart.points()]
+                self.__x_min = min(__p_x)
+                self.__y_min = min(__p_y)
+                self.__x_max = max(__p_x)
+                self.__y_max = max(__p_y)
+            self.__counter -= N
             self.updateMinMax()
         return
 
@@ -216,7 +247,7 @@ class PyQtGraphData:
     def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
                  legend: bool = False):
         """
-        PyQtGraph Data Object
+        PyQtGraph Data Object (Now only a placeholder)
         """
         self.__chart_widget = ChartWidget
         self.__chart_view = _pg.PlotWidget()
