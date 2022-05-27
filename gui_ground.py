@@ -81,7 +81,7 @@ class ProgFullStackGUI:
             __plot_engine = None
         if __plot_engine is not None:
             self.mpl_charts = [
-                __plot_engine(mpl_w, line_type=['spline']) for mpl_w in self.mpl_widgets
+                __plot_engine(mpl_w, line_type=['line']) for mpl_w in self.mpl_widgets
             ]
 
             self.plot_list = [
@@ -106,8 +106,9 @@ class ProgFullStackGUI:
         self.serial_thread = None
         self.serial_plain_text = ''
         self.serial_parsed_dict = dict()
-        self.start_mission_stat = False
         self.pause_data = False
+        self.bool_write_csv = False
+        self.bool_write_kml = False
         self.dict_data_array = self.parser.createBlankDataDict()
 
         # Front end Initialization
@@ -152,7 +153,9 @@ class ProgFullStackGUI:
         self.ui_main.btn_serial_disconnect.clicked.connect(self.serialDisconnect)
         self.ui_main.btn_serial_refresh.clicked.connect(self.listRefreshSerial)
 
-        self.ui_main.btn_start_mission.clicked.connect(self.updateButtonsLogic)
+        self.ui_main.cb_write_log.clicked.connect(self.updateButtonsLogic)
+        self.ui_main.cb_write_kml.clicked.connect(self.updateButtonsLogic)
+
         self.ui_main.btn_start_pause_data.clicked.connect(self.updateButtonsLogic)
         self.ui_main.btn_csv_live.clicked.connect(self.windowStartCsvLiveView)
 
@@ -171,6 +174,7 @@ class ProgFullStackGUI:
         self.ui_main.combo_serial.clear()
         self.com.refreshPortList()
         self.ui_main.combo_serial.addItems(self.com.port_dict)
+        self.ui_main.combo_serial.addItem('[Simulation Mode]')
         return
 
     def setupThreadSerial(self) -> None:
@@ -188,22 +192,31 @@ class ProgFullStackGUI:
     def serialConnect(self) -> None:
         self.com_baudrate = int(self.ui_main.combo_baud.currentText())
         self.com_portname = self.ui_main.combo_serial.currentText()
-        if self.com.connect(self.com_portname, self.com_baudrate):
+        if self.com_portname != '[Simulation Mode]':
+            if self.com.connect(self.com_portname, self.com_baudrate):
+                self.ui_main.tabWidget_Cmd.setCurrentWidget(self.ui_main.tab_data)
+                self.serial_connected = True
+                self.serial_logger = ilib.LogSerial(self.com.device, header=self.header)
+                self.setupThreadSerial()
+                self.serial_thread.start()
+        else:
             self.ui_main.tabWidget_Cmd.setCurrentWidget(self.ui_main.tab_data)
-            self.serial_connected = True
-            self.serial_logger = ilib.LogSerial(self.com.device, header=self.header)
+            self.serial_logger = ilib.LogSimulation(self.data_format, header=self.header, frequency=5)
             self.setupThreadSerial()
             self.serial_thread.start()
         return
 
     def serialDisconnect(self) -> None:
-        try:
-            if self.serial_connected:
-                self.serial_thread.stop()
-            if self.com.disconnect():
-                self.serial_connected = False
-        except Exception:
-            return
+        if self.com_portname == '[Simulation Mode]':
+            self.serial_thread.stop()
+        else:
+            try:
+                if self.serial_connected:
+                    self.serial_thread.stop()
+                if self.com.disconnect():
+                    self.serial_connected = False
+            except Exception:
+                return
         return
 
     def startMission(self) -> None:
@@ -230,12 +243,14 @@ class ProgFullStackGUI:
         self.ui_pref.show()
 
     def updateButtonsLogic(self) -> None:
-        self.start_mission_stat = self.ui_main.btn_start_mission.isChecked()
         self.pause_data = self.ui_main.btn_start_pause_data.isChecked()
+        self.bool_write_csv = self.ui_main.cb_write_log.isChecked()
+        self.bool_write_kml = self.ui_main.cb_write_kml.isChecked()
         return
 
     def updatePlot(self) -> None:
         __to_plot_data = []
+        __max_plot = int(self.ui_main.combo_max_plot.currentText())
         for __chart, __key_x, __key_y in self.plot_list:
             if __key_y not in self.serial_parsed_dict:
                 continue
@@ -246,7 +261,7 @@ class ProgFullStackGUI:
             if type(self.serial_parsed_dict[__key_x]) not in [int, float]:
                 continue
             __data_y = self.serial_parsed_dict[__key_y]
-            __chart.append(float(self.serial_parsed_dict[__key_x]), __data_y)
+            __chart.append(float(self.serial_parsed_dict[__key_x]), __data_y, max_count=__max_plot)
             __chart.setTitle(__data_y, __key_y)
         return
 
@@ -292,13 +307,14 @@ class ProgFullStackGUI:
         self.ui_main.lb_exit_id.setText(str(self.exit_code))
 
         # File Appending
-        if self.is_save:
+        if self.is_save and self.bool_write_csv:
             self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_dict, self.data_format),
                                                self.serial_plain_text)
 
         # Map plotting
-        if self.map_engine == 'earth':
-            self.directory.appendEarthCoord(__coord)
+        if self.bool_write_kml:
+            if self.map_engine == 'earth':
+                self.directory.appendEarthCoord(__coord)
 
         # Key-Value Table
         self.table_main.replaceVector(self.serial_parsed_dict)

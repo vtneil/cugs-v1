@@ -279,9 +279,7 @@ class Ui_MainWindow(object):
         self.fr_m_c_cmd.setFrameShape(QFrame.StyledPanel)
         self.fr_m_c_cmd.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.fr_m_c_cmd)
-        self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(20, 0, 20, 0)
         self.fr_cb_write = QFrame(self.fr_m_c_cmd)
         self.fr_cb_write.setObjectName(u"fr_cb_write")
         self.fr_cb_write.setFrameShape(QFrame.StyledPanel)
@@ -309,16 +307,33 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_4.addWidget(self.fr_cb_write)
 
-        self.btn_start_mission = QPushButton(self.fr_m_c_cmd)
-        self.btn_start_mission.setObjectName(u"btn_start_mission")
-        self.btn_start_mission.setMinimumSize(QSize(90, 90))
-        self.btn_start_mission.setMaximumSize(QSize(120, 90))
-        self.btn_start_mission.setFont(font)
-        self.btn_start_mission.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_start_mission.setCheckable(True)
-        self.btn_start_mission.setChecked(False)
+        self.frame = QFrame(self.fr_m_c_cmd)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_29 = QVBoxLayout(self.frame)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.lb_max_plot = QLabel(self.frame)
+        self.lb_max_plot.setObjectName(u"lb_max_plot")
+        self.lb_max_plot.setFont(font1)
+        self.lb_max_plot.setAlignment(Qt.AlignBottom|Qt.AlignLeading|Qt.AlignLeft)
 
-        self.horizontalLayout_4.addWidget(self.btn_start_mission)
+        self.verticalLayout_29.addWidget(self.lb_max_plot)
+
+        self.combo_max_plot = QComboBox(self.frame)
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.addItem("")
+        self.combo_max_plot.setObjectName(u"combo_max_plot")
+
+        self.verticalLayout_29.addWidget(self.combo_max_plot)
+
+
+        self.horizontalLayout_4.addWidget(self.frame)
 
 
         self.verticalLayout_2.addWidget(self.fr_m_c_cmd)
@@ -380,7 +395,7 @@ class Ui_MainWindow(object):
         self.btn_start_pause_data.setMaximumSize(QSize(300, 40))
         self.btn_start_pause_data.setFont(font)
         self.btn_start_pause_data.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_start_pause_data.setCheckable(True)
+        self.btn_start_pause_data.setCheckable(False)
         self.btn_start_pause_data.setChecked(False)
 
         self.gridLayout.addWidget(self.btn_start_pause_data, 0, 1, 1, 1)
@@ -912,7 +927,9 @@ class Ui_MainWindow(object):
         self.fr_cen_3.setFrameShape(QFrame.StyledPanel)
         self.fr_cen_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.fr_cen_3)
+        self.horizontalLayout_5.setSpacing(4)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(4, 4, 4, 4)
         self.lb_footer = QLabel(self.fr_cen_3)
         self.lb_footer.setObjectName(u"lb_footer")
         self.lb_footer.setFont(font2)
@@ -936,6 +953,23 @@ class Ui_MainWindow(object):
         self.lb_exit_id.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.lb_exit_id)
+
+        self.lb_fps_show = QLabel(self.fr_cen_3)
+        self.lb_fps_show.setObjectName(u"lb_fps_show")
+        self.lb_fps_show.setFont(font4)
+        self.lb_fps_show.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_5.addWidget(self.lb_fps_show)
+
+        self.lb_fps = QLabel(self.fr_cen_3)
+        self.lb_fps.setObjectName(u"lb_fps")
+        font5 = QFont()
+        font5.setPointSize(12)
+        font5.setBold(False)
+        self.lb_fps.setFont(font5)
+        self.lb_fps.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_5.addWidget(self.lb_fps)
 
 
         self.verticalLayout.addWidget(self.fr_cen_3)
@@ -1001,10 +1035,18 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_serial), QCoreApplication.translate("MainWindow", u"Serial Port Connection", None))
         self.cb_write_log.setText(QCoreApplication.translate("MainWindow", u"Write Mission Log CSV", None))
         self.cb_write_kml.setText(QCoreApplication.translate("MainWindow", u"Write Google Earth KML", None))
-        self.btn_start_mission.setText(QCoreApplication.translate("MainWindow", u"Start Mission", None))
+        self.lb_max_plot.setText(QCoreApplication.translate("MainWindow", u"Number of Data in Plots", None))
+        self.combo_max_plot.setItemText(0, QCoreApplication.translate("MainWindow", u"80", None))
+        self.combo_max_plot.setItemText(1, QCoreApplication.translate("MainWindow", u"20", None))
+        self.combo_max_plot.setItemText(2, QCoreApplication.translate("MainWindow", u"50", None))
+        self.combo_max_plot.setItemText(3, QCoreApplication.translate("MainWindow", u"100", None))
+        self.combo_max_plot.setItemText(4, QCoreApplication.translate("MainWindow", u"120", None))
+        self.combo_max_plot.setItemText(5, QCoreApplication.translate("MainWindow", u"150", None))
+        self.combo_max_plot.setItemText(6, QCoreApplication.translate("MainWindow", u"Unlimited", None))
+
         self.lb_fr_m_c.setText(QCoreApplication.translate("MainWindow", u"Mission Control", None))
         self.btn_csv_live.setText(QCoreApplication.translate("MainWindow", u"Live CSV", None))
-        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Data", None))
+        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"None", None))
         self.btn_chart_pop.setText(QCoreApplication.translate("MainWindow", u"Pop Chart", None))
         self.btn_chart_clear.setText(QCoreApplication.translate("MainWindow", u"Clear Chart", None))
         self.lb_fr_d_c.setText(QCoreApplication.translate("MainWindow", u"Data Capture Control", None))
@@ -1048,8 +1090,10 @@ class Ui_MainWindow(object):
         self.text_sys_log.setPlainText(QCoreApplication.translate("MainWindow", u"System Log Area!", None))
         self.tabWidget_Monitor.setTabText(self.tabWidget_Monitor.indexOf(self.tab_sys_log), QCoreApplication.translate("MainWindow", u"System Log", None))
         self.lb_footer.setText(QCoreApplication.translate("MainWindow", u"    CUGS V1: Ground Station Software Interface. Vivatsathorn Thitasirivit, 2022", None))
-        self.lb_exit_code.setText(QCoreApplication.translate("MainWindow", u"Exit Code   ", None))
+        self.lb_exit_code.setText(QCoreApplication.translate("MainWindow", u"Data Counter", None))
         self.lb_exit_id.setText(QCoreApplication.translate("MainWindow", u"Exit Code", None))
+        self.lb_fps_show.setText(QCoreApplication.translate("MainWindow", u"Project", None))
+        self.lb_fps.setText(QCoreApplication.translate("MainWindow", u"CUGS V1", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))

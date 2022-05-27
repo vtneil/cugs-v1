@@ -1,4 +1,6 @@
 import serial as _serial
+import time as _time
+import numpy as _np
 import serial.tools.list_ports as _serial_port
 from typing import Union as _Union
 from lib.lib_log import Log
@@ -119,7 +121,7 @@ class LogSerial:
         self._is_updated = False
         self._find1 = 0
         self._find2 = 0
-        self.logger = Log()
+        self.logger = Log(target='LOG_SERIAL')
         self.read_result = True
 
     def readPayload(self, *func) -> None:
@@ -226,6 +228,59 @@ class LogSerial:
     def __pStrip(s) -> str:
         return s.replace('\r', '').replace('\n', '').strip()
 
+
+class LogSimulation:
+    def __init__(self, data_format, /, *, header, override: list = None, frequency: float = 1):
+        self.data_format = data_format
+        self.data_length = len(self.data_format)
+        self.header = header[0]
+        self.payload = ''
+        self.override = [] if override else override
+        self.read_result = True
+        self.logger = Log(target='LOG_SIM')
+        _np.random.seed(6185293)
+        self.logger.info('Simulation Thread Started')
+        self.counter = 1
+        self.period = 1 / frequency
+        return
+
+    def readPayload(self, *func) -> None:
+        while self.read_result:
+            _time.sleep(self.period)
+            self.payload = self.updateSimulation()
+            if func:
+                for __f, __args, __kwargs in func:
+                    __f(self.payload, *__args, **__kwargs)
+            self._is_updated = True
+        return
+
+    def updateSimulation(self) -> str:
+        rand_np = _np.random.uniform(13.0, 14.0, self.data_length - 3)
+        if self.data_format[0] == 'team_id':
+            __payload = self.header + ',00:00:00,'
+        else:
+            __payload = 'SPARK2,00:00:00,'
+        __payload += str(self.counter) + ','
+        __payload += ','.join(['{:.6f}'.format(__e) for __e in rand_np])
+        self.counter += 1
+        return __payload
+
+    def isUpdated(self) -> bool:
+        """
+        Returns if payload is updated.
+
+        :return:
+        """
+        return self._is_updated
+
+    def getPayload(self) -> str:
+        """
+        Pull latest data from payload.
+
+        :return:
+        """
+        self._is_updated = False
+        return self.payload
 
 if __name__ == '__main__':
     pass

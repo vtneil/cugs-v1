@@ -11,7 +11,7 @@ class ThreadSerial(QThread):
         self.serial_logger = serial_logger
         self.args = args
         self.kwargs = kwargs
-        self.logger = Log('LOG_THREAD')
+        self.logger = Log(target='LOG_THREAD')
         self._isRunning = True
 
     def __del__(self) -> None:

@@ -126,7 +126,7 @@ class QChartData:
         self.__x_data = None
         self.__y_data = _np.array([], dtype='float')
 
-    def append(self, x_new, *y_new):
+    def append(self, x_new, *y_new, max_count):
         y_arr = _np.array(y_new, dtype='float')[:self.__y_len]
         if self.__is_init:
             self.__is_init = False
@@ -156,8 +156,8 @@ class QChartData:
         # Plot only first data in y vector
         for __y, __chart in zip(y_arr, self.__chart_list):
             __chart.append(float(self.__x_data), float(__y))
-        if self.__counter > 80:
-            self.popFirstN()
+        if self.__counter > max_count:
+            self.popFirstN(self.__counter - max_count)
 
         if self.__is_first:
             self.__x_min = self.__x_data
