@@ -50,7 +50,7 @@ class LoadDirectory:
                               '<NetworkLink>\n' + \
                               '<Link>\n<href>'
         self.earth_live_post = '</href>\n<refreshMode>onInterval</refreshMode>\n' + \
-                               '<refreshInterval>0.1</refreshInterval>\n' + \
+                               '<refreshInterval>0.05</refreshInterval>\n' + \
                                '</Link>\n' + \
                                '</NetworkLink>\n' + \
                                '</kml>\n'
