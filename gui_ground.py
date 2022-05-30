@@ -23,6 +23,19 @@ class ProgFullStackGUI:
         self.to_plot_x = pref_dict['use_plot']['x']
         self.is_save = (pref_dict['is_save'].lower() == 'true')
         self.map_engine = pref_dict['map_engine']
+        self.state_key = pref_dict['state_key']
+        self.state_id_list = [str(e) for e in pref_dict['state_id']]
+        self.state_name_list_upcoming = pref_dict['state_name']
+        self.state_name_list_previous = []
+
+        __len_name_state = len(self.state_name_list_upcoming)
+        __len_id_state = len(self.state_id_list)
+
+        # State List Initialization
+        if __len_id_state > __len_name_state:
+            self.state_name_list_upcoming = self.state_id_list
+        elif __len_id_state < __len_name_state:
+            self.state_name_list_upcoming = self.state_name_list_upcoming[:__len_id_state]
 
         # Plot_X Broadcasting
         if isinstance(self.to_plot_x, str):
@@ -248,6 +261,24 @@ class ProgFullStackGUI:
         self.bool_write_kml = self.ui_main.cb_write_kml.isChecked()
         return
 
+    def updateStateBar(self) -> str:
+        # Process List
+        __curr_state_id = self.serial_parsed_dict[self.state_key]
+        if __curr_state_id not in self.state_id_list:
+            return ''
+
+        __curr_state_idx = self.state_id_list.index(__curr_state_id)
+        __curr_state = self.state_name_list_upcoming[__curr_state_idx]
+
+        self.state_name_list_upcoming.pop(__curr_state_idx)
+        self.state_id_list.pop(__curr_state_idx)
+
+        self.state_name_list_previous.append(__curr_state)
+
+        # Update front-end
+        # Insert Remaining Scripts Here
+        return __curr_state
+
     def updatePlot(self) -> None:
         __to_plot_data = []
         __max_plot = int(self.ui_main.combo_max_plot.currentText())
@@ -276,60 +307,61 @@ class ProgFullStackGUI:
         return
 
     def updateBackEnds(self, serial_text_in) -> None:
-        # Raw Data Processing
-        self.serial_plain_text = serial_text_in
-        self.serial_parsed_dict = self.parser.parseData(serial_text_in)
+        if not self.pause_data:
+            # Raw Data Processing
+            self.serial_plain_text = serial_text_in
+            self.serial_parsed_dict = self.parser.parseData(serial_text_in)
 
-        # Append data (large dict, not recommended) if you want to use these data somewhere else.
-        # self.parser.append(self.dict_data_array, self.serial_parsed_dict)
+            # Append data (large dict, not recommended) if you want to use these data somewhere else.
+            # self.parser.append(self.dict_data_array, self.serial_parsed_dict)
 
-        # Create Coordinate data object
-        try:
-            __coord = ilib.Coordinate(
-                latitude=self.serial_parsed_dict['gps_lat'],
-                longitude=self.serial_parsed_dict['gps_lon'],
-                altitude=self.serial_parsed_dict['bar_alt']
-            )
-        except KeyError:
-            __coord = ilib.Coordinate(
-                latitude=None,
-                longitude=None,
-                altitude=None
-            )
+            # Create Coordinate data object
+            try:
+                __coord = ilib.Coordinate(
+                    latitude=self.serial_parsed_dict['gps_lat'],
+                    longitude=self.serial_parsed_dict['gps_lon'],
+                    altitude=self.serial_parsed_dict['bar_alt']
+                )
+            except KeyError:
+                __coord = ilib.Coordinate(
+                    latitude=None,
+                    longitude=None,
+                    altitude=None
+                )
 
-        # Serial Monitor
-        self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
-        self.ui_main.text_serial_mon.moveCursor(QTextCursor.End)
+            # Serial Monitor
+            self.ui_main.text_serial_mon.appendPlainText(self.serial_plain_text)
+            self.ui_main.text_serial_mon.moveCursor(QTextCursor.End)
 
-        # Exit Code
-        if not self.exit_code % 200:
-            self.ui_main.text_serial_mon.clear()
-        self.ui_main.lb_exit_id.setText(str(self.exit_code))
+            # Exit Code
+            if not self.exit_code % 200:
+                self.ui_main.text_serial_mon.clear()
+            self.ui_main.lb_exit_id.setText(str(self.exit_code))
 
-        # File Appending
-        if self.is_save and self.bool_write_csv:
-            self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_dict, self.data_format),
-                                               self.serial_plain_text)
+            # File Appending
+            if self.is_save and self.bool_write_csv:
+                self.directory.appendDelimitedFile(self.directory.dictToList(self.serial_parsed_dict, self.data_format),
+                                                   self.serial_plain_text)
 
-        # Map plotting
-        if self.bool_write_kml:
-            if self.map_engine == 'earth':
-                self.directory.appendEarthCoord(__coord)
+            # Map plotting
+            if self.bool_write_kml:
+                if self.map_engine == 'earth':
+                    self.directory.appendEarthCoord(__coord)
 
-        # Key-Value Table
-        self.table_main.replaceVector(self.serial_parsed_dict)
+            # Key-Value Table
+            self.table_main.replaceVector(self.serial_parsed_dict)
 
-        # CSV Liveview Table
-        if not self.ui_csv.isHidden():
-            self.table_csv.appendTable(self.serial_parsed_dict)
+            # CSV Liveview Table
+            if not self.ui_csv.isHidden():
+                self.table_csv.appendTable(self.serial_parsed_dict)
 
-        # Update plot data
-        if self.plot_list:
-            self.updatePlot()
-            pass
+            # Update plot data
+            if self.plot_list:
+                self.updatePlot()
+                pass
 
-        # Update Exit code
-        self.exit_code += 1
+            # Update Exit code
+            self.exit_code += 1
         return
 
 

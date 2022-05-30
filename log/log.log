@@ -1959,3 +1959,33 @@ serial.serialutil.SerialException: could not open port 'COM4': FileNotFoundError
 [INFO] In root - 30-May-22 17:19:36 - [LOG_THREAD] Try stopping the serial thread.
 [INFO] In root - 30-May-22 17:19:36 - [LOG_THREAD] Stopped the serial thread.
 [INFO] In root - 30-May-22 17:19:36 - [GUI_PROG] Program exited with code 342
+[INFO] In root - 30-May-22 17:53:05 - [GUI_PROG] Start of Program
+[INFO] In root - 30-May-22 17:53:08 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 30-May-22 17:53:08 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 30-May-22 17:53:15 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 30-May-22 17:53:15 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 30-May-22 17:53:15 - [GUI_PROG] Program exited with code 0
+[INFO] In root - 30-May-22 17:53:28 - [GUI_PROG] Start of Program
+[INFO] In root - 30-May-22 17:54:12 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 30-May-22 17:54:12 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 30-May-22 17:54:26 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 30-May-22 17:54:26 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 30-May-22 17:54:26 - [GUI_PROG] Program exited with code 67
+[INFO] In root - 30-May-22 17:56:16 - [GUI_PROG] Start of Program
+[INFO] In root - 30-May-22 17:56:22 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 30-May-22 17:56:22 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 30-May-22 17:57:45 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 30-May-22 17:57:45 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 30-May-22 17:58:24 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 30-May-22 17:58:24 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 30-May-22 17:58:28 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 30-May-22 17:58:28 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 30-May-22 17:58:29 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 30-May-22 17:58:29 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 30-May-22 17:59:08 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 30-May-22 17:59:08 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 30-May-22 18:00:01 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 30-May-22 18:00:01 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 30-May-22 18:00:31 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 30-May-22 18:00:31 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 30-May-22 18:00:31 - [GUI_PROG] Program exited with code 683

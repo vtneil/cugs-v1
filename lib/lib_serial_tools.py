@@ -282,5 +282,6 @@ class LogSimulation:
         self._is_updated = False
         return self.payload
 
+
 if __name__ == '__main__':
     pass

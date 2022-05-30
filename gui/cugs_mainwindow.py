@@ -19,9 +19,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
 from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
     QFrame, QGridLayout, QHBoxLayout, QHeaderView,
     QLabel, QMainWindow, QMenu, QMenuBar,
-    QPlainTextEdit, QPushButton, QSizePolicy, QStatusBar,
-    QTabWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
-    QWidget)
+    QPlainTextEdit, QProgressBar, QPushButton, QSizePolicy,
+    QStatusBar, QTabWidget, QTableWidget, QTableWidgetItem,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -98,6 +98,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_27.addWidget(self.label)
 
         self.combo_serial = QComboBox(self.fr_serial_sel)
+        self.combo_serial.addItem("")
+        self.combo_serial.addItem("")
         self.combo_serial.setObjectName(u"combo_serial")
 
         self.verticalLayout_27.addWidget(self.combo_serial)
@@ -395,7 +397,7 @@ class Ui_MainWindow(object):
         self.btn_start_pause_data.setMaximumSize(QSize(300, 40))
         self.btn_start_pause_data.setFont(font)
         self.btn_start_pause_data.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_start_pause_data.setCheckable(False)
+        self.btn_start_pause_data.setCheckable(True)
         self.btn_start_pause_data.setChecked(False)
 
         self.gridLayout.addWidget(self.btn_start_pause_data, 0, 1, 1, 1)
@@ -491,6 +493,104 @@ class Ui_MainWindow(object):
         self.tabWidget_Cmd.addTab(self.tab_data, "")
         self.tab_state = QWidget()
         self.tab_state.setObjectName(u"tab_state")
+        self.verticalLayout_30 = QVBoxLayout(self.tab_state)
+        self.verticalLayout_30.setSpacing(4)
+        self.verticalLayout_30.setObjectName(u"verticalLayout_30")
+        self.verticalLayout_30.setContentsMargins(4, 4, 4, 4)
+        self.fr_state_01 = QFrame(self.tab_state)
+        self.fr_state_01.setObjectName(u"fr_state_01")
+        self.fr_state_01.setFrameShape(QFrame.StyledPanel)
+        self.fr_state_01.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_15 = QHBoxLayout(self.fr_state_01)
+        self.horizontalLayout_15.setSpacing(20)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.horizontalLayout_15.setContentsMargins(20, 0, 0, 0)
+        self.lb_uc_state_inf = QLabel(self.fr_state_01)
+        self.lb_uc_state_inf.setObjectName(u"lb_uc_state_inf")
+        self.lb_uc_state_inf.setMaximumSize(QSize(110, 16777215))
+        self.lb_uc_state_inf.setFont(font2)
+
+        self.horizontalLayout_15.addWidget(self.lb_uc_state_inf)
+
+        self.lb_uc_state_uni = QLabel(self.fr_state_01)
+        self.lb_uc_state_uni.setObjectName(u"lb_uc_state_uni")
+        self.lb_uc_state_uni.setMaximumSize(QSize(120, 16777215))
+        font3 = QFont()
+        font3.setPointSize(12)
+        font3.setBold(True)
+        self.lb_uc_state_uni.setFont(font3)
+
+        self.horizontalLayout_15.addWidget(self.lb_uc_state_uni)
+
+        self.lb_uc_state_list = QLabel(self.fr_state_01)
+        self.lb_uc_state_list.setObjectName(u"lb_uc_state_list")
+        self.lb_uc_state_list.setFont(font2)
+
+        self.horizontalLayout_15.addWidget(self.lb_uc_state_list)
+
+
+        self.verticalLayout_30.addWidget(self.fr_state_01)
+
+        self.fr_state_02 = QFrame(self.tab_state)
+        self.fr_state_02.setObjectName(u"fr_state_02")
+        self.fr_state_02.setFrameShape(QFrame.StyledPanel)
+        self.fr_state_02.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_16 = QHBoxLayout(self.fr_state_02)
+        self.horizontalLayout_16.setSpacing(20)
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.horizontalLayout_16.setContentsMargins(20, 0, 20, 0)
+        self.lb_curr_state_uni = QLabel(self.fr_state_02)
+        self.lb_curr_state_uni.setObjectName(u"lb_curr_state_uni")
+        self.lb_curr_state_uni.setMinimumSize(QSize(120, 0))
+        self.lb_curr_state_uni.setMaximumSize(QSize(16777215, 16777215))
+        font4 = QFont()
+        font4.setPointSize(18)
+        font4.setBold(True)
+        self.lb_curr_state_uni.setFont(font4)
+
+        self.horizontalLayout_16.addWidget(self.lb_curr_state_uni)
+
+        self.pg_bar_states = QProgressBar(self.fr_state_02)
+        self.pg_bar_states.setObjectName(u"pg_bar_states")
+        self.pg_bar_states.setMinimumSize(QSize(0, 32))
+        self.pg_bar_states.setStyleSheet(u"")
+        self.pg_bar_states.setValue(15)
+        self.pg_bar_states.setTextVisible(False)
+
+        self.horizontalLayout_16.addWidget(self.pg_bar_states)
+
+
+        self.verticalLayout_30.addWidget(self.fr_state_02)
+
+        self.fr_state_03 = QFrame(self.tab_state)
+        self.fr_state_03.setObjectName(u"fr_state_03")
+        self.fr_state_03.setFrameShape(QFrame.StyledPanel)
+        self.fr_state_03.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_17 = QHBoxLayout(self.fr_state_03)
+        self.horizontalLayout_17.setSpacing(20)
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(20, 0, 20, 0)
+        self.lb_past_state_inf = QLabel(self.fr_state_03)
+        self.lb_past_state_inf.setObjectName(u"lb_past_state_inf")
+        self.lb_past_state_inf.setMaximumSize(QSize(110, 16777215))
+        font5 = QFont()
+        font5.setPointSize(11)
+        self.lb_past_state_inf.setFont(font5)
+
+        self.horizontalLayout_17.addWidget(self.lb_past_state_inf)
+
+        self.lb_past_state_list = QLabel(self.fr_state_03)
+        self.lb_past_state_list.setObjectName(u"lb_past_state_list")
+        self.lb_past_state_list.setFont(font5)
+
+        self.horizontalLayout_17.addWidget(self.lb_past_state_list)
+
+
+        self.verticalLayout_30.addWidget(self.fr_state_03)
+
+        self.verticalLayout_30.setStretch(0, 1)
+        self.verticalLayout_30.setStretch(1, 2)
+        self.verticalLayout_30.setStretch(2, 1)
         self.tabWidget_Cmd.addTab(self.tab_state, "")
         self.tab_uplink = QWidget()
         self.tab_uplink.setObjectName(u"tab_uplink")
@@ -834,10 +934,10 @@ class Ui_MainWindow(object):
         self.lb_kv_table.setObjectName(u"lb_kv_table")
         self.lb_kv_table.setMinimumSize(QSize(0, 20))
         self.lb_kv_table.setMaximumSize(QSize(16777215, 20))
-        font3 = QFont()
-        font3.setPointSize(10)
-        font3.setBold(False)
-        self.lb_kv_table.setFont(font3)
+        font6 = QFont()
+        font6.setPointSize(10)
+        font6.setBold(False)
+        self.lb_kv_table.setFont(font6)
 
         self.verticalLayout_14.addWidget(self.lb_kv_table)
 
@@ -939,10 +1039,7 @@ class Ui_MainWindow(object):
 
         self.lb_exit_code = QLabel(self.fr_cen_3)
         self.lb_exit_code.setObjectName(u"lb_exit_code")
-        font4 = QFont()
-        font4.setPointSize(12)
-        font4.setBold(True)
-        self.lb_exit_code.setFont(font4)
+        self.lb_exit_code.setFont(font3)
         self.lb_exit_code.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.lb_exit_code)
@@ -956,17 +1053,17 @@ class Ui_MainWindow(object):
 
         self.lb_fps_show = QLabel(self.fr_cen_3)
         self.lb_fps_show.setObjectName(u"lb_fps_show")
-        self.lb_fps_show.setFont(font4)
+        self.lb_fps_show.setFont(font3)
         self.lb_fps_show.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.lb_fps_show)
 
         self.lb_fps = QLabel(self.fr_cen_3)
         self.lb_fps.setObjectName(u"lb_fps")
-        font5 = QFont()
-        font5.setPointSize(12)
-        font5.setBold(False)
-        self.lb_fps.setFont(font5)
+        font7 = QFont()
+        font7.setPointSize(12)
+        font7.setBold(False)
+        self.lb_fps.setFont(font7)
         self.lb_fps.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.lb_fps)
@@ -988,6 +1085,8 @@ class Ui_MainWindow(object):
         self.menuHelp.setObjectName(u"menuHelp")
         self.menuSettings = QMenu(self.menubar)
         self.menuSettings.setObjectName(u"menuSettings")
+        self.menuState_Override = QMenu(self.menubar)
+        self.menuState_Override.setObjectName(u"menuState_Override")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -996,6 +1095,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuEdit.menuAction())
         self.menubar.addAction(self.menuView.menuAction())
+        self.menubar.addAction(self.menuState_Override.menuAction())
         self.menubar.addAction(self.menuSettings.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
         self.menuHelp.addAction(self.actionAbout)
@@ -1017,6 +1117,9 @@ class Ui_MainWindow(object):
         self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About CUGS", None))
         self.actionPreferences.setText(QCoreApplication.translate("MainWindow", u"Preferences...", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Device Serial Port", None))
+        self.combo_serial.setItemText(0, "")
+        self.combo_serial.setItemText(1, QCoreApplication.translate("MainWindow", u"[Simulation Mode]", None))
+
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Baud Rate", None))
         self.combo_baud.setItemText(0, QCoreApplication.translate("MainWindow", u"115200", None))
         self.combo_baud.setItemText(1, QCoreApplication.translate("MainWindow", u"9600", None))
@@ -1046,12 +1149,18 @@ class Ui_MainWindow(object):
 
         self.lb_fr_m_c.setText(QCoreApplication.translate("MainWindow", u"Mission Control", None))
         self.btn_csv_live.setText(QCoreApplication.translate("MainWindow", u"Live CSV", None))
-        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"None", None))
+        self.btn_start_pause_data.setText(QCoreApplication.translate("MainWindow", u"Pause Data", None))
         self.btn_chart_pop.setText(QCoreApplication.translate("MainWindow", u"Pop Chart", None))
         self.btn_chart_clear.setText(QCoreApplication.translate("MainWindow", u"Clear Chart", None))
         self.lb_fr_d_c.setText(QCoreApplication.translate("MainWindow", u"Data Capture Control", None))
         self.lb_fr_i_d.setText(QCoreApplication.translate("MainWindow", u"Image Data (Coming soon!)", None))
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_data), QCoreApplication.translate("MainWindow", u"Data Acquisition", None))
+        self.lb_uc_state_inf.setText(QCoreApplication.translate("MainWindow", u"Next in queue:", None))
+        self.lb_uc_state_uni.setText(QCoreApplication.translate("MainWindow", u"DDDDD", None))
+        self.lb_uc_state_list.setText(QCoreApplication.translate("MainWindow", u"EEEE, FFFF, GGGGG", None))
+        self.lb_curr_state_uni.setText(QCoreApplication.translate("MainWindow", u"CCCCCC", None))
+        self.lb_past_state_inf.setText(QCoreApplication.translate("MainWindow", u"Past states:", None))
+        self.lb_past_state_list.setText(QCoreApplication.translate("MainWindow", u"AAAA, BBBB, CCCCC", None))
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_state), QCoreApplication.translate("MainWindow", u"State", None))
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_uplink), QCoreApplication.translate("MainWindow", u"Uplink Command", None))
         self.tabWidget_Cmd.setTabText(self.tabWidget_Cmd.indexOf(self.tab_graphics), QCoreApplication.translate("MainWindow", u"Graphics Settings", None))
@@ -1099,5 +1208,6 @@ class Ui_MainWindow(object):
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
         self.menuSettings.setTitle(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.menuState_Override.setTitle(QCoreApplication.translate("MainWindow", u"State Override", None))
     # retranslateUi
 

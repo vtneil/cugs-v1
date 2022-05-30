@@ -3,12 +3,13 @@ import pyqtgraph as _pg
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTableWidget, QTableWidgetItem, QAbstractItemView
 from PySide6.QtCharts import QChart, QChartView, QScatterSeries, QValueAxis, QSplineSeries, QLineSeries
 from PySide6.QtGui import QColor, QPen, QPainter
-from PySide6.QtCore import Qt
 
+# from PySide6.QtCore import Qt
 
 color_r = QColor(255, 0, 0)
 color_g = QColor(0, 255, 0)
 color_b = QColor(0, 0, 255)
+
 
 # Change ui QWidgets parent to QWidget
 class QChartData:
@@ -18,7 +19,7 @@ class QChartData:
 
     def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
                  Color=QColor(255, 255, 255), legend: bool = False, scatter: bool = False, line_type=None,
-                 animation=None, processer=None):
+                 animation=None):
         """
         QGraphicsView Data Object
 
@@ -243,6 +244,7 @@ class QChartData:
         else:
             return b
 
+
 class PyQtGraphData:
     def __init__(self, ChartWidget: QWidget, ChartName: str = 'None (None)', *,
                  legend: bool = False):
@@ -253,7 +255,6 @@ class PyQtGraphData:
         self.__chart_view = _pg.PlotWidget()
         self.__chart_layout = QVBoxLayout(self.__chart_widget)
         self.__chart_layout.addWidget(self.__chart_view)
-
 
     def append(self, x_new, *y_new):
         return
@@ -269,6 +270,7 @@ class PyQtGraphData:
 
     def setTitle(self, value, unit: str):
         return
+
 
 class QTableData:
     def __init__(self, table: QTableWidget):
