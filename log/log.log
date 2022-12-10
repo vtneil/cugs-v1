@@ -1989,3 +1989,22 @@ serial.serialutil.SerialException: could not open port 'COM4': FileNotFoundError
 [INFO] In root - 30-May-22 18:00:31 - [LOG_THREAD] Try stopping the serial thread.
 [INFO] In root - 30-May-22 18:00:31 - [LOG_THREAD] Stopped the serial thread.
 [INFO] In root - 30-May-22 18:00:31 - [GUI_PROG] Program exited with code 683
+[INFO] In root - 12-Jul-22 17:17:39 - [GUI_PROG] Start of Program
+[INFO] In root - 12-Jul-22 17:18:14 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 12-Jul-22 17:18:14 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 12-Jul-22 17:18:21 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 12-Jul-22 17:18:21 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 12-Jul-22 17:18:21 - [GUI_PROG] Program exited with code 31
+[INFO] In root - 10-Dec-22 21:30:07 - [GUI_PROG] Start of Program
+[INFO] In root - 10-Dec-22 21:30:27 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 10-Dec-22 21:30:27 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 10-Dec-22 21:30:48 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 10-Dec-22 21:30:48 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 10-Dec-22 21:30:51 - [LOG_SIM] Simulation Thread Started
+[INFO] In root - 10-Dec-22 21:30:51 - [LOG_THREAD] Starting the serial thread.
+[INFO] In root - 10-Dec-22 21:31:22 - [LOG_THREAD] Try stopping the serial thread.
+[INFO] In root - 10-Dec-22 21:31:22 - [LOG_THREAD] Stopped the serial thread.
+[INFO] In root - 10-Dec-22 21:31:22 - [GUI_PROG] Program exited with code 246
+[INFO] In root - 10-Dec-22 21:42:37 - [GUI_PROG] Start of Program
+[CRITICAL] In root - 10-Dec-22 21:43:07 - [LOG_SERIAL] The port has not been initialized.
+[INFO] In root - 10-Dec-22 21:43:07 - [GUI_PROG] Program exited with code 0
