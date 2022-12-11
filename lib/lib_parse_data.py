@@ -5,7 +5,7 @@ from collections import OrderedDict as _Dict
 
 class Parser:
     def __init__(self, data_format: _Union[list, tuple, dict, set], /, *,
-                 header: str = 'PSG', delimiter: str = ',') -> None:
+                 header: str = 'PSG', delimiter: str = '$') -> None:
         """
         A parser object
 
@@ -13,7 +13,7 @@ class Parser:
         :param header: (A) header(s) of a packet to parse
         :param delimiter: A delimiter in the data to be parsed
         """
-        self.__data_format = data_format
+        self.__data_format = list(data_format)
         self.__len_data_format = len(self.__data_format)
         self.__header = header
         self.__delimiter = delimiter
@@ -100,4 +100,4 @@ class Parser:
 if __name__ == '__main__':
     data_parser = Parser(('d1', 'd2', 'd3'))
     dict_out = data_parser.parseData('PSG,1,2,3,4,5')
-    # print(dict_out)
+    print(dict_out)

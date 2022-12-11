@@ -196,7 +196,7 @@ class LogSerial:
 
     def getPayload(self) -> str:
         """
-        Pull latest data from payload.
+        Pull the latest data from payload.
 
         :return:
         """

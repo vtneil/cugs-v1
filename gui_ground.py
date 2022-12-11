@@ -80,6 +80,7 @@ class ProgFullStackGUI:
             self.ui_main.lb_main2,
             self.ui_main.lb_sub1,
             self.ui_main.lb_sub2,
+            self.ui_main.lb_sub2,
             self.ui_main.lb_sub3,
             self.ui_main.lb_sub4,
             self.ui_main.lb_sub5,
