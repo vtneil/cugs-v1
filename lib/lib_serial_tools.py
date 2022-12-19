@@ -230,7 +230,7 @@ class LogSerial:
 
 
 class LogSimulation:
-    def __init__(self, data_format, /, *, header, override: list = None, frequency: float = 1):
+    def __init__(self, data_format, /, *, header, override: list = None, frequency: float = 0.5):
         self.data_format = data_format
         self.data_length = len(self.data_format)
         self.header = header[0]
@@ -253,6 +253,15 @@ class LogSimulation:
                     __f(self.payload, *__args, **__kwargs)
             self._is_updated = True
         return
+
+    def updateSimulation1(self) -> str:
+        __payload = ''
+        with open('../data/test_raw_1_20.txt') as f:
+            __payload = f.readlines()
+            if self.counter >= len(__payload):
+                return ''
+            self.counter += 1
+            return __payload[self.counter].strip()
 
     def updateSimulation(self) -> str:
         rand_np = _np.random.uniform(13.0, 14.0, self.data_length - 3)

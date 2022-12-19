@@ -159,6 +159,9 @@ class LoadDirectory:
         :return: String of Google Earth KML coordinates file
         """
 
+        if coords.latitude == 0.0:
+            return ''
+
         __color = ''
         if isinstance(color, tuple) and len(color) == 4:
             for code in reversed(color):
