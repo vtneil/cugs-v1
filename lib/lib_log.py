@@ -1,9 +1,9 @@
 import logging as _log
 import os
 
+
 class Log:
     def __init__(self, target: str = 'main') -> None:
-
         if not os.path.exists("log/"):
             os.mkdir("log/")
 

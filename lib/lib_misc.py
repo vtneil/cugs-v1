@@ -1,8 +1,6 @@
 import numpy as _np
 from typing import Union as _Union
 
-import numpy as np
-
 __color_lib_dict_fg = {
     'none': '0',
     'black': '30',

@@ -3,6 +3,7 @@ import lib as _ilib
 from lib.lib_log import Log
 from PySide6.QtCore import QThread, Signal
 
+
 class ThreadSerial(QThread):
     msg_carrier = Signal(object)
 
